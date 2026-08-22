@@ -1,0 +1,103 @@
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 24px 0;
+    background: transparent;
+}
+
+.navbar-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+/* LOGO */
+
+.navbar-logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    white-space: nowrap;
+}
+
+.navbar-logo span {
+    color: #d9ad32;
+    margin-left: 5px;
+}
+
+
+/* MENU */
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navbar-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    color: #d9ad32;
+}
+
+
+/* BUTTON */
+
+.navbar-button {
+    border: 1px solid #d9ad32;
+    background: #d9ad32;
+    color: #241009;
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.navbar-button:hover {
+    background: transparent;
+    color: #d9ad32;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+    .navbar-menu {
+        gap: 15px;
+    }
+    .navbar-menu a {
+        font-size: 13px;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    .navbar-container {
+        width: 90%;
+    }
+    .navbar-menu {
+        display: none;
+    }
+    .navbar-button {
+        padding: 10px 16px;
+    }
+}

@@ -1,0 +1,10 @@
+.navbar {
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+    background: #2b1209;
+    border-bottom: 2px solid #c9972b;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+}

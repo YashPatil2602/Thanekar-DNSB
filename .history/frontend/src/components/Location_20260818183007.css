@@ -1,0 +1,115 @@
+.location-section {
+    width: 100%;
+    padding: 90px 5%;
+    background: #2b1007;
+    box-sizing: border-box;
+}
+
+.location-container {
+    width: 90%;
+    max-width: 1400px;
+    min-height: 520px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    border: 2px solid #d4af37;
+}
+
+.location-content {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #35150b;
+}
+
+.location-small-title {
+    margin: 0 0 15px;
+    color: #d4af37;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.location-content h2 {
+    margin: 0 0 25px;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 52px;
+}
+
+.location-description {
+    margin: 0 0 30px;
+    color: #eeeeee;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.location-button {
+    width: fit-content;
+    padding: 15px 28px;
+    background: #d4af37;
+    color: #1c0b05;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.location-button:hover {
+    background: #edc84a;
+    transform: translateY(-2px);
+}
+
+.location-map {
+    width: 100%;
+    min-height: 520px;
+}
+
+.location-map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
+    border: 0;
+    display: block;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .location-container {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    .location-content {
+        padding: 45px 35px;
+    }
+    .location-content h2 {
+        font-size: 42px;
+    }
+    .location-map,
+    .location-map iframe {
+        min-height: 400px;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .location-section {
+        padding: 60px 20px;
+    }
+    .location-content {
+        padding: 35px 25px;
+    }
+    .location-content h2 {
+        font-size: 36px;
+    }
+    .location-map,
+    .location-map iframe {
+        min-height: 350px;
+    }
+}

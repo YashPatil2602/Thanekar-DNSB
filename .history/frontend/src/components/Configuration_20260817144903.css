@@ -1,0 +1,192 @@
+/* =========================================
+   CONFIGURATION SECTION
+   RICH BROWN + GOLD
+========================================= */
+
+.configuration-section {
+    width: 100%;
+    padding: 110px 6%;
+    background: radial-gradient( circle at 15% 20%, rgba(214, 173, 69, 0.08), transparent 30%), #241109;
+    color: #ffffff;
+}
+
+.configuration-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.configuration-heading {
+    max-width: 800px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.configuration-label {
+    margin: 0 0 18px;
+    color: #d6ad45;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.configuration-heading h2 {
+    margin: 0;
+    color: #fff8ee;
+    font-size: clamp(40px, 4vw, 58px);
+    line-height: 1.1;
+}
+
+.configuration-heading h2 span {
+    display: block;
+    color: #d6ad45;
+}
+
+.configuration-divider {
+    width: 85px;
+    height: 3px;
+    margin: 28px auto;
+    background: linear-gradient( 90deg, #9d6f19, #f0cf70, #b9872b);
+}
+
+.configuration-intro {
+    margin: 0;
+    color: #d8ccc0;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.configuration-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.configuration-card {
+    position: relative;
+    min-height: 380px;
+    padding: 35px;
+    overflow: hidden;
+    background: linear-gradient( 145deg, #35190c, #1d0b05);
+    border: 1px solid rgba(214, 173, 69, 0.30);
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.configuration-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient( 90deg, #9d6f19, #f0cf70, #b9872b);
+}
+
+.configuration-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(214, 173, 69, 0.75);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35), 0 0 25px rgba(214, 173, 69, 0.08);
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.configuration-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 35px;
+    border: 1px solid rgba(214, 173, 69, 0.55);
+    color: #d6ad45;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.configuration-card-content>p:first-child {
+    margin: 0 0 12px;
+    color: #d6ad45;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.configuration-card h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 32px;
+    line-height: 1.15;
+}
+
+.configuration-card h3 span {
+    display: block;
+    color: #d6ad45;
+}
+
+.configuration-line {
+    width: 55px;
+    height: 2px;
+    margin: 25px 0;
+    background: #c59a37;
+}
+
+.configuration-description {
+    margin: 0;
+    color: #cfc1b4;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+    .configuration-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+    .configuration-section {
+        padding: 75px 5%;
+    }
+    .configuration-heading {
+        margin-bottom: 45px;
+    }
+    .configuration-grid {
+        grid-template-columns: 1fr;
+    }
+    .configuration-card {
+        min-height: auto;
+        padding: 28px;
+    }
+    .configuration-card h3 {
+        font-size: 28px;
+    }
+}

@@ -1,0 +1,218 @@
+/* ==============================
+   HERO SECTION
+============================== */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
+    overflow: hidden;
+    background: #2b160e;
+    color: #ffffff;
+}
+
+
+/* ==============================
+   HERO IMAGE
+============================== */
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    z-index: 1;
+}
+
+
+/* ==============================
+   BROWN OVERLAY
+============================== */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient( 90deg, rgba(43, 22, 14, 0.92) 0%, rgba(43, 22, 14, 0.72) 35%, rgba(43, 22, 14, 0.35) 70%, rgba(43, 22, 14, 0.20) 100%);
+}
+
+
+/* ==============================
+   HERO CONTENT
+============================== */
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 20vh;
+    color: #ffffff;
+}
+
+
+/* ==============================
+   SUBTITLE
+============================== */
+
+.hero-subtitle {
+    margin: 0 0 28px;
+    color: #d4af37;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+
+/* ==============================
+   MAIN TITLE
+============================== */
+
+.hero h1 {
+    margin: 0;
+    font-size: clamp(52px, 6vw, 90px);
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -2px;
+    color: #ffffff;
+}
+
+
+/* GOLD TITLE */
+
+.hero h1 span {
+    color: #d4af37;
+}
+
+
+/* ==============================
+   GOLD LINE
+============================== */
+
+.gold-line {
+    width: 90px;
+    height: 3px;
+    margin-top: 28px;
+    background: #d4af37;
+}
+
+
+/* ==============================
+   DESCRIPTION
+============================== */
+
+.hero-description {
+    max-width: 620px;
+    margin: 28px 0 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   BUTTON
+============================== */
+
+.hero-button {
+    margin-top: 32px;
+    padding: 15px 32px;
+    border: 1px solid #d4af37;
+    border-radius: 2px;
+    background: #d4af37;
+    color: #2b160e;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+    background: transparent;
+    color: #d4af37;
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   SLIDER DOTS
+============================== */
+
+.hero-dots {
+    position: absolute;
+    z-index: 4;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-dot {
+    width: 11px;
+    height: 11px;
+    padding: 0;
+    border: 1px solid #d4af37;
+    border-radius: 50%;
+    background: transparent;
+    color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-dot:hover {
+    background: #d4af37;
+}
+
+.hero-dot.active {
+    width: 32px;
+    border-radius: 10px;
+    background: #d4af37;
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 650px;
+    }
+    .hero-overlay {
+        background: linear-gradient( 180deg, rgba(43, 22, 14, 0.55) 0%, rgba(43, 22, 14, 0.85) 75%, rgba(43, 22, 14, 0.95) 100%);
+    }
+    .hero-content {
+        width: auto;
+        margin: 0;
+        padding: 180px 25px 0;
+    }
+    .hero-subtitle {
+        font-size: 13px;
+        letter-spacing: 4px;
+        margin-bottom: 20px;
+    }
+    .hero h1 {
+        font-size: 45px;
+        line-height: 1.08;
+    }
+    .hero-description {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    .hero-button {
+        padding: 14px 25px;
+    }
+    .hero-dots {
+        bottom: 25px;
+    }
+}

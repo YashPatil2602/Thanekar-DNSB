@@ -1,0 +1,147 @@
+.about-section {
+    background: #f7f3eb;
+    padding: 110px 6%;
+    color: #4a3327;
+}
+
+.about-container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+
+/* Main Heading */
+
+.about-heading {
+    margin-bottom: 65px;
+}
+
+.about-small-title {
+    color: #a77b20;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin: 0 0 18px;
+}
+
+.about-heading h2 {
+    color: #3a2115;
+    font-size: 60px;
+    line-height: 1.08;
+    font-weight: 700;
+    margin: 0;
+}
+
+.about-heading h2 span {
+    color: #b88a24;
+}
+
+.about-line {
+    width: 75px;
+    height: 3px;
+    background: #c49a32;
+    margin-top: 28px;
+}
+
+
+/* Project Description */
+
+.about-project {
+    max-width: 1100px;
+    margin-bottom: 90px;
+}
+
+.about-project h3 {
+    color: #3a2115;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.about-project p {
+    color: #654f42;
+    font-size: 17px;
+    line-height: 1.85;
+    margin: 0 0 20px;
+}
+
+
+/* Developer Section */
+
+.about-developer {
+    border-top: 1px solid #d9cdbd;
+    padding-top: 60px;
+    max-width: 1100px;
+}
+
+.developer-label {
+    color: #a77b20;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.about-developer h3 {
+    color: #3a2115;
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 0 0 30px;
+}
+
+.about-developer h3 span {
+    color: #b88a24;
+}
+
+.about-developer p {
+    color: #654f42;
+    font-size: 17px;
+    line-height: 1.85;
+    margin: 0 0 20px;
+}
+
+.developer-last-line {
+    color: #3a2115 !important;
+    font-weight: 600;
+}
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .about-section {
+        padding: 80px 5%;
+    }
+    .about-heading h2 {
+        font-size: 48px;
+    }
+    .about-developer h3 {
+        font-size: 36px;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .about-section {
+        padding: 65px 22px;
+    }
+    .about-small-title {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+    .about-heading h2 {
+        font-size: 36px;
+    }
+    .about-project h3 {
+        font-size: 26px;
+    }
+    .about-project p,
+    .about-developer p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+    .about-developer h3 {
+        font-size: 30px;
+    }
+}

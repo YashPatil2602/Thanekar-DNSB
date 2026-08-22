@@ -1,0 +1,210 @@
+/* =========================================
+   FLOOR PLANS SECTION
+========================================= */
+
+.floor-plans-section {
+    width: 100%;
+    background: #2b170f;
+    color: #f5e7c8;
+    padding: 110px 0;
+}
+
+.floor-plans-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.floor-plans-heading {
+    max-width: 750px;
+    margin-bottom: 60px;
+}
+
+.floor-plans-label {
+    margin: 0 0 18px;
+    color: #b88a24;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.floor-plans-heading h2 {
+    margin: 0;
+    color: #fff8ea;
+    font-size: 58px;
+    line-height: 1.1;
+    font-weight: 600;
+}
+
+.floor-plans-heading h2 span {
+    color: #b88a24;
+}
+
+.floor-plans-line {
+    width: 80px;
+    height: 3px;
+    background: #b88a24;
+    margin: 28px 0;
+}
+
+.floor-plans-intro {
+    max-width: 680px;
+    margin: 0;
+    color: #f5e7c8;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.floor-plans-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.floor-plan-card {
+    overflow: hidden;
+    background: #351d14;
+    border: 1px solid rgba(184, 138, 36, 0.5);
+    transition: 0.35s ease;
+}
+
+.floor-plan-card:hover {
+    transform: translateY(-6px);
+    border-color: #b88a24;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================
+   PDF PREVIEW
+========================================= */
+
+.floor-plan-preview {
+    width: 100%;
+    height: 500px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.floor-plan-preview iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+
+/* =========================================
+   CARD INFO
+========================================= */
+
+.floor-plan-info {
+    padding: 28px 30px 32px;
+}
+
+.floor-plan-label {
+    margin: 0 0 8px;
+    color: #b88a24;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.floor-plan-info h3 {
+    margin: 0 0 22px;
+    color: #fff8ea;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.floor-plan-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 23px;
+    background: #b88a24;
+    color: #2b170f;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.floor-plan-button:hover {
+    background: #fff8ea;
+    color: #2b170f;
+}
+
+.floor-plan-button span {
+    font-size: 18px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+    .floor-plans-grid {
+        grid-template-columns: 1fr;
+    }
+    .floor-plans-heading h2 {
+        font-size: 48px;
+    }
+    .floor-plan-preview {
+        height: 550px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+    .floor-plans-section {
+        padding: 75px 0;
+    }
+    .floor-plans-container {
+        width: 88%;
+    }
+    .floor-plans-label {
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+    .floor-plans-heading h2 {
+        font-size: 39px;
+    }
+    .floor-plans-intro {
+        font-size: 15px;
+    }
+    .floor-plan-preview {
+        height: 430px;
+    }
+    .floor-plan-info {
+        padding: 24px;
+    }
+    .floor-plan-info h3 {
+        font-size: 24px;
+    }
+}

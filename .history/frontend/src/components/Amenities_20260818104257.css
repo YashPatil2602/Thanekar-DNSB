@@ -1,0 +1,210 @@
+/* ================================
+   AMENITIES SECTION
+================================ */
+
+.amenities-section {
+    width: 100%;
+    background: #2b1008;
+    padding: 80px 0 90px;
+    overflow: hidden;
+}
+
+.amenities-container {
+    width: 76%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+
+/* ================================
+   HEADING
+================================ */
+
+.amenities-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 38px;
+}
+
+.amenities-heading span {
+    width: 48px;
+    height: 1px;
+    background: #d4a72c;
+    display: block;
+}
+
+.amenities-heading h2 {
+    margin: 0;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+
+/* ================================
+   SLIDER
+================================ */
+
+.amenities-slider {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+/* ================================
+   CARDS
+================================ */
+
+.amenities-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    overflow: hidden;
+    border-left: 1px solid rgba(212, 167, 44, 0.25);
+    border-right: 1px solid rgba(212, 167, 44, 0.25);
+    padding: 0 20px;
+}
+
+.amenity-card {
+    position: relative;
+    height: 340px;
+    overflow: hidden;
+    border: 1px solid rgba(212, 167, 44, 0.45);
+    background: #1d0b05;
+}
+
+.amenity-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.amenity-card:hover img {
+    transform: scale(1.05);
+}
+
+
+/* ================================
+   IMAGE TITLE
+================================ */
+
+.amenity-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 45px 18px 18px;
+    background: linear-gradient( to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+}
+
+.amenity-overlay h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+
+/* ================================
+   ARROWS
+================================ */
+
+.amenities-arrow {
+    position: absolute;
+    z-index: 5;
+    width: 58px;
+    height: 58px;
+    border: none;
+    border-radius: 50%;
+    background: #d4a72c;
+    color: #2b1008;
+    font-size: 42px;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.amenities-arrow:hover {
+    background: #e5bd4b;
+    transform: scale(1.08);
+    box-shadow: 0 5px 20px rgba(212, 167, 44, 0.35);
+}
+
+.amenities-arrow-left {
+    left: 8px;
+}
+
+.amenities-arrow-right {
+    right: 8px;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1000px) {
+    .amenities-container {
+        width: 90%;
+    }
+    .amenities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .amenity-card {
+        height: 300px;
+    }
+    .amenity-card:nth-child(3) {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .amenities-section {
+        padding: 60px 0;
+    }
+    .amenities-container {
+        width: 92%;
+    }
+    .amenities-heading h2 {
+        font-size: 28px;
+    }
+    .amenities-heading span {
+        width: 35px;
+    }
+    .amenities-grid {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+    .amenity-card {
+        height: 300px;
+    }
+    .amenity-card:nth-child(2),
+    .amenity-card:nth-child(3) {
+        display: none;
+    }
+    .amenities-arrow {
+        width: 48px;
+        height: 48px;
+        font-size: 34px;
+    }
+    .amenities-arrow-left {
+        left: -5px;
+    }
+    .amenities-arrow-right {
+        right: -5px;
+    }
+}

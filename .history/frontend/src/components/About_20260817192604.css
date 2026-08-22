@@ -1,0 +1,65 @@
+/* =========================================
+   ABOUT THANЕKAR DNSB - BIG HEADING
+========================================= */
+
+.about-small-title {
+    margin: 0 0 22px;
+    color: #b88a24;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.about-heading h2 {
+    margin: 0;
+    color: #3a2115;
+    font-size: 64px;
+    line-height: 1.08;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+}
+
+.about-heading h2 span {
+    color: #b88a24;
+}
+
+.about-line {
+    width: 90px;
+    height: 3px;
+    margin-top: 30px;
+    background: #b88a24;
+}
+
+
+/* =========================================
+   ABOUT DEVELOPER - BIG HEADING
+========================================= */
+
+.developer-label {
+    margin: 0 0 20px;
+    color: #b88a24;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.about-developer h3 {
+    margin: 0;
+    color: #3a2115;
+    font-size: 52px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.about-developer h3 span {
+    color: #b88a24;
+}
+
+.developer-line {
+    width: 90px;
+    height: 3px;
+    margin: 28px 0 35px;
+    background: #b88a24;
+}

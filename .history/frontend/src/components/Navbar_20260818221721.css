@@ -1,0 +1,220 @@
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    background: #2b1007;
+    border-bottom: 2px solid #d4af37;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-inner {
+    width: 100%;
+    max-width: 1500px;
+    min-height: 105px;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    min-width: 150px;
+}
+
+.logo-main {
+    color: #d4af37;
+    font-family: Arial, sans-serif;
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.logo-sub {
+    margin-top: 5px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #d4af37;
+}
+
+
+/* =========================================
+   RIGHT BUTTONS
+========================================= */
+
+.navbar-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+/* =========================================
+   BROCHURE
+========================================= */
+
+.brochure-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    background: transparent;
+    color: #d4af37;
+    border: 1px solid #d4af37;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.brochure-btn:hover {
+    background: #d4af37;
+    color: #2b1007;
+}
+
+
+/* =========================================
+   CALL NOW
+========================================= */
+
+.call-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    background: #d4af37;
+    color: #2b1007 !important;
+    border: 1px solid #d4af37;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.call-btn:hover {
+    background: transparent;
+    color: #d4af37 !important;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1200px) {
+    .navbar-inner {
+        padding: 0 3%;
+    }
+    .nav-links {
+        gap: 15px;
+    }
+    .nav-links a {
+        font-size: 13px;
+    }
+    .logo-main {
+        font-size: 23px;
+    }
+    .brochure-btn,
+    .call-btn {
+        padding: 12px 15px;
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+    .navbar-inner {
+        min-height: auto;
+        padding: 18px 20px;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+    .logo {
+        flex: 1;
+    }
+    .navbar-buttons {
+        display: flex;
+    }
+    .nav-links {
+        width: 100%;
+        order: 3;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+    .logo-main {
+        font-size: 20px;
+    }
+    .logo-sub {
+        font-size: 11px;
+    }
+    .brochure-btn {
+        padding: 10px 13px;
+        font-size: 12px;
+    }
+    .call-btn {
+        padding: 10px 13px;
+        font-size: 12px;
+    }
+    .nav-links a {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,21 @@
+.view-plan-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-top: 18px;
+    padding: 9px 16px;
+    background: #b88a24;
+    color: #241109;
+    border: 1px solid #c09228;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.view-plan-btn:hover {
+    background: #d4aa45;
+    color: #241109;
+}

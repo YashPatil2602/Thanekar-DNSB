@@ -1,0 +1,52 @@
+# Full-Stack Setup
+
+## Backend
+
+From the project root, create or activate a Python environment and install the Flask dependencies:
+
+```powershell
+cd backend
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python app.py
+```
+
+The API runs at `http://127.0.0.1:5000`.
+
+Available endpoints:
+
+- `GET /api/health` checks the backend.
+- `GET /api/features` returns the feature cards used by React.
+- `POST /api/contact` accepts `name`, `email`, `phone`, and `message` as JSON.
+
+## Frontend
+
+In a second terminal:
+
+```powershell
+cd frontend
+npm install
+npm run dev
+```
+
+The Vite proxy forwards frontend requests from `/api/*` to Flask. React uses `fetch` in `src/api.js`, so no hard-coded backend URL is required during local development.
+
+For another phone, tablet, or laptop on the same Wi-Fi network, open the Vite **Network** URL shown in the terminal, for example `http://172.20.10.3:5173/`. Do not use `http://localhost:5173/` on another device because `localhost` refers to that device itself. Windows Firewall may need to allow Node.js/Python on private networks.
+
+If another device cannot open the Network URL on Windows, run PowerShell as Administrator from the project root:
+
+```powershell
+.\allow-dev-network.ps1
+```
+
+Then keep both the Flask and Vite terminals open. The computer and phone/tablet must be connected to the same non-guest Wi-Fi network. The current network URL is `http://172.20.10.3:5173/`; this address can change when Wi-Fi or hotspot reconnects, so always use the latest `Network` URL printed by Vite.
+
+For a separately hosted backend, set `VITE_API_URL` before starting or building Vite:
+
+```powershell
+$env:VITE_API_URL = "https://api.example.com/api"
+npm run dev
+```
+
+Flask-CORS is enabled in `backend/app.py` so a separately hosted React application can call the API.

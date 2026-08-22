@@ -1,0 +1,308 @@
+.pricing-section {
+    width: 100%;
+    padding: 110px 0;
+    background: #2b170f;
+    color: #f5e7c8;
+}
+
+.pricing-container {
+    width: 90%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+
+/* ==============================
+   HEADING
+============================== */
+
+.pricing-heading {
+    max-width: 750px;
+    margin-bottom: 60px;
+}
+
+.pricing-label {
+    margin: 0 0 18px;
+    color: #b88a24;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.pricing-heading h2 {
+    margin: 0;
+    color: #fff8ea;
+    font-size: 58px;
+    line-height: 1.1;
+    font-weight: 600;
+}
+
+.pricing-heading h2 span {
+    color: #b88a24;
+}
+
+.pricing-line {
+    width: 80px;
+    height: 3px;
+    margin: 28px 0;
+    background: #b88a24;
+}
+
+.pricing-intro {
+    max-width: 650px;
+    margin: 0;
+    color: #f5e7c8;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* ==============================
+   PRICING GRID
+============================== */
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+
+/* ==============================
+   CARD
+============================== */
+
+.pricing-card {
+    position: relative;
+    padding: 45px;
+    background: #351d14;
+    border: 1px solid rgba(184, 138, 36, 0.45);
+    transition: 0.35s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-7px);
+    border-color: #b88a24;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+}
+
+.pricing-featured {
+    background: linear-gradient( 145deg, #3d2115, #2b170f);
+    border-color: #b88a24;
+}
+
+
+/* ==============================
+   OFFER BADGE
+============================== */
+
+.offer-badge {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    padding: 7px 12px;
+    background: #b88a24;
+    color: #2b170f;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+
+/* ==============================
+   CARD TEXT
+============================== */
+
+.pricing-type {
+    margin: 0 0 15px;
+    color: #b88a24;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.pricing-card h3 {
+    margin: 0;
+    color: #fff8ea;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+
+/* ==============================
+   PRICE
+============================== */
+
+.price {
+    margin-top: 25px;
+    color: #b88a24;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.price span {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+
+/* ==============================
+   DIVIDER
+============================== */
+
+.pricing-divider {
+    width: 100%;
+    height: 1px;
+    margin: 30px 0;
+    background: rgba(184, 138, 36, 0.35);
+}
+
+
+/* ==============================
+   DESCRIPTION
+============================== */
+
+.pricing-description {
+    min-height: 80px;
+    margin: 0;
+    color: #d9c6a5;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   BUTTON
+============================== */
+
+.pricing-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 13px 24px;
+    background: #b88a24;
+    color: #2b170f;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.pricing-button:hover {
+    background: #fff8ea;
+}
+
+
+/* ==============================
+   SPECIAL OFFER
+============================== */
+
+.pricing-offer {
+    margin-top: 35px;
+    padding: 30px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background: #351d14;
+    border: 1px solid rgba(184, 138, 36, 0.5);
+}
+
+.offer-content p {
+    margin: 0 0 8px;
+    color: #b88a24;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.offer-content h3 {
+    margin: 0 0 8px;
+    color: #fff8ea;
+    font-size: 27px;
+}
+
+.offer-content h3 span {
+    color: #b88a24;
+}
+
+.offer-content small {
+    color: #cdbb9d;
+    font-size: 11px;
+}
+
+
+/* ==============================
+   OFFER BUTTON
+============================== */
+
+.offer-button {
+    padding: 13px 25px;
+    border: 1px solid #b88a24;
+    color: #b88a24;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+.offer-button:hover {
+    background: #b88a24;
+    color: #2b170f;
+}
+
+
+/* ==============================
+   TABLET
+============================== */
+
+@media (max-width: 800px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    .pricing-heading h2 {
+        font-size: 45px;
+    }
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 600px) {
+    .pricing-section {
+        padding: 75px 0;
+    }
+    .pricing-container {
+        width: 88%;
+    }
+    .pricing-label {
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+    .pricing-heading h2 {
+        font-size: 38px;
+    }
+    .pricing-intro {
+        font-size: 15px;
+    }
+    .pricing-card {
+        padding: 30px 25px;
+    }
+    .pricing-card h3 {
+        font-size: 34px;
+    }
+    .price {
+        font-size: 45px;
+    }
+    .pricing-offer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px;
+    }
+    .offer-content h3 {
+        font-size: 22px;
+    }
+}

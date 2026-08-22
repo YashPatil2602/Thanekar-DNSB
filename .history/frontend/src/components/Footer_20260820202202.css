@@ -1,0 +1,580 @@
+/* =====================================================
+   FOOTER MAIN
+===================================================== */
+
+.footer {
+    width: 100%;
+    background: #2b1007;
+    color: #ffffff;
+    border-top: 2px solid #d4af37;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   FOOTER CONTAINER
+===================================================== */
+
+.footer-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 70px 0 55px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.25fr 1fr;
+    gap: 60px;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.footer-brand h2 {
+    margin: 0;
+    color: #d4af37;
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.dnsb-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.dnsb-logo span {
+    width: 55px;
+    height: 3px;
+    background: #d4af37;
+    display: block;
+}
+
+.dnsb-logo strong {
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 8px;
+}
+
+.footer-brand p {
+    margin-top: 30px;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   BUILDING ICON
+===================================================== */
+
+.building-icon {
+    position: relative;
+    width: 100px;
+    height: 125px;
+    margin-top: 45px;
+    border-bottom: 4px solid #d4af37;
+}
+
+.building-main {
+    position: absolute;
+    bottom: 0;
+    left: 34px;
+    width: 32px;
+    height: 105px;
+    border: 4px solid #d4af37;
+    border-bottom: none;
+}
+
+.building-side.left {
+    position: absolute;
+    bottom: 0;
+    left: 12px;
+    width: 18px;
+    height: 70px;
+    border: 4px solid #d4af37;
+    border-bottom: none;
+}
+
+.building-side.right {
+    position: absolute;
+    bottom: 0;
+    right: 12px;
+    width: 18px;
+    height: 82px;
+    border: 4px solid #d4af37;
+    border-bottom: none;
+}
+
+
+/* =====================================================
+   FOOTER LOGO
+===================================================== */
+
+.footer-logo-container {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(212, 175, 55, 0.05);
+    border-radius: 12px;
+    border: 2px solid #d4af37;
+}
+
+.footer-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.footer-section h3 {
+    margin: 0;
+    color: #d4af37;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.footer-line {
+    width: 38px;
+    height: 3px;
+    margin-top: 12px;
+    margin-bottom: 24px;
+    background: #d4af37;
+}
+
+
+/* =====================================================
+   QUICK LINKS
+===================================================== */
+
+.footer-section ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 16px;
+}
+
+.footer-section li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.footer-section li a::before {
+    content: "›";
+    color: #d4af37;
+    font-size: 24px;
+    margin-right: 12px;
+    vertical-align: -2px;
+}
+
+.footer-section li a:hover {
+    color: #d4af37;
+    padding-left: 5px;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.contact-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border: 2px solid #d4af37;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d4af37;
+    font-size: 17px;
+    box-sizing: border-box;
+}
+
+.contact-row strong {
+    display: block;
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.contact-row a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.contact-row a:hover {
+    color: #d4af37;
+}
+
+.contact-row p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   SOCIAL
+===================================================== */
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 55px;
+}
+
+.social-icon {
+    width: 54px;
+    height: 54px;
+    border: 2px solid #d4af37;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #d4af37;
+    font-size: 0;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.social-icon::before {
+    font-size: 15px;
+}
+
+.social-icon:first-child::before {
+    content: "IG";
+}
+
+.social-icon:last-child::before {
+    content: "WA";
+}
+
+.social-icon:hover {
+    background: #d4af37;
+    color: #2b1007;
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   BROCHURE
+===================================================== */
+
+.brochure-box {
+    margin-top: 5px;
+}
+
+.enquiry-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 58px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border: 2px solid #d4af37;
+    border-radius: 6px;
+    background: #d4af37;
+    color: #2b1007;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.enquiry-button span {
+    font-size: 20px;
+}
+
+.enquiry-button:hover {
+    background: transparent;
+    color: #d4af37;
+    transform: translateX(5px);
+}
+
+.brochure-divider {
+    height: 2px;
+    background: #d4af37;
+    margin: 20px 0;
+    opacity: 0.3;
+}
+
+.brochure-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 58px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border: 2px solid #d4af37;
+    border-radius: 6px;
+    background: transparent;
+    color: #d4af37;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.brochure-button span {
+    font-size: 20px;
+}
+
+.brochure-button:hover {
+    background: #d4af37;
+    color: #2b1007;
+}
+
+
+/* =====================================================
+   FOOTER BOTTOM
+===================================================== */
+
+.footer-bottom {
+    width: 100%;
+    padding-bottom: 25px;
+    box-sizing: border-box;
+}
+
+.bottom-line {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.bottom-line span {
+    height: 2px;
+    flex: 1;
+    background: #d4af37;
+}
+
+.bottom-building {
+    color: #d4af37;
+    font-size: 28px;
+    line-height: 1;
+}
+
+.bottom-content {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.bottom-content p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.bottom-links {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.bottom-links a {
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.bottom-links a:hover {
+    color: #d4af37;
+}
+
+.bottom-links b {
+    color: #d4af37;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+    .footer-container {
+        width: 90%;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px 40px;
+        padding: 55px 0 45px;
+    }
+    .footer-brand h2 {
+        font-size: 34px;
+    }
+    .footer-brand p {
+        font-size: 15px;
+    }
+    .footer-section h3 {
+        font-size: 18px;
+    }
+    .footer-section li a {
+        font-size: 15px;
+    }
+    .bottom-content {
+        width: 90%;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+    .footer-container {
+        width: 88%;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 45px 0;
+    }
+    .footer-brand h2 {
+        font-size: 30px;
+    }
+    .dnsb-logo strong {
+        font-size: 17px;
+        letter-spacing: 6px;
+    }
+    .dnsb-logo span {
+        width: 40px;
+    }
+    .footer-brand p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+    .building-icon {
+        margin-top: 30px;
+        width: 80px;
+        height: 100px;
+    }
+    .footer-section h3 {
+        font-size: 17px;
+    }
+    .footer-line {
+        margin-bottom: 20px;
+    }
+    .footer-section li {
+        margin-bottom: 13px;
+    }
+    .footer-section li a {
+        font-size: 14px;
+    }
+    .contact-row {
+        gap: 12px;
+    }
+    .contact-icon {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+    }
+    .contact-row strong {
+        font-size: 15px;
+    }
+    .contact-row a,
+    .contact-row p {
+        font-size: 14px;
+    }
+    .social-icons {
+        margin-bottom: 35px;
+    }
+    .social-icon {
+        width: 48px;
+        height: 48px;
+    }
+    .brochure-button {
+        font-size: 14px;
+        min-height: 52px;
+    }
+    .bottom-line {
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .bottom-content {
+        width: 88%;
+        gap: 12px;
+    }
+    .bottom-content p {
+        font-size: 12px;
+    }
+    .bottom-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    .bottom-links a {
+        font-size: 12px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+    .footer-container {
+        width: 90%;
+    }
+    .footer-brand h2 {
+        font-size: 27px;
+    }
+    .footer-brand p {
+        font-size: 13px;
+    }
+    .social-icons {
+        gap: 10px;
+    }
+    .brochure-button {
+        font-size: 13px;
+        padding: 0 10px;
+    }
+}

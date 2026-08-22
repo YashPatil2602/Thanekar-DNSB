@@ -1,0 +1,18 @@
+/* ================================
+   HERO LOGO
+================================ */
+
+.hero-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.hero-logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}

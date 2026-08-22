@@ -1,0 +1,111 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    height: 100px;
+    background: #2b1208;
+    border-bottom: 2px solid #d4a62a;
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar-inner {
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-logo-image {
+    width: 150px;
+    height: auto;
+    max-height: 70px;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.navbar-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    color: #d4a62a;
+}
+
+
+/* =========================
+   CALL BUTTON
+========================= */
+
+.navbar-call {
+    background: #d4a62a;
+    color: #2b1208;
+    border: none;
+    padding: 15px 28px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.navbar-call:hover {
+    background: #e6bd45;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+    .navbar {
+        height: 80px;
+    }
+    .navbar-inner {
+        padding: 0 20px;
+    }
+    .navbar-logo-image {
+        width: 125px;
+        max-height: 55px;
+    }
+    .navbar-menu {
+        display: none;
+    }
+    .navbar-call {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}

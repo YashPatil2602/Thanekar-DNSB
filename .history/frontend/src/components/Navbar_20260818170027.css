@@ -1,0 +1,104 @@
+.navbar {
+    width: 100%;
+    height: 96px;
+    background: #351408;
+    border-bottom: 2px solid #d8ad24;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-inner {
+    width: 90%;
+    max-width: 1500px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.logo {
+    width: 170px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-title {
+    color: #d8ad24;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo-subtitle {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-top: 4px;
+}
+
+
+/* NAV */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #d8ad24;
+}
+
+
+/* CALL BUTTON */
+
+.call-btn {
+    background: #d8ad24;
+    color: #1c0b04;
+    text-decoration: none;
+    padding: 17px 30px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.call-btn:hover {
+    background: #f0c83d;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+    .navbar {
+        height: auto;
+    }
+    .navbar-inner {
+        flex-wrap: wrap;
+        padding: 15px 0;
+    }
+    .nav-links {
+        width: 100%;
+        order: 3;
+        overflow-x: auto;
+        padding-top: 15px;
+        gap: 22px;
+    }
+    .nav-links a {
+        font-size: 14px;
+    }
+}

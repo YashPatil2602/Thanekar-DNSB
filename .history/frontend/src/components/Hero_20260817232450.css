@@ -1,0 +1,346 @@
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero-section {
+    width: 100%;
+    min-height: 680px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    background: #241109;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   LEFT IMAGE
+========================================= */
+
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 680px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* Dark overlay */
+
+.hero-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 8, 4, 0.35);
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+/* =========================================
+   LEFT TEXT
+========================================= */
+
+.hero-overlay {
+    position: absolute;
+    z-index: 2;
+    left: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff8ed;
+}
+
+.hero-overlay p {
+    margin: 0 0 18px;
+    color: #b88a24;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.hero-overlay h1 {
+    margin: 0;
+    color: #fff8ed;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 58px;
+    line-height: 1.05;
+    font-weight: 700;
+}
+
+.hero-overlay span {
+    display: block;
+    margin-top: 25px;
+    max-width: 650px;
+    color: #fff8ed;
+    font-size: 18px;
+}
+
+.hero-overlay button {
+    margin-top: 30px;
+    padding: 14px 28px;
+    background: #b88a24;
+    color: #fff8ed;
+    border: 1px solid #d4aa45;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.hero-overlay button:hover {
+    background: #d4aa45;
+}
+
+
+/* =========================================
+   RIGHT FORM PANEL
+========================================= */
+
+.hero-form-panel {
+    width: 100%;
+    min-height: 680px;
+    box-sizing: border-box;
+    padding: 35px 35px;
+    background: #32180e;
+    border-left: 2px solid #b88a24;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.hero-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.hero-logo img {
+    width: 145px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+
+/* =========================================
+   SMALL TITLE
+========================================= */
+
+.hero-small-title {
+    margin: 0 0 8px;
+    text-align: center;
+    color: #fff8ed;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================================
+   THANEKAR DNSB
+========================================= */
+
+.hero-form-panel h2 {
+    margin: 0;
+    text-align: center;
+    color: #fff8ed;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 36px;
+    line-height: 1.1;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.hero-description {
+    margin: 50px 0 22px;
+    text-align: center;
+    color: #fff8ed;
+    font-size: 14px;
+    letter-spacing: 0.8px;
+}
+
+
+/* =========================================
+   GOLD WALKTHROUGH
+========================================= */
+
+.hero-gold-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    color: #b88a24;
+    font-size: 12px;
+}
+
+.hero-gold-line span {
+    width: 30px;
+    height: 2px;
+    background: #b88a24;
+}
+
+.hero-tailored {
+    margin: 5px 0 18px;
+    text-align: center;
+    color: #b88a24;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.hero-form {
+    width: 100%;
+}
+
+.hero-form input,
+.hero-form select {
+    width: 100%;
+    height: 44px;
+    margin-bottom: 11px;
+    padding: 0 13px;
+    box-sizing: border-box;
+    background: #fffaf2;
+    color: #32180e;
+    border: 1px solid #b88a24;
+    border-radius: 5px;
+    outline: none;
+    font-size: 13px;
+}
+
+.hero-form input::placeholder {
+    color: #76675b;
+}
+
+
+/* =========================================
+   PHONE
+========================================= */
+
+.phone-row {
+    display: grid;
+    grid-template-columns: 42% 58%;
+    gap: 8px;
+}
+
+
+/* =========================================
+   CONSENT
+========================================= */
+
+.consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    margin: 3px 0 18px;
+    color: #eadcc8;
+    font-size: 8px;
+    line-height: 1.4;
+}
+
+.consent input {
+    width: 13px;
+    height: 13px;
+    margin: 0;
+    accent-color: #b88a24;
+}
+
+
+/* =========================================
+   GET IT NOW
+========================================= */
+
+.hero-submit {
+    width: 100%;
+    height: 48px;
+    background: #b88a24;
+    color: #fff8ed;
+    border: 1px solid #d4aa45;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(184, 138, 36, 0.25);
+}
+
+.hero-submit:hover {
+    background: #d4aa45;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+    .hero-section {
+        grid-template-columns: 60% 40%;
+    }
+    .hero-form-panel {
+        padding: 30px 22px;
+    }
+    .hero-overlay h1 {
+        font-size: 45px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-image {
+        height: 430px;
+    }
+    .hero-overlay {
+        left: 25px;
+        right: 25px;
+    }
+    .hero-overlay h1 {
+        font-size: 40px;
+    }
+    .hero-overlay span {
+        font-size: 14px;
+    }
+    .hero-form-panel {
+        min-height: auto;
+        padding: 40px 25px;
+        border-left: none;
+        border-top: 2px solid #b88a24;
+    }
+    .hero-logo img {
+        width: 135px;
+    }
+    .hero-form-panel h2 {
+        font-size: 32px;
+    }
+    .phone-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}

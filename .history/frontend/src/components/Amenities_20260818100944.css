@@ -1,0 +1,235 @@
+/* =========================
+   AMENITIES
+========================= */
+
+.amenities-section {
+    width: 100%;
+    padding: 90px 6% 100px;
+    box-sizing: border-box;
+    background: #2b1208;
+    border-top: 1px solid #d4a62a;
+    border-bottom: 1px solid #d4a62a;
+}
+
+
+/* HEADING */
+
+.amenities-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 50px;
+}
+
+.amenities-heading p {
+    margin: 0;
+    color: #d4a62a;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.amenities-heading h2 {
+    margin: 0;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 42px;
+    font-weight: 600;
+}
+
+.gold-line {
+    width: 55px;
+    height: 2px;
+    background: #d4a62a;
+}
+
+
+/* WRAPPER */
+
+.amenities-wrapper {
+    position: relative;
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+
+/* GRID */
+
+.amenities-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+
+/* CARD */
+
+.amenity-card {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    background: #1d0b05;
+    border: 1px solid #b88a25;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    transition: all 0.35s ease;
+}
+
+.amenity-card:hover {
+    transform: translateY(-6px);
+    border-color: #e0b83a;
+    box-shadow: 0 15px 35px rgba(212, 166, 42, 0.22);
+}
+
+
+/* IMAGE */
+
+.amenity-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.amenity-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.amenity-card:hover .amenity-image img {
+    transform: scale(1.07);
+}
+
+
+/* DARK OVERLAY */
+
+.amenity-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50%;
+    background: linear-gradient( to bottom, transparent, rgba(20, 7, 2, 0.95));
+    pointer-events: none;
+}
+
+
+/* NAME */
+
+.amenity-name {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    padding: 30px 20px 24px;
+    text-align: center;
+}
+
+.amenity-name h3 {
+    margin: 0;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+/* ARROWS */
+
+.amenities-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #d4a62a;
+    border-radius: 50%;
+    background: #d4a62a;
+    color: #2b1208;
+    font-size: 34px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+}
+
+.amenities-arrow:hover {
+    background: #e7bd3c;
+    border-color: #e7bd3c;
+    transform: translateY(-50%) scale(1.08);
+}
+
+.amenities-left {
+    left: -24px;
+}
+
+.amenities-right {
+    right: -24px;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+    .amenities-section {
+        padding: 75px 5%;
+    }
+    .amenities-grid {
+        gap: 15px;
+    }
+    .amenity-card {
+        height: 300px;
+    }
+    .amenity-name h3 {
+        font-size: 20px;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+    .amenities-section {
+        padding: 65px 20px;
+    }
+    .amenities-heading {
+        gap: 10px;
+        margin-bottom: 35px;
+    }
+    .amenities-heading h2 {
+        font-size: 32px;
+    }
+    .amenities-heading p {
+        display: none;
+    }
+    .gold-line {
+        width: 40px;
+    }
+    .amenities-grid {
+        grid-template-columns: 1fr;
+    }
+    .amenity-card {
+        height: 320px;
+    }
+    .amenity-card:nth-child(2),
+    .amenity-card:nth-child(3) {
+        display: none;
+    }
+    .amenities-left {
+        left: -8px;
+    }
+    .amenities-right {
+        right: -8px;
+    }
+}

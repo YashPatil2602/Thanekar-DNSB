@@ -1,0 +1,202 @@
+/* ================================
+   RIGHT SIDE FORM PANEL
+================================ */
+
+.hero-form-panel {
+    width: 100%;
+    min-height: 620px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #2b160f;
+    /* Premium Brown */
+    border-left: 2px solid #b88a24;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* TOP SMALL TITLE */
+
+.hero-small-title {
+    margin: 0 0 10px;
+    text-align: center;
+    color: #fff8ed;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+}
+
+
+/* MAIN TITLE */
+
+.hero-form-panel h1 {
+    margin: 0;
+    text-align: center;
+    color: #fff8ed;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 42px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+/* SUBTITLE */
+
+.hero-subtitle {
+    margin: 70px 0 30px;
+    text-align: center;
+    color: #fff8ed;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+
+/* ================================
+   GOLD WALKTHROUGH TITLE
+================================ */
+
+.hero-gold-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #b88a24;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+}
+
+.hero-gold-line span {
+    width: 38px;
+    height: 2px;
+    background: #b88a24;
+}
+
+.hero-tailored {
+    margin: 5px 0 20px;
+    text-align: center;
+    color: #b88a24;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+/* ================================
+   FORM
+================================ */
+
+.hero-form {
+    width: 100%;
+}
+
+
+/* INPUTS */
+
+.hero-form input,
+.hero-form select {
+    width: 100%;
+    height: 46px;
+    margin-bottom: 12px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    background: #fffaf2;
+    color: #32180e;
+    border: 1px solid #b88a24;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+}
+
+
+/* INPUT FOCUS */
+
+.hero-form input:focus,
+.hero-form select:focus {
+    border: 2px solid #d4aa45;
+    box-shadow: 0 0 8px rgba(184, 138, 36, 0.35);
+}
+
+
+/* ================================
+   PHONE
+================================ */
+
+.phone-row {
+    display: grid;
+    grid-template-columns: 42% 58%;
+    gap: 10px;
+}
+
+
+/* ================================
+   CONSENT
+================================ */
+
+.consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 3px 0 22px;
+    color: #eadcc8;
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+.consent input {
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    accent-color: #b88a24;
+}
+
+
+/* ================================
+   GET IT NOW BUTTON
+================================ */
+
+.hero-form button {
+    width: 100%;
+    height: 50px;
+    background: #b88a24;
+    color: #fff8ed;
+    border: 1px solid #d4aa45;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 18px rgba(184, 138, 36, 0.25);
+}
+
+
+/* BUTTON HOVER */
+
+.hero-form button:hover {
+    background: #d4aa45;
+    border-color: #e0bd68;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(184, 138, 36, 0.4);
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+    .hero-form-panel {
+        min-height: auto;
+        padding: 45px 25px;
+        border-left: none;
+        border-top: 2px solid #b88a24;
+    }
+    .hero-form-panel h1 {
+        font-size: 32px;
+    }
+    .hero-subtitle {
+        margin-top: 40px;
+    }
+    .phone-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}

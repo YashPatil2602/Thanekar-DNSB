@@ -1,0 +1,88 @@
+import { useEffect, useState } from "react";
+
+function Hero() {
+    const images = [
+        "/images/hero/hero-1.png",
+        "/images/hero/hero-2.png",
+        "/images/hero/hero-3.png",
+    ];
+
+    const [currentImage, setCurrentImage] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentImage((prev) => (prev + 1) % images.length);
+        }, 4000);
+
+        return () => clearInterval(timer);
+    }, []);
+
+    return ( <
+        section className = "hero" >
+
+        { /* Background Image */ } <
+        img src = { images[currentImage] }
+        alt = "Thanekar DNSB"
+        className = "hero-image" /
+        >
+
+        { /* Dark Overlay */ } <
+        div className = "hero-overlay" > < /div>
+
+        { /* Hero Content */ } <
+        div className = "hero-content" >
+
+        <
+        p className = "hero-subtitle" >
+        THANEKAR DNSB <
+        /p>
+
+        <
+        h1 >
+        Premium Living <
+        br / >
+        at Its Finest <
+        /h1>
+
+        <
+        p className = "hero-description" >
+        Experience modern luxury, comfort and elegance in the heart of Thane. <
+        /p>
+
+        <
+        button type = "button"
+        className = "hero-button" >
+        Enquire Now <
+        /button>
+
+        <
+        /div>
+
+        { /* Slider Dots */ } <
+        div className = "hero-dots" >
+
+        {
+            images.map((_, index) => ( <
+                button key = { index }
+                type = "button"
+                onClick = {
+                    () => setCurrentImage(index) }
+                className = {
+                    currentImage === index ?
+                    "hero-dot active" :
+                        "hero-dot"
+                }
+                aria - label = { `Go to slide ${index + 1}` } >
+                < /button>
+            ))
+        }
+
+        <
+        /div>
+
+        <
+        /section>
+    );
+}
+
+export default Hero;

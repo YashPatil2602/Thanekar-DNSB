@@ -1,0 +1,33 @@
+.area-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.area-item {
+    padding: 18px 15px;
+    background: rgba(217, 170, 50, 0.08);
+    border: 1px solid rgba(217, 170, 50, 0.18);
+}
+
+.area-item span {
+    display: block;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.area-item strong {
+    color: #d9aa32;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .area-details {
+        grid-template-columns: 1fr;
+    }
+}

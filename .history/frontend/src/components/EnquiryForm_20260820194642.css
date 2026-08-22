@@ -1,0 +1,467 @@
+/* =========================================
+   ENQUIRY FORM MODAL
+========================================= */
+
+.enquiry-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.enquiry-modal-content {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* CLOSE BUTTON */
+
+.enquiry-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    color: #666;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.enquiry-close-btn:hover {
+    background: #f0f0f0;
+    color: #000;
+}
+
+
+/* MODAL HEADER */
+
+.enquiry-modal-header {
+    background: linear-gradient(135deg, #2b1007 0%, #5a2d1a 100%);
+    color: #ffffff;
+    padding: 40px 30px;
+    text-align: center;
+    border-radius: 12px 12px 0 0;
+}
+
+.enquiry-modal-header h2 {
+    margin: 0 0 10px 0;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #d4af37;
+}
+
+.enquiry-modal-header p {
+    margin: 0;
+    font-size: 16px;
+    color: #e8e8e8;
+    letter-spacing: 0.5px;
+}
+
+
+/* FORM CONTAINER */
+
+.enquiry-form {
+    padding: 40px 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2b1007;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #d4af37;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+
+/* FORM ROW */
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+/* SUBMIT BUTTON */
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #d4af37 0%, #b8960f 100%);
+    color: #2b1007;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #e8c758 0%, #d4af37 100%);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+
+/* SUCCESS MESSAGE */
+
+.enquiry-success {
+    padding: 60px 30px;
+    text-align: center;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background: #4caf50;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: #ffffff;
+    margin: 0 auto 30px;
+    animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.enquiry-success h3 {
+    color: #2b1007;
+    font-size: 28px;
+    margin: 0 0 15px 0;
+    letter-spacing: 0.5px;
+}
+
+.enquiry-success p {
+    color: #666;
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .enquiry-modal-content {
+        max-width: 95%;
+    }
+    .enquiry-modal-header {
+        padding: 30px 20px;
+    }
+    .enquiry-modal-header h2 {
+        font-size: 26px;
+    }
+    .enquiry-form {
+        padding: 30px 20px;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .enquiry-close-btn {
+        top: 15px;
+        right: 15px;
+    }
+}
+
+/* BRANDED ENQUIRY EXPERIENCE */
+
+.enquiry-modal-overlay {
+    padding: 24px;
+    background: rgba(20, 7, 3, 0.82);
+    backdrop-filter: blur(8px);
+}
+
+.enquiry-modal-content {
+    max-width: 760px;
+    max-height: min(92vh, 780px);
+    overflow-y: auto;
+    background: #fffaf0;
+    border: 1px solid rgba(212, 175, 55, 0.65);
+    border-radius: 8px;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.48), 0 0 0 8px rgba(212, 175, 55, 0.08);
+}
+
+.enquiry-modal-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 12%;
+    right: 12%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #f0c95c, transparent);
+    z-index: 2;
+}
+
+.enquiry-modal-header {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    padding: 34px 64px 30px 42px;
+    background: radial-gradient(circle at 18% 30%, rgba(212, 175, 55, 0.2), transparent 28%), linear-gradient(135deg, #241008 0%, #572611 100%);
+    border-bottom: 2px solid #d4af37;
+    text-align: left;
+}
+
+.enquiry-logo {
+    width: 112px;
+    height: 112px;
+    flex: 0 0 112px;
+    object-fit: contain;
+    border: 1px solid rgba(212, 175, 55, 0.75);
+    border-radius: 6px;
+    background: #050505;
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.08), 0 10px 24px rgba(0, 0, 0, 0.32);
+    transform: scale(1.08);
+}
+
+.enquiry-eyebrow {
+    margin: 0 0 10px;
+    color: #d4af37;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.enquiry-modal-header h2 {
+    margin: 0 0 10px;
+    color: #fffaf0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(26px, 4vw, 38px);
+    line-height: 1.1;
+}
+
+.enquiry-subtitle {
+    margin: 0;
+    color: #f5ead7;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.enquiry-close-btn {
+    top: 14px;
+    right: 14px;
+    z-index: 1;
+    color: #f5ead7;
+    border: 1px solid rgba(255, 250, 240, 0.45);
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+.enquiry-close-btn:hover {
+    background: #d4af37;
+    color: #2b1007;
+}
+
+.enquiry-form {
+    padding: 30px 42px 34px;
+    background: linear-gradient(180deg, #fffaf0 0%, #fffdf8 100%);
+}
+
+.enquiry-form-intro {
+    margin: 0 0 22px;
+    color: #6c4a35;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.enquiry-form .form-row {
+    gap: 18px;
+}
+
+.enquiry-form .form-group {
+    margin-bottom: 18px;
+}
+
+.enquiry-form .form-group label {
+    margin-bottom: 7px;
+    color: #2b1007;
+    font-size: 13px;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}
+
+.enquiry-form .form-group input,
+.enquiry-form .form-group textarea {
+    padding: 13px 14px;
+    border: 1px solid #d8c5a1;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #2b1007;
+    font-size: 15px;
+    box-shadow: inset 0 1px 2px rgba(43, 16, 7, 0.04);
+}
+
+.enquiry-form .form-group input:focus,
+.enquiry-form .form-group textarea:focus {
+    border-color: #c9972b;
+    box-shadow: 0 0 0 3px rgba(201, 151, 43, 0.14);
+}
+
+.enquiry-form .form-group textarea {
+    min-height: 84px;
+}
+
+.enquiry-form .submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #e0b943 0%, #bd8a1f 100%);
+    border: 1px solid #e0b943;
+    border-radius: 4px;
+    color: #2b1007;
+    font-size: 15px;
+    letter-spacing: 0.4px;
+    box-shadow: 0 8px 18px rgba(174, 119, 20, 0.22);
+    text-transform: none;
+}
+
+.enquiry-form .submit-btn:hover {
+    background: #e0b943;
+    box-shadow: 0 8px 25px rgba(201, 151, 43, 0.28);
+}
+
+.enquiry-form .submit-btn span {
+    font-size: 20px;
+}
+
+.enquiry-note {
+    margin: 14px 0 0;
+    color: #8a725f;
+    font-size: 12px;
+    text-align: center;
+}
+
+.enquiry-success {
+    padding: 80px 30px;
+    background: #fffaf0;
+    text-align: center;
+}
+
+.enquiry-success h2 {
+    margin: 0 0 12px;
+    color: #2b1007;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.enquiry-success p {
+    margin: 0;
+    color: #6c4a35;
+}
+
+@media (max-width: 600px) {
+    .enquiry-modal-overlay {
+        padding: 12px;
+    }
+
+    .enquiry-modal-header {
+        align-items: flex-start;
+        gap: 16px;
+        padding: 34px 42px 24px 22px;
+    }
+
+    .enquiry-logo {
+        width: 76px;
+        height: 76px;
+        flex-basis: 76px;
+    }
+
+    .enquiry-eyebrow {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .enquiry-subtitle {
+        font-size: 13px;
+    }
+
+    .enquiry-form {
+        padding: 24px 22px 26px;
+    }
+
+    .enquiry-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}

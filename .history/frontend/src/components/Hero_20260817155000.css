@@ -1,0 +1,186 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 720px;
+    overflow: hidden;
+    background: #241109;
+}
+
+
+/* Building Image */
+
+.hero-image-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 72%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 0.5s ease, transform 0.8s ease;
+}
+
+
+/* Overlay */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( 90deg, #241109 0%, rgba(36, 17, 9, 0.96) 25%, rgba(36, 17, 9, 0.55) 48%, rgba(36, 17, 9, 0.08) 75%, rgba(36, 17, 9, 0.15) 100%);
+    z-index: 1;
+}
+
+
+/* Left Content */
+
+.hero-content {
+    position: absolute;
+    z-index: 2;
+    left: 7%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 430px;
+    color: #ffffff;
+}
+
+.hero-subtitle {
+    margin: 0 0 18px;
+    color: #d6ad45;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.hero-content h1 {
+    margin: 0;
+    color: #fff8ee;
+    font-size: 54px;
+    line-height: 1.08;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.hero-content h1 span {
+    color: #d6ad45;
+}
+
+.hero-description {
+    max-width: 390px;
+    margin: 25px 0;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* Button */
+
+.hero-button {
+    padding: 13px 28px;
+    border: 1px solid #d6ad45;
+    background: linear-gradient( 135deg, #a87920, #d6ad45);
+    color: #241109;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+    background: transparent;
+    color: #d6ad45;
+    box-shadow: 0 0 20px rgba(214, 173, 69, 0.2);
+}
+
+
+/* Slider */
+
+.hero-dots {
+    position: absolute;
+    z-index: 3;
+    right: 35px;
+    bottom: 35px;
+    display: flex;
+    gap: 8px;
+}
+
+.hero-dot {
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(36, 17, 9, 0.5);
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    font-size: 11px;
+    transition: 0.3s ease;
+}
+
+.hero-dot.active {
+    border-color: #d6ad45;
+    background: #d6ad45;
+    color: #241109;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 900px) {
+    .hero {
+        height: 650px;
+    }
+    .hero-image-wrapper {
+        width: 100%;
+    }
+    .hero-overlay {
+        background: linear-gradient( 90deg, rgba(36, 17, 9, 0.96) 0%, rgba(36, 17, 9, 0.75) 45%, rgba(36, 17, 9, 0.25) 100%);
+    }
+    .hero-content {
+        left: 6%;
+    }
+    .hero-content h1 {
+        font-size: 46px;
+    }
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+    .hero {
+        height: 620px;
+    }
+    .hero-image-wrapper {
+        width: 100%;
+    }
+    .hero-content {
+        left: 5%;
+        right: 5%;
+        width: auto;
+    }
+    .hero-content h1 {
+        font-size: 38px;
+    }
+    .hero-subtitle {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+    .hero-description {
+        max-width: 300px;
+        font-size: 14px;
+    }
+    .hero-dots {
+        right: 20px;
+        bottom: 20px;
+    }
+}

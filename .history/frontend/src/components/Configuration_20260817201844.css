@@ -1,0 +1,297 @@
+/* =========================================
+   CONFIGURATION SECTION
+========================================= */
+
+.configuration-section {
+    width: 100%;
+    background: #2b170f;
+    color: #f5e7c8;
+    padding: 110px 0;
+}
+
+.configuration-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.configuration-heading {
+    max-width: 750px;
+    margin-bottom: 60px;
+}
+
+.configuration-label {
+    margin: 0 0 18px;
+    color: #b88a24;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.configuration-heading h2 {
+    margin: 0;
+    color: #fff8ea;
+    font-size: 58px;
+    line-height: 1.1;
+    font-weight: 600;
+}
+
+.configuration-heading h2 span {
+    color: #b88a24;
+}
+
+.configuration-line {
+    width: 80px;
+    height: 3px;
+    background: #b88a24;
+    margin: 28px 0;
+}
+
+.configuration-intro {
+    max-width: 680px;
+    margin: 0;
+    color: #f5e7c8;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   CONFIGURATION CARDS
+========================================= */
+
+.configuration-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 70px;
+}
+
+.configuration-card {
+    position: relative;
+    padding: 45px;
+    background: #351d14;
+    border: 1px solid rgba(184, 138, 36, 0.5);
+    min-height: 390px;
+    transition: all 0.4s ease;
+}
+
+.configuration-card:hover {
+    transform: translateY(-6px);
+    border-color: #b88a24;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* FEATURED 3 BHK */
+
+.featured-card {
+    background: linear-gradient( 145deg, #3a2116, #2b170f);
+    border-color: #b88a24;
+}
+
+
+/* CARD NUMBER */
+
+.card-number {
+    color: #b88a24;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+
+/* CARD TITLE */
+
+.configuration-card h3 {
+    margin: 0;
+    color: #fff8ea;
+    font-size: 42px;
+    font-weight: 600;
+}
+
+.card-subtitle {
+    margin: 10px 0 25px;
+    color: #d9c6a5;
+    font-size: 15px;
+}
+
+
+/* DIVIDER */
+
+.card-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(184, 138, 36, 0.35);
+    margin-bottom: 30px;
+}
+
+
+/* AREA */
+
+.area-title {
+    color: #b88a24;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+
+/* AREA LIST */
+
+.area-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.area-list div {
+    padding: 15px;
+    background: rgba(255, 248, 234, 0.04);
+    border-left: 2px solid #b88a24;
+}
+
+.area-list strong {
+    display: block;
+    color: #fff8ea;
+    font-size: 24px;
+}
+
+.area-list span {
+    display: block;
+    margin-top: 4px;
+    color: #cdbb9d;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.configuration-features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid rgba(184, 138, 36, 0.5);
+    border-bottom: 1px solid rgba(184, 138, 36, 0.5);
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 35px 25px;
+    border-right: 1px solid rgba(184, 138, 36, 0.35);
+}
+
+.feature-item:last-child {
+    border-right: none;
+}
+
+
+/* FEATURE NUMBER */
+
+.feature-icon {
+    min-width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #b88a24;
+    color: #b88a24;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* FEATURE TEXT */
+
+.feature-item h4 {
+    margin: 0 0 8px;
+    color: #fff8ea;
+    font-size: 16px;
+}
+
+.feature-item p {
+    margin: 0;
+    color: #cdbb9d;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+    .configuration-grid {
+        grid-template-columns: 1fr;
+    }
+    .configuration-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .feature-item:nth-child(2) {
+        border-right: none;
+    }
+    .feature-item:nth-child(1),
+    .feature-item:nth-child(2) {
+        border-bottom: 1px solid rgba(184, 138, 36, 0.35);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+    .configuration-section {
+        padding: 75px 0;
+    }
+    .configuration-container {
+        width: 88%;
+    }
+    .configuration-label {
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+    .configuration-heading h2 {
+        font-size: 40px;
+    }
+    .configuration-intro {
+        font-size: 15px;
+    }
+    .configuration-grid {
+        gap: 20px;
+    }
+    .configuration-card {
+        padding: 30px 25px;
+        min-height: auto;
+    }
+    .configuration-card h3 {
+        font-size: 35px;
+    }
+    .area-list {
+        grid-template-columns: 1fr;
+    }
+    .configuration-features {
+        grid-template-columns: 1fr;
+    }
+    .feature-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(184, 138, 36, 0.35);
+    }
+    .feature-item:last-child {
+        border-bottom: none;
+    }
+}

@@ -1,0 +1,175 @@
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.about-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 110px 6%;
+    /* WARM BEIGE BACKGROUND */
+    background: #ede2d0;
+    color: #6b5142;
+}
+
+.about-container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   ABOUT THANЕKAR DNSB
+========================================= */
+
+.about-heading {
+    margin-bottom: 65px;
+}
+
+.about-small-title {
+    margin: 0 0 20px;
+    /* RICH GOLD */
+    color: #b88a24;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.about-heading h2 {
+    margin: 0;
+    /* RICH GOLD */
+    color: #b88a24;
+    font-size: 64px;
+    line-height: 1.08;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+}
+
+.about-heading h2 span {
+    color: #b88a24;
+}
+
+.about-line {
+    width: 90px;
+    height: 3px;
+    margin-top: 30px;
+    background: #b88a24;
+}
+
+
+/* =========================================
+   PROJECT DESCRIPTION
+========================================= */
+
+.about-project {
+    max-width: 1050px;
+    margin-bottom: 90px;
+}
+
+.about-project h3 {
+    margin: 0 0 28px;
+    /* RICH GOLD */
+    color: #b88a24;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.about-project p {
+    margin: 0 0 20px;
+    /* WARM BROWN TEXT */
+    color: #6b5142;
+    font-size: 17px;
+    line-height: 1.85;
+}
+
+
+/* =========================================
+   ABOUT DEVELOPER
+========================================= */
+
+.about-developer {
+    max-width: 1050px;
+    padding-top: 65px;
+    border-top: 1px solid #d2c2ad;
+}
+
+.developer-label {
+    margin: 0 0 20px;
+    /* RICH GOLD */
+    color: #b88a24;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.about-developer h3 {
+    margin: 0;
+    /* RICH GOLD */
+    color: #b88a24;
+    font-size: 52px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.about-developer h3 span {
+    color: #b88a24;
+}
+
+.developer-line {
+    width: 90px;
+    height: 3px;
+    margin: 28px 0 35px;
+    background: #b88a24;
+}
+
+.about-developer p {
+    margin: 0 0 20px;
+    /* WARM BROWN */
+    color: #6b5142;
+    font-size: 17px;
+    line-height: 1.85;
+}
+
+.about-developer .developer-last-line {
+    margin-top: 30px;
+    color: #5a4032;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+    .about-section {
+        padding: 70px 22px;
+    }
+    .about-small-title {
+        font-size: 17px;
+        letter-spacing: 2px;
+    }
+    .about-heading h2 {
+        font-size: 40px;
+        line-height: 1.12;
+    }
+    .about-project h3 {
+        font-size: 26px;
+    }
+    .about-project p,
+    .about-developer p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+    .about-developer {
+        padding-top: 45px;
+    }
+    .developer-label {
+        font-size: 17px;
+        letter-spacing: 2px;
+    }
+    .about-developer h3 {
+        font-size: 34px;
+    }
+}

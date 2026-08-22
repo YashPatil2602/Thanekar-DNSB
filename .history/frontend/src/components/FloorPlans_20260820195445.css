@@ -1,0 +1,290 @@
+/* ================================
+   FLOOR PLANS SECTION
+================================ */
+
+.floor-plans-section {
+    width: 100%;
+    min-height: 100vh;
+    background: #321208;
+    padding: 80px 5%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* MAIN CONTAINER */
+
+.floor-plans-container {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+
+/* ================================
+   HEADING
+================================ */
+
+.floor-plans-title {
+    margin: 0;
+    text-align: center;
+    color: #d9a900;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.floor-plans-subtitle {
+    margin: 22px auto 60px;
+    text-align: center;
+    color: #f1d37a;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    max-width: 600px;
+}
+
+
+/* ================================
+   GRID
+================================ */
+
+.floor-plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px;
+    align-items: stretch;
+}
+
+
+/* ================================
+   CARD
+================================ */
+
+.floor-plan-card {
+    display: flex;
+    flex-direction: row;
+    min-height: 320px;
+    overflow: hidden;
+    background: #35150b;
+    border: 2px solid #d9a900;
+    border-radius: 18px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.floor-plan-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(217, 169, 0, 0.2);
+}
+
+
+/* ================================
+   IMAGE
+================================ */
+
+.floor-plan-image-container {
+    width: 45%;
+    height: auto;
+    min-height: 320px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.floor-plan-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #ffffff;
+    padding: 20px;
+}
+
+.floor-plan-pdf {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    border: 0;
+    background: #ffffff;
+}
+
+
+/* ================================
+   DETAILS
+================================ */
+
+.floor-plan-details {
+    width: 55%;
+    padding: 40px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.floor-plan-project {
+    margin: 0 0 12px 0;
+    color: #d9a900;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.floor-plan-title {
+    margin: 0 0 20px 0;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+
+/* ================================
+   GOLD DIVIDER
+================================ */
+
+.gold-divider {
+    width: 60px;
+    height: 3px;
+    background: #d9a900;
+    margin: 0 0 25px 0;
+    position: relative;
+}
+
+.gold-divider span {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #d9a900;
+    border-radius: 50%;
+    left: 24px;
+    top: -3px;
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+.view-plan-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 28px;
+    background: transparent;
+    border: 2px solid #d9a900;
+    border-radius: 8px;
+    color: #d9a900;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.view-plan-btn:hover {
+    background: #d9a900;
+    color: #321208;
+    transform: translateX(5px);
+}
+
+.view-plan-btn:active {
+    transform: translateX(3px);
+}
+
+
+/* ================================
+   TABLET (1000px and below)
+================================ */
+
+@media (max-width: 1000px) {
+    .floor-plans-section {
+        padding: 70px 4%;
+    }
+    .floor-plans-title {
+        font-size: 46px;
+    }
+    .floor-plans-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .floor-plan-card {
+        min-height: 300px;
+        flex-direction: row;
+    }
+    .floor-plan-image-container {
+        width: 40%;
+        min-height: 300px;
+    }
+    .floor-plan-details {
+        width: 60%;
+        padding: 30px 25px;
+    }
+    .floor-plan-title {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+}
+
+
+/* ================================
+   MOBILE (650px and below)
+================================ */
+
+@media (max-width: 650px) {
+    .floor-plans-section {
+        padding: 60px 20px;
+        min-height: auto;
+    }
+    .floor-plans-title {
+        font-size: 38px;
+    }
+    .floor-plans-subtitle {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+    .floor-plans-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .floor-plan-card {
+        flex-direction: column;
+        min-height: auto;
+        max-height: none;
+    }
+    .floor-plan-image-container {
+        width: 100%;
+        min-height: 250px;
+        height: 250px;
+    }
+    .floor-plan-details {
+        width: 100%;
+        padding: 25px;
+    }
+    .floor-plan-title {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+    .floor-plan-project {
+        font-size: 12px;
+    }
+    .view-plan-btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}

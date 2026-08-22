@@ -1,0 +1,151 @@
+.location-section {
+    width: 100%;
+    padding: 70px 5%;
+    background: #2b1007;
+    box-sizing: border-box;
+}
+
+.location-container {
+    width: 90%;
+    max-width: 1400px;
+    min-height: 520px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    border: 2px solid #d4af37;
+}
+
+.location-content {
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #35150b;
+}
+
+.location-small-title {
+    margin: 0 0 18px;
+    color: #d4af37;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.location-content h2 {
+    margin: 0 0 25px;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 56px;
+    line-height: 1.1;
+}
+
+.location-description {
+    max-width: 500px;
+    margin: 0 0 35px;
+    color: #ffffff;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.location-button {
+    display: inline-block;
+    padding: 16px 32px;
+    background: #d4af37;
+    color: #1b0b05;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.location-button:hover {
+    background: #edc84a;
+    transform: translateY(-2px);
+}
+
+.location-map {
+    width: 100%;
+    min-height: 520px;
+}
+
+.location-map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
+    display: block;
+    border: 0;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .location-container {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    .location-content {
+        padding: 50px 30px;
+    }
+    .location-content h2 {
+        font-size: 45px;
+    }
+    .location-map {
+        min-height: 400px;
+    }
+    .location-map iframe {
+        min-height: 400px;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .location-section {
+        padding: 50px 20px;
+    }
+    .location-content {
+        padding: 40px 20px;
+    }
+    .location-small-title {
+        font-size: 13px;
+        letter-spacing: 3px;
+    }
+    .location-content h2 {
+        font-size: 38px;
+    }
+    .location-description {
+        font-size: 15px;
+    }
+    .location-button {
+        padding: 14px 25px;
+    }
+    .location-map {
+        min-height: 350px;
+    }
+    .location-map iframe {
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .location-section {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .location-content {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .location-small-title {
+        letter-spacing: 2px;
+    }
+    .location-map,
+    .location-map iframe {
+        min-height: 300px;
+    }
+}

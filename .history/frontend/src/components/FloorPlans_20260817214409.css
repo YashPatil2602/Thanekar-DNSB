@@ -1,0 +1,224 @@
+/* ================================
+   FLOOR PLANS
+================================ */
+
+.floor-plans-section {
+    width: 100%;
+    padding: 90px 0;
+    background: #241109;
+    color: #fff8ec;
+}
+
+.floor-plans-container {
+    width: 90%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+
+/* ================================
+   HEADING
+================================ */
+
+.floor-plans-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.floor-plans-label {
+    margin: 0 0 15px;
+    color: #c09228;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.floor-plans-heading h2 {
+    margin: 0;
+    color: #fff7e8;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.15;
+}
+
+.floor-plans-heading h2 span {
+    color: #c09228;
+}
+
+.floor-gold-line {
+    width: 75px;
+    height: 2px;
+    margin: 22px auto;
+    background: #c09228;
+}
+
+.floor-plans-description {
+    margin: 0;
+    color: #eadcc8;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* ================================
+   GRID
+================================ */
+
+.floor-plans-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+
+/* ================================
+   CARD
+================================ */
+
+.floor-plan-card {
+    display: grid;
+    grid-template-columns: 48% 52%;
+    min-height: 210px;
+    overflow: hidden;
+    background: #2c160d;
+    border: 1px solid #9a6818;
+    border-radius: 7px;
+    box-shadow: inset 0 0 0 1px rgba(192, 146, 40, 0.08), 0 8px 22px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+.floor-plan-card:hover {
+    border-color: #c09228;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(192, 146, 40, 0.08);
+}
+
+
+/* ================================
+   PDF AREA
+================================ */
+
+.floor-plan-image {
+    height: 210px;
+    padding: 10px;
+    background: #f1e9dc;
+    border-right: 1px solid #9a6818;
+    overflow: hidden;
+}
+
+.floor-plan-image object {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+    background: #f1e9dc;
+}
+
+
+/* ================================
+   CARD TEXT
+================================ */
+
+.floor-plan-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px 28px;
+}
+
+.floor-project-name {
+    margin: 0 0 10px;
+    color: #c09228;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+
+.floor-plan-info h3 {
+    margin: 0;
+    color: #fff7e8;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.small-gold-line {
+    width: 38px;
+    height: 2px;
+    margin-top: 20px;
+    background: #c09228;
+}
+
+
+/* ================================
+   PDF FALLBACK
+================================ */
+
+.floor-plan-image a {
+    color: #241109;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+    .floor-plans-grid {
+        grid-template-columns: 1fr;
+    }
+    .floor-plan-card {
+        grid-template-columns: 45% 55%;
+    }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+    .floor-plans-section {
+        padding: 65px 0;
+    }
+    .floor-plans-container {
+        width: 92%;
+    }
+    .floor-plans-heading {
+        margin-bottom: 35px;
+    }
+    .floor-plans-heading h2 {
+        font-size: 34px;
+    }
+    .floor-plans-description {
+        font-size: 14px;
+    }
+    .floor-plans-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .floor-plan-card {
+        grid-template-columns: 45% 55%;
+        min-height: 150px;
+    }
+    .floor-plan-image {
+        height: 150px;
+        padding: 6px;
+    }
+    .floor-plan-info {
+        padding: 15px 17px;
+    }
+    .floor-project-name {
+        font-size: 10px;
+        margin-bottom: 7px;
+    }
+    .floor-plan-info h3 {
+        font-size: 18px;
+    }
+    .small-gold-line {
+        margin-top: 12px;
+    }
+}
