@@ -10,3 +10,12 @@ target/
 *.log
 *.tmp
 *.cache
+
+# Python virtual environment
+backend/venv/
+venv/
+.venv/
+
+# Python cache
+_pycache_/
+*.py[cod]
