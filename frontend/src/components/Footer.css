@@ -6,7 +6,7 @@
     width: 100%;
     background: #2b1007;
     color: #ffffff;
-    border-top: 2px solid #d4af37;
+    border-top: 2px solid #c9a227;
     box-sizing: border-box;
 }
 
@@ -33,7 +33,7 @@
 
 .footer-brand h2 {
     margin: 0;
-    color: #d4af37;
+    color: #c9a227;
     font-size: 38px;
     font-weight: 800;
     letter-spacing: 2px;
@@ -49,7 +49,7 @@
 .dnsb-logo span {
     width: 55px;
     height: 3px;
-    background: #d4af37;
+    background: #c9a227;
     display: block;
 }
 
@@ -76,7 +76,7 @@
     width: 100px;
     height: 125px;
     margin-top: 45px;
-    border-bottom: 4px solid #d4af37;
+    border-bottom: 4px solid #c9a227;
 }
 
 .building-main {
@@ -85,7 +85,7 @@
     left: 34px;
     width: 32px;
     height: 105px;
-    border: 4px solid #d4af37;
+    border: 4px solid #c9a227;
     border-bottom: none;
 }
 
@@ -95,7 +95,7 @@
     left: 12px;
     width: 18px;
     height: 70px;
-    border: 4px solid #d4af37;
+    border: 4px solid #c9a227;
     border-bottom: none;
 }
 
@@ -105,7 +105,7 @@
     right: 12px;
     width: 18px;
     height: 82px;
-    border: 4px solid #d4af37;
+    border: 4px solid #c9a227;
     border-bottom: none;
 }
 
@@ -123,7 +123,7 @@
     justify-content: center;
     background: rgba(212, 175, 55, 0.05);
     border-radius: 12px;
-    border: 2px solid #d4af37;
+    border: 2px solid #c9a227;
 }
 
 .footer-logo {
@@ -140,7 +140,7 @@
 
 .footer-section h3 {
     margin: 0;
-    color: #d4af37;
+    color: #c9a227;
     font-size: 20px;
     font-weight: 800;
     letter-spacing: 0.5px;
@@ -151,7 +151,7 @@
     height: 3px;
     margin-top: 12px;
     margin-bottom: 24px;
-    background: #d4af37;
+    background: #c9a227;
 }
 
 
@@ -178,14 +178,14 @@
 
 .footer-section li a::before {
     content: "›";
-    color: #d4af37;
+    color: #c9a227;
     font-size: 24px;
     margin-right: 12px;
     vertical-align: -2px;
 }
 
 .footer-section li a:hover {
-    color: #d4af37;
+    color: #c9a227;
     padding-left: 5px;
 }
 
@@ -210,12 +210,12 @@
     width: 40px;
     height: 40px;
     min-width: 40px;
-    border: 2px solid #d4af37;
+    border: 2px solid #c9a227;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #d4af37;
+    color: #c9a227;
     font-size: 17px;
     box-sizing: border-box;
 }
@@ -235,7 +235,7 @@
 }
 
 .contact-row a:hover {
-    color: #d4af37;
+    color: #c9a227;
 }
 
 .contact-row p {
@@ -259,13 +259,13 @@
 .social-icon {
     width: 54px;
     height: 54px;
-    border: 2px solid #d4af37;
+    border: 2px solid #c9a227;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #d4af37;
+    color: #c9a227;
     font-size: 0;
     text-decoration: none;
     transition: 0.3s ease;
@@ -284,7 +284,7 @@
 }
 
 .social-icon:hover {
-    background: #d4af37;
+    background: #c9a227;
     color: #2b1007;
     transform: translateY(-3px);
 }
@@ -307,9 +307,9 @@
     min-height: 58px;
     padding: 0 20px;
     box-sizing: border-box;
-    border: 2px solid #d4af37;
+    border: 2px solid #c9a227;
     border-radius: 6px;
-    background: #d4af37;
+    background: #c9a227;
     color: #2b1007;
     font-size: 16px;
     font-weight: 700;
@@ -325,13 +325,13 @@
 
 .enquiry-button:hover {
     background: transparent;
-    color: #d4af37;
+    color: #c9a227;
     transform: translateX(5px);
 }
 
 .brochure-divider {
     height: 2px;
-    background: #d4af37;
+    background: #c9a227;
     margin: 20px 0;
     opacity: 0.3;
 }
@@ -345,10 +345,10 @@
     min-height: 58px;
     padding: 0 20px;
     box-sizing: border-box;
-    border: 2px solid #d4af37;
+    border: 2px solid #c9a227;
     border-radius: 6px;
     background: transparent;
-    color: #d4af37;
+    color: #c9a227;
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
@@ -360,7 +360,7 @@
 }
 
 .brochure-button:hover {
-    background: #d4af37;
+    background: #c9a227;
     color: #2b1007;
 }
 
@@ -387,11 +387,11 @@
 .bottom-line span {
     height: 2px;
     flex: 1;
-    background: #d4af37;
+    background: #c9a227;
 }
 
 .bottom-building {
-    color: #d4af37;
+    color: #c9a227;
     font-size: 28px;
     line-height: 1;
 }
@@ -426,11 +426,11 @@
 }
 
 .bottom-links a:hover {
-    color: #d4af37;
+    color: #c9a227;
 }
 
 .bottom-links b {
-    color: #d4af37;
+    color: #c9a227;
 }
 
 

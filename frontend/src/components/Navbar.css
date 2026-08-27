@@ -5,7 +5,7 @@
 .navbar {
     width: 100%;
     background: #2b1007;
-    border-bottom: 2px solid #d4af37;
+    border-bottom: 2px solid #c9a227;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -47,7 +47,7 @@
 }
 
 .logo-main {
-    color: #d4af37;
+    color: #c9a227;
     font-family: Arial, sans-serif;
     font-size: 27px;
     font-weight: 800;
@@ -85,7 +85,7 @@
 }
 
 .nav-links a:hover {
-    color: #d4af37;
+    color: #c9a227;
 }
 
 .menu-toggle {
@@ -93,7 +93,7 @@
     width: 44px;
     height: 44px;
     padding: 9px;
-    border: 1px solid #d4af37;
+    border: 1px solid #c9a227;
     border-radius: 6px;
     background: transparent;
     cursor: pointer;
@@ -107,7 +107,7 @@
     display: block;
     width: 22px;
     height: 2px;
-    background: #d4af37;
+    background: #c9a227;
     transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
@@ -145,8 +145,8 @@
     justify-content: center;
     padding: 15px 20px;
     background: transparent;
-    color: #d4af37;
-    border: 1px solid #d4af37;
+    color: #c9a227;
+    border: 1px solid #c9a227;
     border-radius: 6px;
     font-family: Arial, sans-serif;
     font-size: 15px;
@@ -157,7 +157,7 @@
 }
 
 .brochure-btn:hover {
-    background: #d4af37;
+    background: #c9a227;
     color: #2b1007;
 }
 
@@ -251,7 +251,7 @@
     top: calc(100% + 12px);
     min-width: 145px;
     padding: 12px 16px;
-    background: #d4af37;
+    background: #c9a227;
     color: #2b1007;
     border-radius: 8px;
     white-space: nowrap;
@@ -293,9 +293,9 @@
     align-items: center;
     justify-content: center;
     padding: 16px 24px;
-    background: #d4af37;
+    background: #c9a227;
     color: #2b1007 !important;
-    border: 1px solid #d4af37;
+    border: 1px solid #c9a227;
     border-radius: 6px;
     font-family: Arial, sans-serif;
     cursor: pointer;
@@ -308,7 +308,7 @@
 
 .call-btn:hover {
     background: transparent;
-    color: #d4af37 !important;
+    color: #c9a227 !important;
 }
 
 @media (max-width: 1100px) {
@@ -381,7 +381,7 @@
         align-items: stretch;
         gap: 0;
         background: #2b1007;
-        border-bottom: 0 solid #d4af37;
+        border-bottom: 0 solid #c9a227;
         opacity: 0;
         pointer-events: none;
         transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;

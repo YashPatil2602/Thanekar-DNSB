@@ -30,7 +30,7 @@
 .floor-plans-title {
     margin: 0;
     text-align: center;
-    color: #d9a900;
+    color: #c9a227;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 56px;
     font-weight: 700;
@@ -40,7 +40,7 @@
 .floor-plans-subtitle {
     margin: 22px auto 60px;
     text-align: center;
-    color: #f1d37a;
+    color: #d7ba63;
     font-family: Arial, sans-serif;
     font-size: 18px;
     letter-spacing: 0.5px;
@@ -70,7 +70,7 @@
     min-height: 320px;
     overflow: hidden;
     background: #35150b;
-    border: 2px solid #d9a900;
+    border: 2px solid #c9a227;
     border-radius: 18px;
     box-sizing: border-box;
     min-width: 0;
@@ -135,7 +135,7 @@
 
 .floor-plan-project {
     margin: 0 0 12px 0;
-    color: #d9a900;
+    color: #c9a227;
     font-family: Arial, sans-serif;
     font-size: 14px;
     font-weight: 600;
@@ -160,7 +160,7 @@
 .gold-divider {
     width: 60px;
     height: 3px;
-    background: #d9a900;
+    background: #c9a227;
     margin: 0 0 25px 0;
     position: relative;
 }
@@ -169,7 +169,7 @@
     position: absolute;
     width: 8px;
     height: 8px;
-    background: #d9a900;
+    background: #c9a227;
     border-radius: 50%;
     left: 24px;
     top: -3px;
@@ -185,9 +185,9 @@
     align-items: center;
     padding: 14px 28px;
     background: transparent;
-    border: 2px solid #d9a900;
+    border: 2px solid #c9a227;
     border-radius: 8px;
-    color: #d9a900;
+    color: #c9a227;
     font-family: Arial, sans-serif;
     font-size: 15px;
     font-weight: 700;
@@ -198,7 +198,7 @@
 }
 
 .view-plan-btn:hover {
-    background: #d9a900;
+    background: #c9a227;
     color: #321208;
     transform: translateX(5px);
 }

@@ -12,7 +12,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: 40% 60%;
-    border: 2px solid #d4af37;
+    border: 2px solid #c9a227;
 }
 
 .location-content {
@@ -27,7 +27,7 @@
 
 .location-small-title {
     margin: 0 0 18px;
-    color: #d4af37;
+    color: #c9a227;
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 4px;
@@ -52,7 +52,7 @@
 .location-button {
     display: inline-block;
     padding: 16px 32px;
-    background: #d4af37;
+    background: #c9a227;
     color: #1b0b05;
     text-decoration: none;
     border-radius: 5px;
@@ -62,7 +62,7 @@
 }
 
 .location-button:hover {
-    background: #edc84a;
+    background: #e3c66b;
     transform: translateY(-2px);
 }
 

@@ -140,8 +140,8 @@
     background: linear-gradient(
         90deg,
         #8d6014,
-        #f5d675,
-        #b67c18
+        #e3c66b,
+        #a67c00
     );
 
     box-shadow:
@@ -238,7 +238,7 @@
             #120704 100%
         );
 
-    border: 1px solid #d4af37;
+    border: 1px solid #c9a227;
 
     box-shadow:
         0 22px 58px rgba(0, 0, 0, 0.44),
@@ -568,8 +568,8 @@
         120deg,
         #9a6717,
         #d1a239,
-        #f3d372,
-        #b67b1c
+        #e3c66b,
+        #a67c00
     );
 
     color: #211006;
@@ -753,7 +753,7 @@
 
     border: 1px solid #d2a53b;
 
-    color: #efd173;
+    color: #e3c66b;
 
     text-decoration: none;
 
@@ -782,7 +782,7 @@
     background: linear-gradient(
         120deg,
         #a87217,
-        #e1b947,
+        #c9a227,
         #ffe68f
     );
 
@@ -952,7 +952,7 @@
     }
 
     .pricing-featured {
-        border-color: #d4af37;
+        border-color: #c9a227;
         box-shadow:
             0 18px 38px rgba(0, 0, 0, 0.38),
             0 0 18px rgba(212, 175, 55, 0.18),

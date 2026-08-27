@@ -8,7 +8,7 @@
     display: grid;
     grid-template-columns: 70% 30%;
     background: #2b1209;
-    border-bottom: 2px solid #c9972b;
+    border-bottom: 2px solid #c9a227;
 }
 
 
@@ -69,7 +69,7 @@
     margin-bottom: 22px;
     font-size: 18px;
     letter-spacing: 3px;
-    color: #d4a72c;
+    color: #c9a227;
     font-weight: 600;
 }
 
@@ -99,18 +99,18 @@
     display: inline-block;
     margin-top: 30px;
     padding: 16px 32px;
-    background: #c9972b;
+    background: #c9a227;
     color: #2b1209;
     text-decoration: none;
     font-size: 16px;
     font-weight: 700;
     border-radius: 5px;
-    border: 1px solid #e0b943;
+    border: 1px solid #e3c66b;
     transition: 0.3s ease;
 }
 
 .hero-button:hover {
-    background: #e0b943;
+    background: #e3c66b;
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(201, 151, 43, 0.35);
 }
@@ -134,7 +134,7 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: 1px solid #d4a72c;
+    border: 1px solid #c9a227;
     background: transparent;
     color: #fffaf0;
     cursor: pointer;
@@ -143,7 +143,7 @@
 }
 
 .hero-dots button.active {
-    background: #d4a72c;
+    background: #c9a227;
     color: #2b1209;
 }
 
@@ -157,7 +157,7 @@
     padding: 55px 45px;
     background: linear-gradient( 145deg, #35170c, #241008);
     color: #fffaf0;
-    border-left: 1px solid #c9972b;
+    border-left: 1px solid #c9a227;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -197,7 +197,7 @@
     align-items: center;
     justify-content: center;
     gap: 12px;
-    color: #d4a72c;
+    color: #c9a227;
     font-size: 14px;
     letter-spacing: 1px;
 }
@@ -205,12 +205,12 @@
 .form-heading span {
     width: 35px;
     height: 2px;
-    background: #d4a72c;
+    background: #c9a227;
 }
 
 .form-tagline {
     text-align: center;
-    color: #d4a72c;
+    color: #c9a227;
     font-weight: 600;
     margin: 8px 0 25px;
 }
@@ -231,7 +231,7 @@
     height: 48px;
     margin-bottom: 14px;
     padding: 0 15px;
-    border: 1px solid #d4a72c;
+    border: 1px solid #c9a227;
     border-radius: 5px;
     background: #fffaf0;
     color: #4a2918;
@@ -241,7 +241,7 @@
 
 .hero-form input:focus,
 .hero-form select:focus {
-    border-color: #e5bd45;
+    border-color: #c9a227;
     box-shadow: 0 0 0 2px rgba(212, 167, 44, 0.18);
 }
 
@@ -288,9 +288,9 @@
 .form-submit {
     width: 100%;
     height: 52px;
-    border: 1px solid #e0b943;
+    border: 1px solid #e3c66b;
     border-radius: 5px;
-    background: #c9972b;
+    background: #c9a227;
     color: #2b1209;
     font-size: 17px;
     font-weight: 700;
@@ -299,7 +299,7 @@
 }
 
 .form-submit:hover {
-    background: #e0b943;
+    background: #e3c66b;
     box-shadow: 0 8px 25px rgba(201, 151, 43, 0.35);
 }
 
@@ -314,7 +314,7 @@
         min-height: auto;
         padding: 55px 12%;
         border-left: none;
-        border-top: 1px solid #c9972b;
+        border-top: 1px solid #c9a227;
     }
 }
 
@@ -335,7 +335,7 @@
         min-height: auto;
         padding: 45px 25px;
         border-left: none;
-        border-top: 1px solid #c9972b;
+        border-top: 1px solid #c9a227;
     }
     .hero-content {
         left: 7%;

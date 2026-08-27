@@ -1,0 +1,447 @@
+
+/* =========================================================
+   FINAL PREMIUM GOLD THEME
+   Client requirement:
+   All yellow text / buttons / boxes / borders should
+   visually appear as premium metallic gold.
+   ========================================================= */
+
+:root {
+    --lux-gold-deep: #74500f;
+    --lux-gold-dark: #956b17;
+    --lux-gold: #c9a227;
+    --lux-gold-rich: #d4af37;
+    --lux-gold-light: #f1d98d;
+    --lux-gold-border: #b88b2a;
+    --lux-gold-soft: rgba(201, 162, 39, 0.48);
+
+    --lux-gold-text:
+        linear-gradient(
+            90deg,
+            #7b5511 0%,
+            #a87919 18%,
+            #d4af37 38%,
+            #f1d98d 50%,
+            #d4af37 64%,
+            #a87919 82%,
+            #74500f 100%
+        );
+
+    --lux-gold-button:
+        linear-gradient(
+            135deg,
+            #74500f 0%,
+            #9b7019 18%,
+            #c9a227 38%,
+            #e2c76d 54%,
+            #f1d98d 62%,
+            #c09627 78%,
+            #74500f 100%
+        );
+
+    --lux-gold-line:
+        linear-gradient(
+            90deg,
+            #74500f,
+            #c9a227,
+            #f1d98d,
+            #c9a227,
+            #74500f
+        );
+}
+
+
+/* =========================================================
+   METALLIC GOLD TEXT
+   ========================================================= */
+
+.logo-main,
+
+.hero-small-title,
+.form-heading,
+.form-tagline,
+
+.about-small-title,
+.about-content h2 span,
+.developer-small-title,
+.developer-content h2 span,
+
+.configuration-label,
+.configuration-heading h2 span,
+.card-number,
+.area-title,
+
+.features-heading > span,
+.features-heading em,
+.feature-index,
+
+.floor-plans-title,
+.floor-plan-project,
+
+.location-small-title,
+
+.pricing-label,
+.pricing-heading h2 span,
+.pricing-type,
+.pricing-type-gold,
+.pricing-featured h3,
+.price,
+.price span,
+.featured-price,
+.offer-content > p,
+.offer-content h3 span,
+
+.footer-brand h2,
+.footer-section h3,
+
+.enquiry-eyebrow {
+    background: var(--lux-gold-text) !important;
+    background-size: 220% auto !important;
+
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+}
+
+
+/* =========================================================
+   SOLID ANTIQUE GOLD TEXT
+   ========================================================= */
+
+.nav-links a:hover,
+.brochure-btn,
+.call-btn:hover,
+
+.view-plan-btn,
+.offer-button,
+.brochure-button,
+
+.footer-section li a::before,
+.footer-section li a:hover,
+.contact-icon,
+.contact-row a:hover,
+.social-icon,
+.bottom-building,
+.bottom-links b,
+.bottom-links a:hover {
+    color: var(--lux-gold) !important;
+}
+
+
+/* Floor plans supporting text */
+.floor-plans-subtitle {
+    color: #d7ba63 !important;
+}
+
+
+/* =========================================================
+   GOLD BORDERS
+   ========================================================= */
+
+.navbar,
+.menu-toggle,
+.brochure-btn,
+
+.hero-section,
+.hero-form,
+.hero-form input,
+.hero-form select,
+
+.about-image,
+.developer-container,
+
+.amenities-image-wrapper,
+.amenity-dot,
+
+.floor-plan-card,
+.view-plan-btn,
+
+.featured-card,
+.feature-icon,
+
+.features-grid,
+.feature-card,
+
+.location-container,
+
+.footer,
+.footer-logo-container,
+.building-icon,
+.building-main,
+.building-side.left,
+.building-side.right,
+.contact-icon,
+.social-icon,
+.enquiry-button,
+.brochure-button,
+
+.enquiry-modal-content,
+.enquiry-logo,
+
+.pricing-card,
+.pricing-featured,
+.pricing-offer,
+.offer-button {
+    border-color: var(--lux-gold-border) !important;
+}
+
+
+/* =========================================================
+   CONFIGURATION SOFT GOLD BORDERS
+   ========================================================= */
+
+.configuration-card {
+    border-color: var(--lux-gold-soft) !important;
+}
+
+.configuration-card:hover,
+.featured-card {
+    border-color: var(--lux-gold-border) !important;
+}
+
+.configuration-features,
+.feature-item {
+    border-color: rgba(201, 162, 39, 0.42) !important;
+}
+
+.area-list div {
+    border-left-color: var(--lux-gold-border) !important;
+}
+
+.feature-icon {
+    color: var(--lux-gold) !important;
+}
+
+
+/* =========================================================
+   PREMIUM GOLD LINES / DIVIDERS
+   ========================================================= */
+
+.menu-toggle span,
+.form-heading span,
+.about-line,
+.configuration-line,
+.card-divider,
+
+.gold-divider,
+.gold-divider span,
+
+.pricing-line,
+.pricing-divider,
+
+.footer-line,
+.dnsb-logo span,
+.brochure-divider,
+.bottom-line span,
+
+.enquiry-modal-content::before {
+    background: var(--lux-gold-line) !important;
+}
+
+
+/* =========================================================
+   PREMIUM FILLED BUTTONS
+   ========================================================= */
+
+.hero-button,
+.form-submit,
+
+.call-btn,
+.call-contact-tooltip,
+
+.amenities-arrow,
+
+.location-button,
+
+.enquiry-button,
+.enquiry-form .submit-btn,
+
+.pricing-button,
+.offer-badge {
+    background: var(--lux-gold-button) !important;
+    color: #1b0b05 !important;
+    border-color: var(--lux-gold-border) !important;
+
+    box-shadow:
+        0 7px 20px rgba(0, 0, 0, 0.25),
+        0 0 15px rgba(201, 162, 39, 0.16) !important;
+}
+
+
+/* Text inside metallic buttons must remain dark */
+.hero-button *,
+.form-submit *,
+.call-btn *,
+.amenities-arrow *,
+.location-button *,
+.enquiry-button *,
+.enquiry-form .submit-btn *,
+.pricing-button *,
+.offer-badge * {
+    -webkit-text-fill-color: initial !important;
+}
+
+
+/* =========================================================
+   OUTLINE BUTTON HOVERS
+   ========================================================= */
+
+.brochure-btn:hover,
+.brochure-button:hover,
+.view-plan-btn:hover,
+.offer-button:hover,
+.social-icon:hover {
+    background: var(--lux-gold-button) !important;
+    border-color: var(--lux-gold-border) !important;
+    color: #1b0b05 !important;
+
+    box-shadow:
+        0 7px 20px rgba(0, 0, 0, 0.22),
+        0 0 13px rgba(201, 162, 39, 0.15) !important;
+}
+
+
+/* =========================================================
+   BUTTON HOVER SHINE
+   ========================================================= */
+
+.hero-button:hover,
+.form-submit:hover,
+.call-btn:hover,
+.amenities-arrow:hover,
+.location-button:hover,
+.enquiry-button:hover,
+.enquiry-form .submit-btn:hover,
+.pricing-button:hover {
+    filter: brightness(1.08);
+}
+
+
+/* =========================================================
+   SLIDER DOTS
+   ========================================================= */
+
+.hero-dots button,
+.amenity-dot {
+    border-color: var(--lux-gold-border) !important;
+}
+
+.hero-dots button.active,
+.amenity-dot.active {
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #f1d98d,
+            #c9a227 55%,
+            #74500f
+        ) !important;
+
+    border-color: var(--lux-gold-border) !important;
+}
+
+
+/* =========================================================
+   AMENITIES
+   ========================================================= */
+
+.amenities-arrow {
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #f1d98d 0%,
+            #d4af37 35%,
+            #a87919 75%,
+            #74500f 100%
+        ) !important;
+}
+
+
+/* =========================================================
+   FLOOR PLANS
+   ========================================================= */
+
+.floor-plan-card {
+    box-shadow:
+        0 0 0 1px rgba(201, 162, 39, 0.08);
+}
+
+.floor-plan-card:hover {
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.32),
+        0 0 20px rgba(201, 162, 39, 0.16) !important;
+}
+
+
+/* =========================================================
+   PRICING
+   ========================================================= */
+
+.pricing-card {
+    border-color: rgba(201, 162, 39, 0.52) !important;
+}
+
+.pricing-featured {
+    border-color: var(--lux-gold-rich) !important;
+}
+
+.offer-badge {
+    background-size: 220% auto !important;
+}
+
+.offer-button {
+    color: var(--lux-gold) !important;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer-section li a::before {
+    color: var(--lux-gold) !important;
+}
+
+.contact-icon,
+.social-icon {
+    color: var(--lux-gold) !important;
+}
+
+.enquiry-button {
+    color: #1b0b05 !important;
+}
+
+
+/* =========================================================
+   ENQUIRY MODAL
+   ========================================================= */
+
+.enquiry-modal-content {
+    border-color: var(--lux-gold-border) !important;
+}
+
+.enquiry-form .form-group input:focus,
+.enquiry-form .form-group textarea:focus {
+    border-color: var(--lux-gold-border) !important;
+
+    box-shadow:
+        0 0 0 3px rgba(201, 162, 39, 0.14) !important;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .pricing-label,
+    .pricing-heading h2 span,
+    .pricing-type,
+    .pricing-type-gold,
+    .pricing-featured h3,
+    .price,
+    .featured-price {
+        animation: none !important;
+    }
+}

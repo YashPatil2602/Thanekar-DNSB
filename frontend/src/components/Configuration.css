@@ -27,7 +27,7 @@
 
 .configuration-label {
     margin: 0 0 18px;
-    color: #b88a24;
+    color: #c9a227;
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 3px;
@@ -43,13 +43,13 @@
 }
 
 .configuration-heading h2 span {
-    color: #b88a24;
+    color: #c9a227;
 }
 
 .configuration-line {
     width: 80px;
     height: 3px;
-    background: #b88a24;
+    background: #c9a227;
     margin: 28px 0;
 }
 
@@ -84,7 +84,7 @@
 
 .configuration-card:hover {
     transform: translateY(-6px);
-    border-color: #b88a24;
+    border-color: #c9a227;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
 }
 
@@ -93,14 +93,14 @@
 
 .featured-card {
     background: linear-gradient( 145deg, #3a2116, #2b170f);
-    border-color: #b88a24;
+    border-color: #c9a227;
 }
 
 
 /* CARD NUMBER */
 
 .card-number {
-    color: #b88a24;
+    color: #c9a227;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -137,7 +137,7 @@
 /* AREA */
 
 .area-title {
-    color: #b88a24;
+    color: #c9a227;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -157,7 +157,7 @@
 .area-list div {
     padding: 15px;
     background: rgba(255, 248, 234, 0.04);
-    border-left: 2px solid #b88a24;
+    border-left: 2px solid #c9a227;
 }
 
 .area-list strong {
@@ -206,8 +206,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #b88a24;
-    color: #b88a24;
+    border: 1px solid #c9a227;
+    color: #c9a227;
     font-size: 12px;
     font-weight: 700;
 }

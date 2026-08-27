@@ -81,7 +81,7 @@
     font-size: 32px;
     font-weight: 700;
     letter-spacing: 1px;
-    color: #d4af37;
+    color: #c9a227;
 }
 
 .enquiry-modal-header p {
@@ -126,7 +126,7 @@
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #d4af37;
+    border-color: #c9a227;
     box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
 }
 
@@ -150,7 +150,7 @@
 .submit-btn {
     width: 100%;
     padding: 16px;
-    background: linear-gradient(135deg, #d4af37 0%, #b8960f 100%);
+    background: linear-gradient(135deg, #c9a227 0%, #a67c00 100%);
     color: #2b1007;
     border: none;
     border-radius: 6px;
@@ -163,7 +163,7 @@
 }
 
 .submit-btn:hover {
-    background: linear-gradient(135deg, #e8c758 0%, #d4af37 100%);
+    background: linear-gradient(135deg, #e3c66b 0%, #c9a227 100%);
     box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
     transform: translateY(-2px);
 }
@@ -269,7 +269,7 @@
     left: 12%;
     right: 12%;
     height: 3px;
-    background: linear-gradient(90deg, transparent, #f0c95c, transparent);
+    background: linear-gradient(90deg, transparent, #e3c66b, transparent);
     z-index: 2;
 }
 
@@ -279,7 +279,7 @@
     gap: 26px;
     padding: 34px 64px 30px 42px;
     background: radial-gradient(circle at 18% 30%, rgba(212, 175, 55, 0.2), transparent 28%), linear-gradient(135deg, #241008 0%, #572611 100%);
-    border-bottom: 2px solid #d4af37;
+    border-bottom: 2px solid #c9a227;
     text-align: left;
 }
 
@@ -297,7 +297,7 @@
 
 .enquiry-eyebrow {
     margin: 0 0 10px;
-    color: #d4af37;
+    color: #c9a227;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -329,7 +329,7 @@
 }
 
 .enquiry-close-btn:hover {
-    background: #d4af37;
+    background: #c9a227;
     color: #2b1007;
 }
 
@@ -374,7 +374,7 @@
 
 .enquiry-form .form-group input:focus,
 .enquiry-form .form-group textarea:focus {
-    border-color: #c9972b;
+    border-color: #c9a227;
     box-shadow: 0 0 0 3px rgba(201, 151, 43, 0.14);
 }
 
@@ -388,8 +388,8 @@
     justify-content: center;
     gap: 12px;
     padding: 15px 20px;
-    background: linear-gradient(135deg, #e0b943 0%, #bd8a1f 100%);
-    border: 1px solid #e0b943;
+    background: linear-gradient(135deg, #e3c66b 0%, #a67c00 100%);
+    border: 1px solid #e3c66b;
     border-radius: 4px;
     color: #2b1007;
     font-size: 15px;
@@ -399,7 +399,7 @@
 }
 
 .enquiry-form .submit-btn:hover {
-    background: #e0b943;
+    background: #e3c66b;
     box-shadow: 0 8px 25px rgba(201, 151, 43, 0.28);
 }
 
@@ -490,7 +490,7 @@
     max-height: 90vh;
     overflow-y: auto;
     background: #2b1209;
-    border: 1px solid #c9972b;
+    border: 1px solid #c9a227;
     border-radius: 0;
     box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5);
 }
@@ -499,7 +499,7 @@
     left: 0;
     right: 0;
     height: 2px;
-    background: #d4af37;
+    background: #c9a227;
 }
 
 .enquiry-modal-header {
@@ -538,7 +538,7 @@
     align-items: center;
     justify-content: center;
     gap: 14px;
-    color: #d4a72c;
+    color: #c9a227;
     font-size: 17px;
     letter-spacing: 1px;
 }
@@ -546,12 +546,12 @@
 .enquiry-modal-header .form-heading span {
     width: 44px;
     height: 2px;
-    background: #d4a72c;
+    background: #c9a227;
 }
 
 .enquiry-modal-header .form-tagline {
     margin: 8px 0 18px;
-    color: #d4a72c;
+    color: #c9a227;
     font-size: 15px;
     font-weight: 700;
 }
@@ -573,7 +573,7 @@
     margin-bottom: 10px;
     padding: 0 14px;
     box-sizing: border-box;
-    border: 1px solid #d4a72c;
+    border: 1px solid #c9a227;
     border-radius: 5px;
     background: #fffaf0;
     color: #4a2918;
@@ -612,16 +612,16 @@
     height: 15px;
     flex: 0 0 15px;
     margin: 1px 0 0;
-    accent-color: #c9972b;
+    accent-color: #c9a227;
 }
 
 .enquiry-form .submit-btn {
     width: 100%;
     height: 50px;
     padding: 0 20px;
-    background: #c9972b;
+    background: #c9a227;
     color: #2b1209;
-    border: 1px solid #e0b943;
+    border: 1px solid #e3c66b;
     border-radius: 5px;
     font-size: 16px;
     font-weight: 700;
@@ -629,7 +629,7 @@
 }
 
 .enquiry-form .submit-btn:hover {
-    background: #e0b943;
+    background: #e3c66b;
     box-shadow: 0 8px 25px rgba(201, 151, 43, 0.35);
 }
 
