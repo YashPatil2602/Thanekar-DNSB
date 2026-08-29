@@ -2,57 +2,52 @@ import "./Location.css";
 
 function Location() {
     const googleMapsUrl =
-        "https://maps.app.goo.gl/47T3Mmq2bMsQFqaEA?g_st=ac";
+        "https://maps.app.goo.gl/RmpqrCthRuWyVC5y6";
 
-    return ( <
-        section id = "location"
-        className = "location-section" >
-        <
-        div className = "location-container" >
+    const googleMapsEmbedUrl =
+        "https://www.google.com/maps?q=19.1639878,73.2395066&z=17&output=embed";
 
-        { /* LEFT SIDE */ } <
-        div className = "location-content" >
+    return (
+        <section
+            id="location"
+            className="location-section"
+        >
+            <div className="location-container">
 
-        <
-        p className = "location-small-title" >
-        THANEKAR DNSB <
-        /p>
+                <div className="location-content">
+                    <p className="location-small-title">
+                        THANEKAR DNSB
+                    </p>
 
-        <
-        h2 > Location < /h2>
+                    <h2>Location</h2>
 
-        <
-        p className = "location-description" >
-        Find Thanekar DNSB at its prime location with excellent connectivity and easy access to nearby facilities. <
-        /p>
+                    <p className="location-description">
+                        Thanekar DNSB – Residential & Commercial Spaces,
+                        Patil Pada, Station Pada, Badlapur,
+                        Maharashtra - 421503.
+                    </p>
 
-        { /* GET DIRECTIONS */ } <
-        a href = { googleMapsUrl }
-        target = "_blank"
-        rel = "noopener noreferrer"
-        className = "location-button" >
-        Get Directions <
-        /a>
+                    <a
+                        href={googleMapsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="location-button"
+                    >
+                        Get Directions
+                    </a>
+                </div>
 
-        <
-        /div>
+                <div className="location-map">
+                    <iframe
+                        src={googleMapsEmbedUrl}
+                        title="Thanekar DNSB Location"
+                        loading="lazy"
+                        allowFullScreen
+                    ></iframe>
+                </div>
 
-        { /* RIGHT SIDE - GOOGLE MAP */ } <
-        div className = "location-map" >
-
-        <
-        iframe src = "https://www.google.com/maps?q=Thanekar%20DNSB&output=embed"
-        title = "Thanekar DNSB Location"
-        loading = "lazy"
-        allowFullScreen >
-        < /iframe>
-
-        <
-        /div>
-
-        <
-        /div> <
-        /section>
+            </div>
+        </section>
     );
 }
 

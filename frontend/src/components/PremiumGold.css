@@ -445,3 +445,158 @@
         animation: none !important;
     }
 }
+
+
+/* CLIENT FEEDBACK FIXES - AUG 29 2026 */
+
+/* ---------------------------------------------------------
+   ENQUIRY CLOSE ICON
+--------------------------------------------------------- */
+
+.enquiry-close-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.enquiry-close-btn span {
+    display: block;
+    line-height: 1;
+    font-size: inherit;
+}
+
+
+/* ---------------------------------------------------------
+   ENQUIRY TEXT ALIGNMENT
+--------------------------------------------------------- */
+
+.enquiry-modal-header {
+    text-align: center !important;
+}
+
+.enquiry-modal-header .form-top-text,
+.enquiry-modal-header h2,
+.enquiry-modal-header .form-subtitle,
+.enquiry-modal-header .form-tagline {
+    text-align: center !important;
+}
+
+.enquiry-modal-header .form-heading {
+    justify-content: center !important;
+}
+
+
+/* ---------------------------------------------------------
+   BUTTON RESET AFTER BROCHURE LINKS BECAME BUTTONS
+--------------------------------------------------------- */
+
+.brochure-btn,
+.brochure-button {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    font-family: inherit !important;
+    cursor: pointer !important;
+}
+
+
+/* ---------------------------------------------------------
+   CONFIGURATION BOX ALIGNMENT
+--------------------------------------------------------- */
+
+.configuration-grid {
+    align-items: stretch !important;
+}
+
+.configuration-card {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.configuration-card .area-list {
+    min-height: 166px;
+    align-content: start;
+}
+
+.configuration-card .area-title {
+    min-height: 18px;
+}
+
+
+/* ---------------------------------------------------------
+   SAME SHARP GOLD SHINE FOR 2 BHK + 3 BHK
+--------------------------------------------------------- */
+
+.pricing-card h3,
+.pricing-featured h3,
+.pricing-card .price,
+.pricing-card .featured-price,
+.pricing-card .price span {
+    background: linear-gradient(
+        90deg,
+        #8a5e13 0%,
+        #b98924 16%,
+        #d4af37 34%,
+        #f5dfa0 48%,
+        #fff1b8 52%,
+        #d4af37 68%,
+        #b98924 84%,
+        #8a5e13 100%
+    ) !important;
+
+    background-size: 220% auto !important;
+
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+
+    animation:
+        clientPricingGoldShine
+        4s linear infinite !important;
+
+    filter: none !important;
+    text-shadow: none !important;
+}
+
+.pricing-card h3,
+.pricing-featured h3 {
+    font-weight: 650 !important;
+}
+
+
+/* Sharp moving shine without blur */
+@keyframes clientPricingGoldShine {
+    0% {
+        background-position: 200% center;
+    }
+
+    100% {
+        background-position: -200% center;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+--------------------------------------------------------- */
+
+@media (max-width: 800px) {
+    .configuration-card .area-list {
+        min-height: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pricing-card h3,
+    .pricing-featured h3,
+    .pricing-card .price,
+    .pricing-card .featured-price,
+    .pricing-card .price span {
+        animation: none !important;
+    }
+}

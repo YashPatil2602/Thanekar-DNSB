@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -15,50 +16,55 @@ import "./App.css";
 
 function App() {
     const [isEnquiryOpen, setIsEnquiryOpen] = useState(true);
+    const [enquiryPurpose, setEnquiryPurpose] = useState("general");
 
-    return ( <
-        >
-        <
-        EnquiryForm isOpen = { isEnquiryOpen }
-        onClose = {
-            () => setIsEnquiryOpen(false) }
-        /> <
-        Navbar / >
+    const openEnquiry = (purpose = "general") => {
+        setEnquiryPurpose(purpose);
+        setIsEnquiryOpen(true);
+    };
 
-        <
-        main >
-        <
-        Hero onEnquire = {
-            () => setIsEnquiryOpen(true) }
-        />
+    const closeEnquiry = () => {
+        setIsEnquiryOpen(false);
+        setEnquiryPurpose("general");
+    };
 
-        <
-        About / >
+    return (
+        <>
+            <EnquiryForm
+                isOpen={isEnquiryOpen}
+                onClose={closeEnquiry}
+                purpose={enquiryPurpose}
+            />
 
-        <
-        Configuration / >
+            <Navbar
+                onBrochure={() => openEnquiry("brochure")}
+            />
 
-        <Features />
+            <main>
+                <Hero
+                    onEnquire={() => openEnquiry("general")}
+                />
 
-        <
-        Pricing / >
+                <About />
 
-        <
-        Amenities / >
+                <Configuration />
 
-        <
-        FloorPlans / >
+                <Features />
 
-        <
-        Location / >
-        <
-        /main>
+                <Pricing />
 
-        <
-        Footer onEnquire = {
-            () => setIsEnquiryOpen(true) }
-        /> <
-        />
+                <Amenities />
+
+                <FloorPlans />
+
+                <Location />
+            </main>
+
+            <Footer
+                onEnquire={() => openEnquiry("general")}
+                onBrochure={() => openEnquiry("brochure")}
+            />
+        </>
     );
 }
 

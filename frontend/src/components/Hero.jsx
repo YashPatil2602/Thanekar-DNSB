@@ -73,7 +73,7 @@ function Hero({ onEnquire }) {
         <
         p className = "form-top-text" > THE NEW PRIDE OF BADLAPUR < /p> <
         h2 > THANEKAR DNSB < /h2> <
-        p className = "form-subtitle" > Luxury Residential & amp; Commercial Development < /p>
+        p className = "form-subtitle" > Luxury Residential & Commercial Development < /p>
 
         <
         div className = "form-heading" >
