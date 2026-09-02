@@ -25,10 +25,6 @@ const amenities = [{
         image: "/images/amenities/Solar Panel.png",
         title: "Solar Panel",
     },
-    {
-        image: "/images/amenities/Warm Luxury Bedroom at Dusk.png",
-        title: "Warm Luxury Bedroom at Dusk",
-    },
 ];
 
 function Amenities() {
