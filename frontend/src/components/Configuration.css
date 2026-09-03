@@ -295,3 +295,58 @@
         border-bottom: none;
     }
 }
+
+/* CLIENT CONFIGURATION FINAL */
+
+.area-item {
+    box-sizing: border-box;
+}
+
+.area-metric-label {
+    display: block;
+    margin-bottom: 7px;
+    color: #c9a227 !important;
+    font-size: 10px !important;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.area-item strong {
+    display: block;
+}
+
+.area-item strong small {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.area-item .carpet-area {
+    display: block;
+    margin-top: 8px;
+    color: #d4c2a5 !important;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.configuration-features-title {
+    margin: 0 0 22px;
+    color: #c9a227;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+    .configuration-features-title {
+        margin-top: 8px;
+        margin-bottom: 18px;
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+
+    .area-item {
+        padding: 16px !important;
+    }
+}

@@ -1,186 +1,222 @@
 import "./Configuration.css";
 
 function Configuration() {
-    return ( <
-        section className = "configuration-section"
-        id = "configuration" >
-        <
-        div className = "configuration-container" >
+    return (
+        <section
+            className="configuration-section"
+            id="configuration"
+        >
+            <div className="configuration-container">
 
-        { /* SECTION HEADING */ } <
-        div className = "configuration-heading" >
-        <
-        p className = "configuration-label" >
-        CONFIGURATION <
-        /p>
+                <div className="configuration-heading">
+                    <p className="configuration-label">
+                        CONFIGURATION
+                    </p>
 
-        <
-        h2 >
-        Designed
-        for <
-        br / >
-        <
-        span > Modern Living < /span> <
-        /h2>
+                    <h2>
+                        Designed for
+                        <br />
+                        <span>Modern Living</span>
+                    </h2>
 
-        <
-        div className = "configuration-line" > < /div>
+                    <div className="configuration-line"></div>
 
-        <
-        p className = "configuration-intro" >
-        Discover thoughtfully planned residences with spacious layouts, premium features and modern lifestyle comforts. <
-        /p> <
-        /div>
+                    <p className="configuration-intro">
+                        Discover thoughtfully planned residences
+                        with spacious layouts, premium features and
+                        modern lifestyle comforts.
+                    </p>
+                </div>
 
+                <div className="configuration-grid">
 
-        { /* CONFIGURATION CARDS */ } <
-        div className = "configuration-grid" >
+                    <div className="configuration-card">
+                        <div className="card-number">
+                            01
+                        </div>
 
-        { /* 2 BHK */ } <
-        div className = "configuration-card" >
-        <
-        div className = "card-number" > 01 < /div>
+                        <h3>2 BHK</h3>
 
-        <
-        h3 > 2 BHK < /h3>
+                        <p className="card-subtitle">
+                            Spacious & Comfortable Homes
+                        </p>
 
-        <
-        p className = "card-subtitle" >
-        Spacious & Comfortable Homes <
-        /p>
+                        <div className="card-divider"></div>
 
-        <
-        div className = "card-divider" > < /div>
+                        <div className="area-title">
+                            Area Details
+                        </div>
 
-        <
-        div className = "area-title" >
-        Build - up Area <
-        /div>
+                        <div className="area-list">
 
-        <
-        div className = "area-list" >
-        <
-        div >
-        <
-        strong > 1058 < /strong> <
-        span > [688] sq.ft. < /span> <
-        /div>
+                            <div className="area-item">
+                                <span className="area-metric-label">
+                                    Built-up Area
+                                </span>
 
-        <
-        div >
-        <
-        strong > 1210 < /strong> <
-        span > [716] sq.ft. < /span> <
-        /div>
+                                <strong>
+                                    1058
+                                    <small> sq.ft.</small>
+                                </strong>
 
-        <
-        div >
-        <
-        strong > 1228 < /strong> <
-        span > [800] sq.ft. < /span> <
-        /div>
+                                <span className="carpet-area">
+                                    Carpet Area: 688 sq.ft.
+                                </span>
+                            </div>
 
-        <
-        div >
-        <
-        strong > 1280 < /strong> <
-        span > [842] sq.ft. < /span> <
-        /div> <
-        /div> <
-        /div>
+                            <div className="area-item">
+                                <span className="area-metric-label">
+                                    Built-up Area
+                                </span>
 
+                                <strong>
+                                    1210
+                                    <small> sq.ft.</small>
+                                </strong>
 
-        { /* 3 BHK */ } <
-        div className = "configuration-card featured-card" >
-        <
-        div className = "card-number" > 02 < /div>
+                                <span className="carpet-area">
+                                    Carpet Area: 716 sq.ft.
+                                </span>
+                            </div>
 
-        <
-        h3 > 3 BHK < /h3>
+                            <div className="area-item">
+                                <span className="area-metric-label">
+                                    Built-up Area
+                                </span>
 
-        <
-        p className = "card-subtitle" >
-        Premium & Spacious Living <
-        /p>
+                                <strong>
+                                    1228
+                                    <small> sq.ft.</small>
+                                </strong>
 
-        <
-        div className = "card-divider" > < /div>
+                                <span className="carpet-area">
+                                    Carpet Area: 800 sq.ft.
+                                </span>
+                            </div>
 
-        <
-        div className = "area-title" >
-        Build - up Area <
-        /div>
+                            <div className="area-item">
+                                <span className="area-metric-label">
+                                    Built-up Area
+                                </span>
 
-        <
-        div className = "area-list" >
-        <
-        div >
-        <
-        strong > 2022 < /strong> <
-        span > [1314] sq.ft. < /span> <
-        /div> <
-        /div> <
-        /div>
+                                <strong>
+                                    1280
+                                    <small> sq.ft.</small>
+                                </strong>
 
-        <
-        /div>
+                                <span className="carpet-area">
+                                    Carpet Area: 842 sq.ft.
+                                </span>
+                            </div>
 
+                        </div>
+                    </div>
 
-        { /* FEATURES */ } <
-        div className = "configuration-features" >
+                    <div className="configuration-card featured-card">
+                        <div className="card-number">
+                            02
+                        </div>
 
-        <
-        div className = "feature-item" >
-        <
-        span className = "feature-icon" > 01 < /span> <
-        div >
-        <
-        h4 > Premium 2 & 3 BHK < /h4> <
-        p > Thoughtfully designed homes < /p> <
-        /div> <
-        /div>
+                        <h3>3 BHK</h3>
 
-        <
-        div className = "feature-item" >
-        <
-        span className = "feature-icon" > 02 < /span> <
-        div >
-        <
-        h4 > Rooftop Solar < /h4> <
-        p > Smart and sustainable living < /p> <
-        /div> <
-        /div>
+                        <p className="card-subtitle">
+                            Premium & Spacious Living
+                        </p>
 
-        <
-        div className = "feature-item" >
-        <
-        span className = "feature-icon" > 03 < /span> <
-        div >
-        <
-        h4 > Rooftop Gym & Play Area < /h4> <
-        p > Lifestyle spaces
-        for everyone < /p> <
-        /div> <
-        /div>
+                        <div className="card-divider"></div>
 
-        <
-        div className = "feature-item" >
-        <
-        span className = "feature-icon" > 04 < /span> <
-        div >
-        <
-        h4 > Spacious Homes < /h4> <
-        p > Comfortable layouts
-        for modern families < /p> <
-        /div> <
-        /div>
+                        <div className="area-title">
+                            Area Details
+                        </div>
 
-        <
-        /div>
+                        <div className="area-list">
 
-        <
-        /div> <
-        /section>
+                            <div className="area-item">
+                                <span className="area-metric-label">
+                                    Built-up Area
+                                </span>
+
+                                <strong>
+                                    2022
+                                    <small> sq.ft.</small>
+                                </strong>
+
+                                <span className="carpet-area">
+                                    Carpet Area: 1314 sq.ft.
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <h3 className="configuration-features-title">
+                    PROJECT HIGHLIGHTS
+                </h3>
+
+                <div className="configuration-features">
+
+                    <div className="feature-item">
+                        <span className="feature-icon">
+                            01
+                        </span>
+
+                        <div>
+                            <h4>Premium 2 & 3 BHK</h4>
+                            <p>
+                                Thoughtfully designed homes
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="feature-item">
+                        <span className="feature-icon">
+                            02
+                        </span>
+
+                        <div>
+                            <h4>Rooftop Solar</h4>
+                            <p>
+                                Smart and sustainable living
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="feature-item">
+                        <span className="feature-icon">
+                            03
+                        </span>
+
+                        <div>
+                            <h4>
+                                Rooftop Gym & Play Area
+                            </h4>
+
+                            <p>
+                                Lifestyle spaces for everyone
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="feature-item">
+                        <span className="feature-icon">
+                            04
+                        </span>
+
+                        <div>
+                            <h4>Spacious Homes</h4>
+
+                            <p>
+                                Comfortable layouts for modern
+                                families
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
     );
 }
 

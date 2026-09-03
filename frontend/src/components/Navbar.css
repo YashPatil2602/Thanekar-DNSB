@@ -471,3 +471,82 @@
         font-size: 14px;
     }
 }
+
+/* CLIENT MOBILE NAVBAR FINAL */
+
+@media (max-width: 600px) {
+    .navbar-inner {
+        min-height: 70px;
+        padding: 8px 10px;
+        flex-wrap: nowrap;
+        gap: 5px;
+    }
+
+    .logo,
+    .navbar-logo-image {
+        width: 92px;
+        min-width: 92px;
+        height: 52px;
+    }
+
+    .logo {
+        flex: 0 0 92px;
+    }
+
+    .navbar-buttons {
+        order: 2;
+        width: auto;
+        flex: 1 1 auto;
+        min-width: 0;
+        justify-content: flex-end;
+        gap: 4px;
+    }
+
+    .whatsapp-contact-container,
+    .call-contact-container {
+        flex: 0 0 auto;
+    }
+
+    .whatsapp-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .whatsapp-btn svg {
+        width: 19px;
+        height: 19px;
+    }
+
+    .navbar-buttons .brochure-btn,
+    .navbar-buttons .call-btn {
+        flex: 0 0 auto;
+        min-width: 0;
+        max-width: none;
+        min-height: 32px;
+        padding: 7px 7px;
+        font-size: 10px;
+        line-height: 1;
+    }
+
+    .menu-toggle {
+        order: 4;
+        flex: 0 0 34px;
+        width: 34px;
+        height: 34px;
+        padding: 6px;
+    }
+
+    .menu-toggle span {
+        width: 18px;
+    }
+
+    .nav-links {
+        top: 100%;
+    }
+}
+
+@media (max-width: 340px) {
+    .whatsapp-contact-container {
+        display: none;
+    }
+}

@@ -1,28 +1,30 @@
 import { useEffect, useState } from "react";
+
 import "./Amenities.css";
 
-const amenities = [{
-        image: "/images/amenities/Bedroom.png",
+const amenities = [
+    {
+        image: "/images/amenities/optimized/Bedroom.png",
         title: "Bedroom",
     },
     {
-        image: "/images/amenities/Car parking.png",
+        image: "/images/amenities/optimized/Car parking.png",
         title: "Car Parking",
     },
     {
-        image: "/images/amenities/Kids Play Area.png",
+        image: "/images/amenities/optimized/Kids Play Area.png",
         title: "Kids Play Area",
     },
     {
-        image: "/images/amenities/Living.png",
+        image: "/images/amenities/optimized/Living.png",
         title: "Living",
     },
     {
-        image: "/images/amenities/Play Ground.png",
+        image: "/images/amenities/optimized/Play Ground.png",
         title: "Play Ground",
     },
     {
-        image: "/images/amenities/Solar Panel.png",
+        image: "/images/amenities/optimized/Solar Panel.png",
         title: "Solar Panel",
     },
 ];
@@ -30,101 +32,101 @@ const amenities = [{
 function Amenities() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // Automatic image switch every 3 seconds
     useEffect(() => {
         const timer = setInterval(() => {
-            setCurrentIndex((prevIndex) => {
-                return (prevIndex + 1) % amenities.length;
-            });
+            setCurrentIndex(
+                (previousIndex) =>
+                    (previousIndex + 1) % amenities.length
+            );
         }, 3000);
 
         return () => clearInterval(timer);
     }, []);
 
-    // Previous
+    useEffect(() => {
+        const nextIndex =
+            (currentIndex + 1) % amenities.length;
+
+        const nextImage = new Image();
+        nextImage.src = amenities[nextIndex].image;
+    }, [currentIndex]);
+
     const previousImage = () => {
-        setCurrentIndex((prevIndex) => {
-            if (prevIndex === 0) {
-                return amenities.length - 1;
-            }
-
-            return prevIndex - 1;
-        });
+        setCurrentIndex((previousIndex) =>
+            previousIndex === 0
+                ? amenities.length - 1
+                : previousIndex - 1
+        );
     };
 
-    // Next
     const nextImage = () => {
-        setCurrentIndex((prevIndex) => {
-            return (prevIndex + 1) % amenities.length;
-        });
+        setCurrentIndex(
+            (previousIndex) =>
+                (previousIndex + 1) % amenities.length
+        );
     };
 
-    return ( <
-        section id = "amenities"
-        className = "amenities-section" >
-
-        <
-        div className = "amenities-slider" >
-
-        { /* LEFT ARROW */ } <
-        button className = "amenities-arrow amenities-arrow-left"
-        onClick = { previousImage } >
-        ‹
-        <
-        /button>
-
-        { /* ONE IMAGE */ } <
-        div className = "amenities-image-wrapper" >
-
-        <
-        img key = { amenities[currentIndex].image }
-        src = { amenities[currentIndex].image }
-        alt = { amenities[currentIndex].title }
-        className = "amenities-image" /
+    return (
+        <section
+            id="amenities"
+            className="amenities-section"
         >
+            <div className="amenities-slider">
 
-        <
-        div className = "amenities-overlay" >
-        <
-        h2 > { amenities[currentIndex].title } <
-        /h2> <
-        /div>
+                <button
+                    type="button"
+                    className="amenities-arrow amenities-arrow-left"
+                    onClick={previousImage}
+                    aria-label="Previous amenity"
+                >
+                    ‹
+                </button>
 
-        <
-        /div>
+                <div className="amenities-image-wrapper">
+                    <img
+                        key={amenities[currentIndex].image}
+                        src={amenities[currentIndex].image}
+                        alt={amenities[currentIndex].title}
+                        className="amenities-image"
+                        decoding="async"
+                    />
 
-        { /* RIGHT ARROW */ } <
-        button className = "amenities-arrow amenities-arrow-right"
-        onClick = { nextImage } >
-        ›
-        <
-        /button>
+                    <div className="amenities-overlay">
+                        <h2>
+                            {amenities[currentIndex].title}
+                        </h2>
+                    </div>
+                </div>
 
-        <
-        /div>
+                <button
+                    type="button"
+                    className="amenities-arrow amenities-arrow-right"
+                    onClick={nextImage}
+                    aria-label="Next amenity"
+                >
+                    ›
+                </button>
 
-        { /* DOTS */ } <
-        div className = "amenities-dots" >
+            </div>
 
-        {
-            amenities.map((item, index) => ( <
-                button key = { index }
-                onClick = {
-                    () => setCurrentIndex(index) }
-                className = {
-                    currentIndex === index ?
-                    "amenity-dot active" :
-                        "amenity-dot"
-                } >
-                < /button>
-            ))
-        }
-
-        <
-        /div>
-
-        <
-        /section>
+            <div className="amenities-dots">
+                {amenities.map((item, index) => (
+                    <button
+                        key={item.image}
+                        type="button"
+                        onClick={() =>
+                            setCurrentIndex(index)
+                        }
+                        className={
+                            currentIndex === index
+                                ? "amenity-dot active"
+                                : "amenity-dot"
+                        }
+                        aria-label={`Show ${item.title}`}
+                    />
+                ))}
+            </div>
+        </section>
     );
 }
 

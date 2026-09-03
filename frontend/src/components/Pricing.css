@@ -1041,3 +1041,16 @@
         animation: none;
     }
 }
+
+/* CLIENT PRICING LAKH FINAL */
+
+.price span {
+    white-space: nowrap;
+    letter-spacing: 0.4px;
+}
+
+@media (max-width: 600px) {
+    .price span {
+        font-size: 18px;
+    }
+}
