@@ -71,8 +71,11 @@ function Amenities() {
             id="amenities"
             className="amenities-section"
         >
-            <div className="amenities-slider">
+            <h2 className="amenities-heading">
+                Amenities
+            </h2>
 
+            <div className="amenities-slider">
                 <button
                     type="button"
                     className="amenities-arrow amenities-arrow-left"
@@ -92,9 +95,9 @@ function Amenities() {
                     />
 
                     <div className="amenities-overlay">
-                        <h2>
+                        <h3>
                             {amenities[currentIndex].title}
-                        </h2>
+                        </h3>
                     </div>
                 </div>
 
@@ -106,7 +109,6 @@ function Amenities() {
                 >
                     ›
                 </button>
-
             </div>
 
             <div className="amenities-dots">

@@ -10,7 +10,7 @@ function Pricing() {
 
                 <div className="pricing-heading">
                     <p className="pricing-label">
-                        PRICING & OFFERS
+                        RESIDENTIAL PRICING & OFFERS
                     </p>
 
                     <h2>
@@ -22,9 +22,9 @@ function Pricing() {
                     <div className="pricing-line"></div>
 
                     <p className="pricing-intro">
-                        Discover premium residences at Thanekar
-                        DNSB with attractive pricing and a
-                        special limited-time offer.
+                        Discover premium residential homes at
+                        Thanekar DNSB with attractive pricing
+                        and a special limited-time offer.
                     </p>
                 </div>
 
@@ -111,11 +111,9 @@ function Pricing() {
                             </span>
                         </a>
                     </div>
-
                 </div>
 
                 <div className="pricing-offer">
-
                     <div
                         className="offer-shine"
                         aria-hidden="true"
@@ -125,8 +123,7 @@ function Pricing() {
                         <p>LIMITED TIME OFFER</p>
 
                         <h3>
-                            Get up to
-                            {" "}
+                            Get up to{" "}
                             <span>
                                 ₹8 Lakh Discount*
                             </span>
@@ -143,6 +140,99 @@ function Pricing() {
                     >
                         Know More <span>→</span>
                     </a>
+                </div>
+
+                <div
+                    className="commercial-pricing-block"
+                    id="commercial-pricing"
+                >
+                    <div className="commercial-pricing-heading">
+                        <p className="commercial-pricing-eyebrow">
+                            COMMERCIAL • G+2 SHOPS
+                        </p>
+
+                        <h2>
+                            Commercial
+                            <br />
+                            <span>Pricing</span>
+                        </h2>
+
+                        <div className="pricing-line"></div>
+
+                        <p>
+                            Dedicated commercial shop spaces
+                            at Thanekar DNSB Tower.
+                        </p>
+                    </div>
+
+                    <div className="pricing-grid commercial-pricing-grid">
+
+                        <div className="pricing-card commercial-pricing-card">
+                            <p className="pricing-type">
+                                COMMERCIAL SHOP
+                            </p>
+
+                            <h3>262 SQ.FT.</h3>
+
+                            <p className="commercial-area-caption">
+                                SHOP AREA
+                            </p>
+
+                            <div className="price">
+                                ₹60 <span>LAKH*</span>
+                            </div>
+
+                            <div className="pricing-divider"></div>
+
+                            <p className="pricing-description">
+                                Commercial shop space in
+                                Thanekar DNSB Tower.
+                            </p>
+
+                            <a
+                                href="#contact"
+                                className="pricing-button"
+                            >
+                                Enquire for Shop →
+                            </a>
+                        </div>
+
+                        <div className="pricing-card commercial-pricing-card">
+                            <p className="pricing-type">
+                                COMMERCIAL SHOP
+                            </p>
+
+                            <h3>1011 SQ.FT.</h3>
+
+                            <p className="commercial-area-caption">
+                                SHOP AREA
+                            </p>
+
+                            <div className="price">
+                                ₹4 <span>CR*</span>
+                            </div>
+
+                            <div className="pricing-divider"></div>
+
+                            <p className="pricing-description">
+                                Large-format commercial shop
+                                space at Thanekar DNSB Tower.
+                            </p>
+
+                            <a
+                                href="#contact"
+                                className="pricing-button"
+                            >
+                                Enquire for Shop →
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <p className="commercial-price-note">
+                        *Pricing and availability are subject
+                        to applicable terms and confirmation.
+                    </p>
                 </div>
 
             </div>

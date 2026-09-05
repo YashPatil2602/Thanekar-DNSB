@@ -578,3 +578,30 @@
         padding: 0 10px;
     }
 }
+
+/* CLIENT BIGGER FOOTER LOGO SEP 2026 */
+
+.footer-logo-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.footer-logo-container img {
+    width: 82% !important;
+    max-width: 125px !important;
+    height: auto !important;
+
+    object-fit: contain !important;
+
+    transform: scale(1.12);
+    transform-origin: center;
+}
+
+@media (max-width: 767px) {
+    .footer-logo-container img {
+        width: 86% !important;
+        max-width: 110px !important;
+        transform: scale(1.08);
+    }
+}

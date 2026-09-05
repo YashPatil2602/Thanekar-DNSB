@@ -1054,3 +1054,105 @@
         font-size: 18px;
     }
 }
+
+/* CLIENT COMMERCIAL PRICING SEP 2026 */
+
+.commercial-pricing-block {
+    margin-top: 90px;
+    padding-top: 70px;
+    border-top: 1px solid rgba(201, 162, 39, 0.45);
+}
+
+.commercial-pricing-heading {
+    max-width: 680px;
+    margin-bottom: 46px;
+}
+
+.commercial-pricing-eyebrow {
+    margin: 0 0 14px;
+    color: #c9a227;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.commercial-pricing-heading h2 {
+    margin: 0;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 52px;
+    line-height: 1.05;
+}
+
+.commercial-pricing-heading h2 span {
+    color: #c9a227;
+}
+
+.commercial-pricing-heading > p:last-child {
+    margin: 20px 0 0;
+    color: #e5d8c6;
+    line-height: 1.7;
+}
+
+.commercial-pricing-card {
+    position: relative;
+    border-color: #c9a227 !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(82, 33, 17, 0.98),
+            rgba(52, 19, 8, 0.98)
+        ) !important;
+}
+
+.commercial-pricing-card::before {
+    content: "COMMERCIAL";
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    padding: 6px 10px;
+
+    border: 1px solid rgba(201, 162, 39, 0.75);
+
+    color: #c9a227;
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+}
+
+.commercial-area-caption {
+    margin: 8px 0 18px;
+    color: #d7ba63;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.commercial-price-note {
+    margin: 22px 0 0;
+    color: #bcae9a;
+    font-size: 12px;
+}
+
+@media (max-width: 767px) {
+    .commercial-pricing-block {
+        margin-top: 60px;
+        padding-top: 50px;
+    }
+
+    .commercial-pricing-heading {
+        margin-bottom: 32px;
+    }
+
+    .commercial-pricing-heading h2 {
+        font-size: 38px;
+    }
+
+    .commercial-pricing-eyebrow {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+}

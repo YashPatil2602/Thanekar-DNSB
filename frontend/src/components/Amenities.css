@@ -285,3 +285,27 @@
         box-sizing: border-box !important;
     }
 }
+
+/* CLIENT AMENITIES HEADING SEP 2026 */
+
+.amenities-section {
+    flex-direction: column !important;
+}
+
+.amenities-heading {
+    margin: 0 auto 38px;
+    text-align: center;
+    color: #c9a227;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.6px;
+}
+
+@media (max-width: 767px) {
+    .amenities-heading {
+        margin-bottom: 24px;
+        font-size: 36px;
+    }
+}
