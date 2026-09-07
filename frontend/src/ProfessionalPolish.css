@@ -2937,3 +2937,28 @@ section:not(.hero-section) {
         justify-self: stretch;
     }
 }
+
+/* ============================================================
+   FINAL ENQUIRY SUCCESS MESSAGE CONTRAST
+   ============================================================ */
+
+.enquiry-modal-content .success-message h2,
+.enquiry-modal-content .success-message h3,
+.enquiry-modal-content .success-title,
+.enquiry-modal-content .thank-you-title {
+    color: #f1d487 !important;
+    -webkit-text-fill-color: #f1d487 !important;
+    opacity: 1 !important;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25) !important;
+}
+
+.enquiry-modal-content .success-message p,
+.enquiry-modal-content .success-message,
+.enquiry-modal-content .success-text,
+.enquiry-modal-content .thank-you-message {
+    color: #e0d1c3 !important;
+    -webkit-text-fill-color: #e0d1c3 !important;
+    opacity: 1 !important;
+    line-height: 1.6 !important;
+}
+
