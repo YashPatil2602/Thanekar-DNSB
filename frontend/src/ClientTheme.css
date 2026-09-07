@@ -1,0 +1,907 @@
+/* =========================================================
+   THANEKAR DNSB
+   CLIENT BACKGROUND THEME - SEPTEMBER 2026
+
+   Inspiration:
+   - Brown Classic Refined presentation
+   - Beige Minimalist portfolio website
+
+   Purpose:
+   - Warm beige / cream backgrounds
+   - Elegant dark brown typography
+   - Thin refined borders
+   - Soft premium shadows
+   - Preserve existing content/functionality
+   ========================================================= */
+
+:root {
+    --client-page-bg: #f3eee8;
+    --client-paper: #faf7f2;
+    --client-paper-soft: #f7f1eb;
+    --client-beige: #eadfd5;
+    --client-beige-deep: #dfd0c3;
+
+    --client-brown: #3f2d28;
+    --client-brown-dark: #2e211e;
+    --client-brown-soft: #68544c;
+
+    --client-gold: #a9812e;
+    --client-gold-soft: #c0a05b;
+
+    --client-line: rgba(63, 45, 40, 0.22);
+    --client-line-strong: rgba(63, 45, 40, 0.38);
+
+    --client-shadow:
+        0 18px 45px rgba(55, 39, 33, 0.10);
+
+    --client-shadow-soft:
+        0 10px 28px rgba(55, 39, 33, 0.07);
+}
+
+
+/* =========================================================
+   GLOBAL PAGE
+   ========================================================= */
+
+html {
+    background: var(--client-page-bg);
+}
+
+body {
+    margin: 0;
+
+    background:
+        radial-gradient(
+            circle at 15% 8%,
+            rgba(190, 159, 126, 0.11),
+            transparent 31%
+        ),
+        radial-gradient(
+            circle at 88% 38%,
+            rgba(168, 129, 80, 0.07),
+            transparent 29%
+        ),
+        linear-gradient(
+            180deg,
+            #fbf8f4 0%,
+            #f3ece5 52%,
+            #eee5dc 100%
+        );
+
+    background-attachment: fixed;
+
+    color: var(--client-brown);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+#root {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    background: transparent;
+}
+
+
+/* =========================================================
+   CLASSIC TYPOGRAPHY
+   ========================================================= */
+
+section:not(.hero-section) h1,
+section:not(.hero-section) h2,
+section:not(.hero-section) h3,
+section:not(.hero-section) h4 {
+    color: var(--client-brown-dark) !important;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+}
+
+section:not(.hero-section) p {
+    color: var(--client-brown-soft);
+}
+
+section:not(.hero-section) small {
+    color: #806d64;
+}
+
+
+/* =========================================================
+   ALL CONTENT SECTION BACKGROUNDS
+
+   Hero is intentionally excluded so the building/hero
+   photography remains intact.
+   ========================================================= */
+
+section:not(.hero-section) {
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 12% 15%,
+            rgba(178, 145, 113, 0.08),
+            transparent 34%
+        ),
+        linear-gradient(
+            135deg,
+            #faf7f2 0%,
+            #f5efe9 48%,
+            #eee4db 100%
+        ) !important;
+
+    color: var(--client-brown) !important;
+
+    border-top:
+        1px solid rgba(63, 45, 40, 0.09);
+}
+
+
+/* subtle alternate background */
+
+section:not(.hero-section):nth-of-type(even) {
+    background:
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(177, 139, 96, 0.08),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #f3ebe4 0%,
+            #faf6f1 100%
+        ) !important;
+}
+
+
+/* =========================================================
+   NAVBAR
+   Beige minimalist website reference
+   ========================================================= */
+
+.navbar {
+    background:
+        rgba(250, 247, 242, 0.97) !important;
+
+    border-bottom:
+        1px solid var(--client-line) !important;
+
+    box-shadow:
+        0 4px 22px rgba(52, 37, 31, 0.06) !important;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.nav-links a,
+.navbar a:not(.brochure-btn):not(.call-btn),
+.menu-toggle {
+    color: var(--client-brown-dark) !important;
+}
+
+.nav-links a:hover {
+    color: var(--client-gold) !important;
+}
+
+
+/* =========================================================
+   GOLD / CLASSIC SMALL TITLES
+   ========================================================= */
+
+.about-small-title,
+.configuration-small-title,
+.configuration-label,
+.pricing-label,
+.pricing-type,
+.commercial-pricing-eyebrow,
+.floor-plan-group-eyebrow,
+.floor-plan-project,
+.location-small-title,
+.amenities-heading {
+    color: var(--client-gold) !important;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.amenities-heading,
+.floor-plans-title,
+.floor-plan-group-title,
+.pricing-heading h2,
+.commercial-pricing-heading h2 {
+    color: var(--client-brown-dark) !important;
+}
+
+.pricing-heading h2 span,
+.commercial-pricing-heading h2 span,
+.about-content h2 span {
+    color: var(--client-gold) !important;
+}
+
+
+/* =========================================================
+   TEXT / SUBTITLES
+   ========================================================= */
+
+.floor-plans-subtitle,
+.floor-plan-group-description,
+.pricing-intro,
+.pricing-description,
+.commercial-pricing-heading p,
+.commercial-price-note {
+    color: var(--client-brown-soft) !important;
+}
+
+
+/* =========================================================
+   PREMIUM LIGHT CARDS
+   ========================================================= */
+
+.pricing-card,
+.commercial-pricing-card,
+.feature-card,
+.featured-card,
+.floor-plan-card,
+.configuration-card,
+.config-card,
+.developer-container,
+.location-container {
+    background:
+        rgba(255, 252, 248, 0.90) !important;
+
+    border:
+        1px solid var(--client-line) !important;
+
+    box-shadow:
+        var(--client-shadow-soft) !important;
+}
+
+
+/* cards hover */
+
+.pricing-card:hover,
+.feature-card:hover,
+.featured-card:hover,
+.floor-plan-card:hover {
+    border-color:
+        rgba(169, 129, 46, 0.52) !important;
+
+    box-shadow:
+        var(--client-shadow) !important;
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =========================================================
+   PRICING CARDS
+   ========================================================= */
+
+.pricing-card h3,
+.commercial-pricing-card h3 {
+    color: var(--client-brown-dark) !important;
+}
+
+.pricing-card .price,
+.commercial-pricing-card .price {
+    color: var(--client-gold) !important;
+}
+
+.pricing-card .price span,
+.commercial-pricing-card .price span {
+    color: var(--client-gold) !important;
+}
+
+
+/* featured residential pricing */
+
+.pricing-featured {
+    background:
+        linear-gradient(
+            145deg,
+            #ede0d5 0%,
+            #fffaf5 50%,
+            #eadbce 100%
+        ) !important;
+
+    border:
+        1px solid rgba(169, 129, 46, 0.48) !important;
+}
+
+
+/* =========================================================
+   COMMERCIAL PRICING
+   ========================================================= */
+
+.commercial-pricing-block {
+    background: transparent !important;
+
+    border-top:
+        1px solid var(--client-line-strong) !important;
+}
+
+.commercial-pricing-card {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 252, 248, 0.96),
+            rgba(239, 227, 217, 0.93)
+        ) !important;
+
+    border:
+        1px solid rgba(169, 129, 46, 0.44) !important;
+}
+
+.commercial-pricing-card::before {
+    color: var(--client-gold) !important;
+
+    background:
+        rgba(250, 247, 242, 0.92);
+
+    border-color:
+        rgba(169, 129, 46, 0.50) !important;
+}
+
+.commercial-area-caption {
+    color: var(--client-gold) !important;
+}
+
+
+/* =========================================================
+   LIMITED OFFER
+   Keep one elegant dark-brown feature block
+   ========================================================= */
+
+.pricing-offer {
+    background:
+        linear-gradient(
+            135deg,
+            #342520,
+            #50382f
+        ) !important;
+
+    border:
+        1px solid rgba(192, 160, 91, 0.52) !important;
+
+    box-shadow:
+        0 16px 38px rgba(45, 31, 27, 0.14) !important;
+}
+
+.pricing-offer p,
+.pricing-offer small {
+    color: #eee2d8 !important;
+}
+
+.pricing-offer h3 {
+    color: #fffaf5 !important;
+}
+
+.pricing-offer h3 span {
+    color: #d4b66d !important;
+}
+
+
+/* =========================================================
+   FLOOR PLANS
+   ========================================================= */
+
+.floor-plans-section {
+    background:
+        linear-gradient(
+            135deg,
+            #f7f1eb,
+            #eee4db
+        ) !important;
+}
+
+.floor-plan-card {
+    background:
+        #fbf8f4 !important;
+
+    border:
+        1px solid rgba(63, 45, 40, 0.23) !important;
+}
+
+.floor-plan-details {
+    background:
+        #fbf8f4 !important;
+}
+
+.floor-plan-title {
+    color:
+        var(--client-brown-dark) !important;
+}
+
+.floor-plan-project {
+    color:
+        var(--client-gold) !important;
+}
+
+
+/* Commercial plans visibly separate */
+
+.commercial-floor-plan-group {
+    background:
+        rgba(255, 252, 248, 0.60) !important;
+
+    border:
+        1px solid rgba(169, 129, 46, 0.35) !important;
+
+    box-shadow:
+        var(--client-shadow-soft);
+}
+
+.commercial-floor-plan-card {
+    background:
+        #fffaf6 !important;
+
+    border-color:
+        rgba(169, 129, 46, 0.46) !important;
+}
+
+.floor-plan-section-divider {
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(106, 79, 65, 0.45),
+            transparent
+        ) !important;
+}
+
+
+/* =========================================================
+   CONFIGURATION
+   ========================================================= */
+
+.configuration-section {
+    background:
+        linear-gradient(
+            135deg,
+            #f5eee7,
+            #faf7f2
+        ) !important;
+
+    color:
+        var(--client-brown) !important;
+}
+
+.configuration-section h2,
+.configuration-section h3 {
+    color:
+        var(--client-brown-dark) !important;
+}
+
+.configuration-section p {
+    color:
+        var(--client-brown-soft) !important;
+}
+
+
+/* Generic configuration cards */
+
+.configuration-card,
+.config-card,
+.configuration-item {
+    background:
+        rgba(255, 252, 248, 0.82) !important;
+
+    border-color:
+        var(--client-line) !important;
+}
+
+
+/* =========================================================
+   FEATURES
+   ========================================================= */
+
+.features-section,
+.features-wrapper {
+    background:
+        transparent !important;
+}
+
+.feature-card,
+.featured-card {
+    color:
+        var(--client-brown) !important;
+}
+
+.feature-card h3,
+.featured-card h3 {
+    color:
+        var(--client-brown-dark) !important;
+}
+
+.feature-card p,
+.featured-card p {
+    color:
+        var(--client-brown-soft) !important;
+}
+
+
+/* =========================================================
+   AMENITIES
+   ========================================================= */
+
+.amenities-section {
+    background:
+        linear-gradient(
+            135deg,
+            #faf7f2 0%,
+            #eee3da 100%
+        ) !important;
+}
+
+.amenities-heading {
+    color:
+        var(--client-brown-dark) !important;
+}
+
+/* image itself remains full colour */
+
+.amenities-image-wrapper {
+    background:
+        #e9dfd6 !important;
+
+    border:
+        1px solid rgba(63, 45, 40, 0.20) !important;
+
+    box-shadow:
+        var(--client-shadow) !important;
+}
+
+/* image overlay must remain readable */
+
+.amenities-overlay h3,
+.amenities-overlay p {
+    color:
+        #fffaf5 !important;
+}
+
+
+/* =========================================================
+   ABOUT / DEVELOPER
+   ========================================================= */
+
+.about-content h2,
+.developer-container h2,
+.developer-container h3 {
+    color:
+        var(--client-brown-dark) !important;
+}
+
+.about-content p,
+.developer-container p {
+    color:
+        var(--client-brown-soft) !important;
+}
+
+.developer-container {
+    background:
+        rgba(255, 252, 248, 0.72) !important;
+
+    border:
+        1px solid var(--client-line) !important;
+}
+
+
+/* =========================================================
+   LOCATION
+   ========================================================= */
+
+.location-container {
+    background:
+        rgba(255, 252, 248, 0.82) !important;
+}
+
+.location-container h2,
+.location-container h3 {
+    color:
+        var(--client-brown-dark) !important;
+}
+
+.location-container p {
+    color:
+        var(--client-brown-soft) !important;
+}
+
+
+/* =========================================================
+   FORM INPUTS / MODALS
+   ========================================================= */
+
+.enquiry-modal-content {
+    background:
+        #faf7f2 !important;
+
+    color:
+        var(--client-brown) !important;
+
+    border:
+        1px solid rgba(63, 45, 40, 0.25) !important;
+
+    box-shadow:
+        0 25px 70px rgba(35, 24, 20, 0.22) !important;
+}
+
+.enquiry-modal-content h2,
+.enquiry-modal-content h3 {
+    color:
+        var(--client-brown-dark) !important;
+}
+
+.enquiry-modal-content p,
+.enquiry-modal-content label {
+    color:
+        var(--client-brown-soft) !important;
+}
+
+.enquiry-modal-content input,
+.enquiry-modal-content select,
+.enquiry-modal-content textarea {
+    background:
+        #fffdf9 !important;
+
+    color:
+        var(--client-brown-dark) !important;
+
+    border:
+        1px solid rgba(63, 45, 40, 0.26) !important;
+}
+
+.enquiry-modal-content input::placeholder,
+.enquiry-modal-content textarea::placeholder {
+    color:
+        #9a877e !important;
+}
+
+
+/* =========================================================
+   FOOTER
+   Beige refined presentation style
+   ========================================================= */
+
+.footer {
+    background:
+        linear-gradient(
+            135deg,
+            #e9ddd3 0%,
+            #f7f1eb 100%
+        ) !important;
+
+    color:
+        var(--client-brown) !important;
+
+    border-top:
+        1px solid rgba(63, 45, 40, 0.25) !important;
+}
+
+.footer h2,
+.footer h3,
+.footer h4 {
+    color:
+        var(--client-brown-dark) !important;
+}
+
+.footer p,
+.footer li,
+.footer a {
+    color:
+        var(--client-brown-soft) !important;
+}
+
+.footer a:hover {
+    color:
+        var(--client-gold) !important;
+}
+
+
+/* Footer logo - keep client's earlier "make it bigger" request */
+
+.footer-logo-container {
+    background:
+        rgba(255, 252, 248, 0.55) !important;
+
+    border:
+        1px solid rgba(169, 129, 46, 0.46) !important;
+
+    box-shadow:
+        0 10px 25px rgba(62, 45, 38, 0.08);
+}
+
+.footer-logo-container img {
+    width:
+        84% !important;
+
+    max-width:
+        135px !important;
+
+    height:
+        auto !important;
+
+    object-fit:
+        contain !important;
+
+    transform:
+        scale(1.12) !important;
+}
+
+
+/* =========================================================
+   DIVIDERS
+   ========================================================= */
+
+.gold-divider,
+.pricing-line {
+    opacity: 0.82;
+}
+
+.gold-divider span,
+.pricing-line {
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--client-gold),
+            transparent
+        ) !important;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background:
+        #eee5dc;
+}
+
+::-webkit-scrollbar-thumb {
+    background:
+        #8e7264;
+
+    border-radius:
+        20px;
+
+    border:
+        2px solid #eee5dc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background:
+        #664e43;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    body {
+        background:
+            linear-gradient(
+                180deg,
+                #faf7f2,
+                #f1e8e0
+            );
+    }
+
+    section:not(.hero-section) {
+        background:
+            linear-gradient(
+                145deg,
+                #faf7f2,
+                #f0e6dd
+            ) !important;
+    }
+
+
+    /* mobile navbar */
+
+    .navbar {
+        background:
+            rgba(250, 247, 242, 0.98) !important;
+    }
+
+    .nav-links,
+    .navbar-menu,
+    .mobile-menu {
+        background:
+            #faf7f2 !important;
+    }
+
+    .nav-links a,
+    .navbar-menu a,
+    .mobile-menu a {
+        color:
+            var(--client-brown-dark) !important;
+    }
+
+
+    /* headings */
+
+    section:not(.hero-section) h2 {
+        line-height:
+            1.12;
+    }
+
+
+    /* cards */
+
+    .pricing-card,
+    .commercial-pricing-card,
+    .floor-plan-card,
+    .feature-card,
+    .featured-card,
+    .configuration-card,
+    .config-card,
+    .developer-container,
+    .location-container {
+        box-shadow:
+            0 10px 28px rgba(58, 40, 33, 0.08) !important;
+    }
+
+
+    /* commercial */
+
+    .commercial-floor-plan-group {
+        background:
+            rgba(255, 252, 248, 0.56) !important;
+    }
+
+
+    /* footer */
+
+    .footer {
+        background:
+            linear-gradient(
+                180deg,
+                #eee3da,
+                #f8f3ee
+            ) !important;
+    }
+
+    .footer-logo-container img {
+        width:
+            88% !important;
+
+        max-width:
+            120px !important;
+
+        transform:
+            scale(1.08) !important;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    section:not(.hero-section) {
+        padding-left:
+            12px;
+
+        padding-right:
+            12px;
+    }
+
+}

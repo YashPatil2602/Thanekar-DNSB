@@ -13,6 +13,8 @@ import Footer from "./components/Footer";
 import EnquiryForm from "./components/EnquiryForm";
 
 import "./App.css";
+import "./ClientTheme.css";
+import "./ProfessionalPolish.css";
 
 function App() {
     const [isEnquiryOpen, setIsEnquiryOpen] = useState(true);

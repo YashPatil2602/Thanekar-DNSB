@@ -1,0 +1,2939 @@
+/* ============================================================
+   THANEKAR DNSB
+   FINAL PROFESSIONAL POLISH
+   Senior / Production Quality Visual Layer
+
+   Import this AFTER ClientTheme.css
+   ============================================================ */
+
+:root {
+    --pro-bg: #f5f0ea;
+    --pro-surface: #fcfaf7;
+    --pro-surface-alt: #eee4da;
+
+    --pro-brown-950: #241915;
+    --pro-brown-900: #30211c;
+    --pro-brown-800: #443029;
+    --pro-brown-700: #604b42;
+    --pro-brown-600: #78645a;
+
+    --pro-gold-700: #927026;
+    --pro-gold-600: #aa8431;
+    --pro-gold-500: #bd9a4b;
+
+    --pro-border: rgba(63, 45, 40, 0.15);
+    --pro-border-strong: rgba(63, 45, 40, 0.28);
+
+    --pro-shadow-sm:
+        0 8px 24px rgba(46, 32, 27, 0.06);
+
+    --pro-shadow-md:
+        0 16px 42px rgba(46, 32, 27, 0.09);
+
+    --pro-shadow-lg:
+        0 25px 70px rgba(46, 32, 27, 0.13);
+
+    --pro-radius-sm: 10px;
+    --pro-radius-md: 16px;
+    --pro-radius-lg: 22px;
+
+    --pro-container: 1280px;
+}
+
+
+/* ============================================================
+   GLOBAL FOUNDATION
+   ============================================================ */
+
+html {
+    scroll-behavior: smooth;
+    background: var(--pro-bg);
+}
+
+body {
+    margin: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fbf8f4 0%,
+            #f5eee8 50%,
+            #eee5dc 100%
+        ) !important;
+
+    color: var(--pro-brown-800);
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 16px;
+    line-height: 1.65;
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* ============================================================
+   CONSISTENT SECTION RHYTHM
+   ============================================================ */
+
+section:not(.hero-section) {
+    position: relative;
+
+    padding-top: 96px !important;
+    padding-bottom: 96px !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #faf7f3 0%,
+            #f3ebe4 100%
+        ) !important;
+
+    border-top:
+        1px solid rgba(62, 44, 37, 0.07) !important;
+}
+
+
+/* Do not randomly alternate backgrounds */
+
+section:not(.hero-section):nth-of-type(even) {
+    background:
+        linear-gradient(
+            180deg,
+            #f8f3ee 0%,
+            #f0e7df 100%
+        ) !important;
+}
+
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+
+section:not(.hero-section) h1,
+section:not(.hero-section) h2,
+section:not(.hero-section) h3,
+section:not(.hero-section) h4 {
+    margin-top: 0;
+
+    color: var(--pro-brown-950) !important;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-weight: 500;
+
+    text-wrap: balance;
+}
+
+section:not(.hero-section) h2 {
+    font-size: clamp(38px, 4vw, 58px);
+    line-height: 1.05;
+    letter-spacing: -1.2px;
+}
+
+section:not(.hero-section) h3 {
+    font-size: clamp(25px, 2.5vw, 34px);
+    line-height: 1.15;
+}
+
+section:not(.hero-section) p {
+    color: var(--pro-brown-600) !important;
+
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+
+/* ============================================================
+   SECTION EYEBROWS
+   ============================================================ */
+
+.pricing-label,
+.pricing-type,
+.commercial-pricing-eyebrow,
+.floor-plan-group-eyebrow,
+.floor-plan-project,
+.configuration-label,
+.configuration-small-title,
+.about-small-title,
+.location-small-title {
+    color: var(--pro-gold-700) !important;
+
+    font-family:
+        Arial,
+        sans-serif !important;
+
+    font-size: 11px !important;
+    font-weight: 700 !important;
+
+    letter-spacing: 2.4px !important;
+
+    text-transform: uppercase;
+}
+
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+
+.navbar {
+    min-height: 78px;
+
+    background:
+        rgba(251, 248, 244, 0.96) !important;
+
+    border-bottom:
+        1px solid var(--pro-border) !important;
+
+    box-shadow:
+        0 4px 22px rgba(42, 29, 24, 0.05) !important;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+.navbar-inner {
+    max-width: var(--pro-container);
+    margin: 0 auto;
+}
+
+.nav-links {
+    align-items: center;
+}
+
+.nav-links a {
+    position: relative;
+
+    color: var(--pro-brown-800) !important;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 0.25px;
+}
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--pro-gold-600);
+
+    transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: var(--pro-brown-950) !important;
+}
+
+
+/* ============================================================
+   BUTTON SYSTEM
+   Reduce excessive metallic/shiny styling
+   ============================================================ */
+
+.hero-button,
+.form-submit,
+.call-btn,
+.brochure-btn,
+.pricing-button,
+.featured-button,
+.offer-button,
+.view-plan-btn,
+.location-button,
+.enquiry-button,
+.brochure-button {
+    min-height: 44px;
+
+    border-radius: 6px !important;
+
+    font-family:
+        Arial,
+        sans-serif !important;
+
+    font-size: 12px !important;
+    font-weight: 700 !important;
+
+    letter-spacing: 0.8px;
+
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        background 0.22s ease,
+        border-color 0.22s ease !important;
+}
+
+
+/* main dark brown CTA */
+
+.pricing-button,
+.view-plan-btn,
+.location-button,
+.enquiry-button {
+    background:
+        var(--pro-brown-900) !important;
+
+    color:
+        #fffaf6 !important;
+
+    border:
+        1px solid var(--pro-brown-900) !important;
+
+    box-shadow:
+        0 8px 18px rgba(47, 32, 27, 0.12) !important;
+}
+
+.pricing-button:hover,
+.view-plan-btn:hover,
+.location-button:hover,
+.enquiry-button:hover {
+    transform:
+        translateY(-2px);
+
+    background:
+        #1f1512 !important;
+
+    box-shadow:
+        0 12px 26px rgba(47, 32, 27, 0.17) !important;
+}
+
+
+/* gold CTA */
+
+.brochure-btn,
+.brochure-button,
+.featured-button,
+.offer-button {
+    background:
+        linear-gradient(
+            135deg,
+            #a57d2a,
+            #c4a354
+        ) !important;
+
+    color:
+        #241915 !important;
+
+    border:
+        1px solid rgba(99, 73, 20, 0.2) !important;
+}
+
+.brochure-btn:hover,
+.brochure-button:hover,
+.featured-button:hover,
+.offer-button:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(154, 117, 38, 0.20) !important;
+}
+
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+
+.about-container {
+    max-width: var(--pro-container) !important;
+    margin: 0 auto !important;
+}
+
+.about-content {
+    max-width: 620px;
+}
+
+.about-content h2 {
+    margin-bottom: 24px !important;
+}
+
+.about-content p {
+    max-width: 590px;
+}
+
+.about-image {
+    overflow: hidden;
+
+    border:
+        1px solid var(--pro-border) !important;
+
+    border-radius:
+        var(--pro-radius-md) !important;
+
+    box-shadow:
+        var(--pro-shadow-md) !important;
+}
+
+.about-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.7s ease;
+}
+
+.about-image:hover img {
+    transform:
+        scale(1.025);
+}
+
+
+/* ============================================================
+   CONFIGURATION
+   ============================================================ */
+
+.configuration-section {
+    background:
+        linear-gradient(
+            180deg,
+            #f4ece5,
+            #faf7f3
+        ) !important;
+}
+
+.configuration-container {
+    max-width:
+        var(--pro-container) !important;
+}
+
+.configuration-card,
+.config-card,
+.configuration-item {
+    border:
+        1px solid var(--pro-border) !important;
+
+    border-radius:
+        var(--pro-radius-md) !important;
+
+    background:
+        rgba(255, 253, 250, 0.88) !important;
+
+    box-shadow:
+        var(--pro-shadow-sm) !important;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease !important;
+}
+
+.configuration-card:hover,
+.config-card:hover,
+.configuration-item:hover {
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        var(--pro-shadow-md) !important;
+}
+
+
+/* ============================================================
+   FEATURES
+   ============================================================ */
+
+.features-grid {
+    max-width:
+        var(--pro-container);
+
+    margin-left:
+        auto;
+
+    margin-right:
+        auto;
+
+    gap:
+        24px !important;
+}
+
+.feature-card,
+.featured-card {
+    padding:
+        32px !important;
+
+    background:
+        rgba(255, 253, 250, 0.92) !important;
+
+    border:
+        1px solid var(--pro-border) !important;
+
+    border-radius:
+        var(--pro-radius-md) !important;
+
+    box-shadow:
+        var(--pro-shadow-sm) !important;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease !important;
+}
+
+.feature-card:hover,
+.featured-card:hover {
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        var(--pro-shadow-md) !important;
+}
+
+.feature-card h3,
+.featured-card h3 {
+    margin-bottom:
+        12px !important;
+}
+
+
+/* ============================================================
+   PRICING
+   ============================================================ */
+
+.pricing-container {
+    max-width:
+        var(--pro-container) !important;
+
+    margin:
+        0 auto !important;
+}
+
+.pricing-heading {
+    max-width:
+        760px;
+}
+
+.pricing-grid {
+    gap:
+        26px !important;
+
+    align-items:
+        stretch;
+}
+
+.pricing-card {
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    padding:
+        38px !important;
+
+    background:
+        #fcfaf7 !important;
+
+    border:
+        1px solid var(--pro-border) !important;
+
+    border-radius:
+        var(--pro-radius-md) !important;
+
+    box-shadow:
+        var(--pro-shadow-sm) !important;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease !important;
+}
+
+.pricing-card:hover {
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(166, 128, 48, 0.34) !important;
+
+    box-shadow:
+        var(--pro-shadow-md) !important;
+}
+
+.pricing-card h3 {
+    margin:
+        10px 0 14px !important;
+}
+
+.price {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif !important;
+
+    font-weight:
+        500 !important;
+
+    letter-spacing:
+        -1px;
+}
+
+.pricing-description {
+    min-height:
+        80px;
+}
+
+
+/* featured card */
+
+.pricing-featured {
+    background:
+        linear-gradient(
+            145deg,
+            #fffaf6,
+            #ece0d5
+        ) !important;
+
+    border:
+        1px solid rgba(162, 123, 41, 0.38) !important;
+}
+
+
+/* ============================================================
+   LIMITED OFFER
+   ============================================================ */
+
+.pricing-offer {
+    margin-top:
+        54px !important;
+
+    padding:
+        34px 38px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2e211d,
+            #4a342d
+        ) !important;
+
+    border:
+        1px solid rgba(193, 161, 92, 0.36) !important;
+
+    border-radius:
+        var(--pro-radius-md) !important;
+
+    box-shadow:
+        var(--pro-shadow-md) !important;
+}
+
+.pricing-offer p {
+    margin-bottom:
+        7px !important;
+
+    color:
+        #cbbfae !important;
+}
+
+.pricing-offer h3 {
+    color:
+        #fffaf5 !important;
+}
+
+.pricing-offer h3 span {
+    color:
+        #d8bd78 !important;
+}
+
+
+/* ============================================================
+   COMMERCIAL PRICING
+   ============================================================ */
+
+.commercial-pricing-block {
+    margin-top:
+        90px !important;
+
+    padding-top:
+        74px !important;
+
+    border-top:
+        1px solid var(--pro-border-strong) !important;
+}
+
+.commercial-pricing-heading {
+    max-width:
+        720px !important;
+}
+
+.commercial-pricing-card {
+    background:
+        linear-gradient(
+            145deg,
+            #fcfaf7,
+            #eee4da
+        ) !important;
+
+    border:
+        1px solid rgba(157, 119, 38, 0.34) !important;
+}
+
+.commercial-pricing-card::before {
+    top:
+        18px !important;
+
+    right:
+        18px !important;
+
+    padding:
+        6px 9px !important;
+
+    background:
+        rgba(247, 241, 234, 0.94) !important;
+
+    border-radius:
+        4px;
+
+    color:
+        var(--pro-gold-700) !important;
+
+    font-size:
+        9px !important;
+}
+
+.commercial-price-note {
+    margin-top:
+        24px !important;
+
+    font-size:
+        12px !important;
+}
+
+
+/* ============================================================
+   AMENITIES
+   ============================================================ */
+
+.amenities-section {
+    padding-left:
+        5% !important;
+
+    padding-right:
+        5% !important;
+}
+
+.amenities-heading {
+    margin-bottom:
+        42px !important;
+
+    color:
+        var(--pro-brown-950) !important;
+
+    font-size:
+        clamp(40px, 4vw, 58px) !important;
+
+    font-weight:
+        500 !important;
+
+    letter-spacing:
+        -1px !important;
+}
+
+.amenities-slider {
+    width:
+        100%;
+
+    max-width:
+        1240px;
+
+    margin:
+        0 auto;
+}
+
+.amenities-image-wrapper {
+    overflow:
+        hidden;
+
+    border:
+        1px solid var(--pro-border) !important;
+
+    border-radius:
+        var(--pro-radius-lg) !important;
+
+    box-shadow:
+        var(--pro-shadow-lg) !important;
+
+    background:
+        #e8ded5 !important;
+}
+
+.amenities-image {
+    display:
+        block;
+
+    width:
+        100%;
+
+    object-fit:
+        cover;
+
+    transition:
+        transform 0.65s ease;
+}
+
+.amenities-image-wrapper:hover .amenities-image {
+    transform:
+        scale(1.015);
+}
+
+.amenities-overlay {
+    background:
+        linear-gradient(
+            180deg,
+            transparent 30%,
+            rgba(21, 14, 12, 0.70) 100%
+        ) !important;
+}
+
+.amenities-overlay h3 {
+    color:
+        white !important;
+
+    text-shadow:
+        0 2px 14px rgba(0, 0, 0, 0.24);
+}
+
+.amenities-dots {
+    margin-top:
+        26px !important;
+}
+
+.amenity-dot {
+    width:
+        8px !important;
+
+    min-width:
+        8px !important;
+
+    max-width:
+        8px !important;
+
+    height:
+        8px !important;
+
+    min-height:
+        8px !important;
+
+    max-height:
+        8px !important;
+
+    border:
+        1px solid var(--pro-brown-700) !important;
+
+    background:
+        transparent !important;
+}
+
+.amenity-dot.active {
+    background:
+        var(--pro-brown-800) !important;
+
+    border-color:
+        var(--pro-brown-800) !important;
+
+    transform:
+        scale(1.18);
+}
+
+
+/* ============================================================
+   FLOOR PLANS
+   ============================================================ */
+
+.floor-plans-container {
+    max-width:
+        var(--pro-container) !important;
+}
+
+.floor-plans-title {
+    font-size:
+        clamp(40px, 4vw, 58px) !important;
+
+    font-weight:
+        500 !important;
+
+    letter-spacing:
+        -1px !important;
+}
+
+.floor-plans-subtitle {
+    max-width:
+        670px !important;
+
+    margin:
+        16px auto 64px !important;
+
+    color:
+        var(--pro-brown-600) !important;
+}
+
+.floor-plan-group-title {
+    font-size:
+        clamp(30px, 3vw, 42px) !important;
+
+    font-weight:
+        500 !important;
+}
+
+.floor-plan-group-description {
+    max-width:
+        650px !important;
+}
+
+.floor-plans-grid {
+    gap:
+        28px !important;
+}
+
+.floor-plan-card {
+    overflow:
+        hidden;
+
+    background:
+        var(--pro-surface) !important;
+
+    border:
+        1px solid var(--pro-border) !important;
+
+    border-radius:
+        var(--pro-radius-md) !important;
+
+    box-shadow:
+        var(--pro-shadow-sm) !important;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease !important;
+}
+
+.floor-plan-card:hover {
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        var(--pro-shadow-md) !important;
+}
+
+.floor-plan-image-container {
+    background:
+        #eee8e2 !important;
+}
+
+.floor-plan-pdf {
+    border:
+        0 !important;
+
+    background:
+        white;
+}
+
+.floor-plan-details {
+    padding:
+        26px !important;
+
+    background:
+        #fcfaf7 !important;
+}
+
+.floor-plan-project {
+    margin:
+        0 0 8px !important;
+}
+
+.floor-plan-title {
+    margin:
+        0 0 16px !important;
+
+    font-size:
+        25px !important;
+}
+
+
+/* Commercial container */
+
+.commercial-floor-plan-group {
+    padding:
+        42px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(252, 249, 245, 0.94),
+            rgba(235, 224, 214, 0.84)
+        ) !important;
+
+    border:
+        1px solid rgba(161, 123, 42, 0.28) !important;
+
+    border-radius:
+        var(--pro-radius-lg) !important;
+
+    box-shadow:
+        var(--pro-shadow-sm) !important;
+}
+
+
+/* divider */
+
+.floor-plan-section-divider {
+    margin:
+        90px 0 !important;
+
+    opacity:
+        0.55;
+}
+
+
+/* ============================================================
+   LOCATION
+   ============================================================ */
+
+.location-container {
+    max-width:
+        var(--pro-container) !important;
+
+    overflow:
+        hidden;
+
+    background:
+        rgba(252, 250, 247, 0.90) !important;
+
+    border:
+        1px solid var(--pro-border) !important;
+
+    border-radius:
+        var(--pro-radius-lg) !important;
+
+    box-shadow:
+        var(--pro-shadow-sm) !important;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.footer {
+    padding-top:
+        76px !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #e9ded5,
+            #f4ede7
+        ) !important;
+
+    border-top:
+        1px solid var(--pro-border-strong) !important;
+}
+
+.footer h2,
+.footer h3,
+.footer h4 {
+    color:
+        var(--pro-brown-950) !important;
+}
+
+.footer p,
+.footer li,
+.footer a {
+    color:
+        var(--pro-brown-700) !important;
+}
+
+.footer a {
+    transition:
+        color 0.2s ease;
+}
+
+.footer a:hover {
+    color:
+        var(--pro-gold-700) !important;
+}
+
+
+/* Make footer branding confident, not tiny */
+
+.footer-logo-container {
+    width:
+        190px !important;
+
+    min-width:
+        190px !important;
+
+    height:
+        150px !important;
+
+    display:
+        flex !important;
+
+    align-items:
+        center !important;
+
+    justify-content:
+        center !important;
+
+    padding:
+        16px !important;
+
+    background:
+        rgba(252, 249, 245, 0.62) !important;
+
+    border:
+        1px solid rgba(157, 119, 38, 0.34) !important;
+
+    border-radius:
+        18px !important;
+
+    box-shadow:
+        var(--pro-shadow-sm) !important;
+}
+
+.footer-logo-container img {
+    width:
+        100% !important;
+
+    max-width:
+        155px !important;
+
+    height:
+        auto !important;
+
+    object-fit:
+        contain !important;
+
+    transform:
+        none !important;
+}
+
+
+/* ============================================================
+   MODAL
+   ============================================================ */
+
+.enquiry-modal-content {
+    max-width:
+        520px !important;
+
+    background:
+        #fcfaf7 !important;
+
+    border:
+        1px solid var(--pro-border) !important;
+
+    border-radius:
+        var(--pro-radius-lg) !important;
+
+    box-shadow:
+        0 30px 90px rgba(31, 20, 17, 0.24) !important;
+}
+
+.enquiry-modal-content input,
+.enquiry-modal-content select,
+.enquiry-modal-content textarea {
+    min-height:
+        48px;
+
+    border:
+        1px solid rgba(63, 45, 40, 0.20) !important;
+
+    border-radius:
+        6px !important;
+
+    background:
+        white !important;
+
+    color:
+        var(--pro-brown-900) !important;
+
+    outline:
+        none !important;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.enquiry-modal-content input:focus,
+.enquiry-modal-content select:focus,
+.enquiry-modal-content textarea:focus {
+    border-color:
+        rgba(161, 123, 42, 0.72) !important;
+
+    box-shadow:
+        0 0 0 3px rgba(161, 123, 42, 0.10) !important;
+}
+
+
+/* ============================================================
+   DESKTOP LARGE
+   ============================================================ */
+
+@media (min-width: 1440px) {
+
+    section:not(.hero-section) {
+        padding-top:
+            110px !important;
+
+        padding-bottom:
+            110px !important;
+    }
+
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1024px) {
+
+    section:not(.hero-section) {
+        padding-top:
+            80px !important;
+
+        padding-bottom:
+            80px !important;
+    }
+
+    .commercial-floor-plan-group {
+        padding:
+            32px !important;
+    }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 767px) {
+
+    body {
+        font-size:
+            15px;
+    }
+
+    section:not(.hero-section) {
+        padding-top:
+            68px !important;
+
+        padding-bottom:
+            68px !important;
+    }
+
+
+    /* Typography */
+
+    section:not(.hero-section) h2 {
+        font-size:
+            36px !important;
+
+        line-height:
+            1.08 !important;
+
+        letter-spacing:
+            -0.6px !important;
+    }
+
+    section:not(.hero-section) h3 {
+        font-size:
+            26px !important;
+    }
+
+    section:not(.hero-section) p {
+        font-size:
+            15px !important;
+
+        line-height:
+            1.7 !important;
+    }
+
+
+    /* Navbar */
+
+    .navbar {
+        min-height:
+            68px;
+    }
+
+
+    /* Pricing */
+
+    .pricing-card {
+        padding:
+            28px 22px !important;
+    }
+
+    .pricing-description {
+        min-height:
+            auto;
+    }
+
+    .pricing-offer {
+        padding:
+            28px 22px !important;
+
+        border-radius:
+            14px !important;
+    }
+
+    .commercial-pricing-block {
+        margin-top:
+            65px !important;
+
+        padding-top:
+            54px !important;
+    }
+
+
+    /* Amenities */
+
+    .amenities-section {
+        padding-left:
+            18px !important;
+
+        padding-right:
+            18px !important;
+    }
+
+    .amenities-heading {
+        margin-bottom:
+            28px !important;
+
+        font-size:
+            36px !important;
+    }
+
+    .amenities-image-wrapper {
+        border-radius:
+            14px !important;
+    }
+
+
+    /* Commercial floor plan */
+
+    .commercial-floor-plan-group {
+        padding:
+            26px 14px !important;
+
+        border-radius:
+            14px !important;
+    }
+
+    .floor-plans-subtitle {
+        margin-bottom:
+            44px !important;
+    }
+
+    .floor-plans-grid {
+        gap:
+            22px !important;
+    }
+
+    .floor-plan-details {
+        padding:
+            22px 18px !important;
+    }
+
+    .floor-plan-section-divider {
+        margin:
+            62px 0 !important;
+    }
+
+
+    /* footer */
+
+    .footer {
+        padding-top:
+            60px !important;
+    }
+
+    .footer-logo-container {
+        width:
+            165px !important;
+
+        min-width:
+            165px !important;
+
+        height:
+            130px !important;
+    }
+
+    .footer-logo-container img {
+        max-width:
+            140px !important;
+    }
+
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 390px) {
+
+    section:not(.hero-section) {
+        padding-top:
+            58px !important;
+
+        padding-bottom:
+            58px !important;
+    }
+
+    section:not(.hero-section) h2 {
+        font-size:
+            33px !important;
+    }
+
+    .pricing-card {
+        padding:
+            25px 18px !important;
+    }
+
+}
+
+
+/* ============================================================
+   ACCESSIBILITY
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        scroll-behavior:
+            auto !important;
+
+        transition-duration:
+            0.01ms !important;
+    }
+
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline:
+        2px solid var(--pro-gold-600) !important;
+
+    outline-offset:
+        3px !important;
+}
+/* FINAL MODAL & HERO CONTRAST FIX - SEP 08 2026 */
+
+/* FINAL MODAL & HERO CONTRAST FIX - SEP 08 2026 */
+
+/* ============================================================
+   ENQUIRY MODAL
+   One continuous premium walnut surface.
+   Removes the unwanted bright white separator.
+   ============================================================ */
+
+.enquiry-modal-content {
+    width: min(440px, calc(100vw - 32px)) !important;
+    max-height: 92vh !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow: hidden !important;
+
+    background:
+        radial-gradient(
+            circle at 50% -10%,
+            rgba(182, 132, 45, 0.12),
+            transparent 38%
+        ),
+        linear-gradient(
+            160deg,
+            #35170d 0%,
+            #2b1008 48%,
+            #24100a 100%
+        ) !important;
+
+    border:
+        1px solid rgba(194, 155, 68, 0.58) !important;
+
+    border-radius:
+        18px !important;
+
+    box-shadow:
+        0 28px 90px rgba(16, 8, 5, 0.46),
+        0 0 0 1px rgba(255, 224, 150, 0.025) inset !important;
+}
+
+
+/* no large separator line */
+
+.enquiry-modal-content::before {
+    content: "" !important;
+
+    position: absolute !important;
+    top: 0 !important;
+    left: 28px !important;
+    right: 28px !important;
+
+    width: auto !important;
+    height: 1px !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(227, 190, 103, 0.85),
+            transparent
+        ) !important;
+}
+
+
+/* Any gap between header and form now stays dark */
+
+.enquiry-modal-content > div,
+.enquiry-modal-content > form {
+    background-color: transparent !important;
+}
+
+
+/* ============================================================
+   MODAL HEADER
+   ============================================================ */
+
+.enquiry-modal-header {
+    position: relative !important;
+
+    margin: 0 !important;
+
+    padding:
+        28px 30px 20px !important;
+
+    background:
+        transparent !important;
+
+    border: 0 !important;
+
+    border-bottom:
+        1px solid rgba(210, 174, 91, 0.16) !important;
+
+    text-align:
+        center !important;
+}
+
+
+/* Remove any old decorative white separator */
+
+.enquiry-modal-header::before,
+.enquiry-modal-header::after {
+    background:
+        transparent !important;
+
+    border:
+        0 !important;
+}
+
+
+/* ============================================================
+   MAIN PROJECT NAME
+   Fix the low-contrast THANEKAR DNSB text
+   ============================================================ */
+
+.enquiry-modal-header h2 {
+    margin:
+        8px 0 9px !important;
+
+    color:
+        #f0d38a !important;
+
+    background:
+        none !important;
+
+    -webkit-background-clip:
+        initial !important;
+
+    background-clip:
+        initial !important;
+
+    -webkit-text-fill-color:
+        #f0d38a !important;
+
+    opacity:
+        1 !important;
+
+    filter:
+        none !important;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif !important;
+
+    font-size:
+        clamp(27px, 2vw, 32px) !important;
+
+    font-weight:
+        600 !important;
+
+    line-height:
+        1.12 !important;
+
+    letter-spacing:
+        0.8px !important;
+
+    text-shadow:
+        0 2px 14px rgba(0, 0, 0, 0.28),
+        0 0 20px rgba(212, 175, 86, 0.08) !important;
+}
+
+
+/* little text above title */
+
+.enquiry-modal-header .form-top-text {
+    margin:
+        0 !important;
+
+    color:
+        #bda98e !important;
+
+    -webkit-text-fill-color:
+        #bda98e !important;
+
+    opacity:
+        1 !important;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif !important;
+
+    font-size:
+        10px !important;
+
+    font-weight:
+        600 !important;
+
+    line-height:
+        1.3 !important;
+
+    letter-spacing:
+        2.1px !important;
+
+    text-transform:
+        uppercase !important;
+}
+
+
+/* Luxury Residential & Commercial Development */
+
+.enquiry-modal-header .form-subtitle {
+    margin:
+        0 auto 14px !important;
+
+    color:
+        #d8c7b4 !important;
+
+    -webkit-text-fill-color:
+        #d8c7b4 !important;
+
+    opacity:
+        1 !important;
+
+    font-size:
+        11px !important;
+
+    line-height:
+        1.5 !important;
+
+    letter-spacing:
+        0.15px !important;
+}
+
+
+/* GET LUXURY WALKTHROUGH */
+
+.enquiry-modal-header .form-heading {
+    margin:
+        6px 0 !important;
+
+    display:
+        flex !important;
+
+    align-items:
+        center !important;
+
+    justify-content:
+        center !important;
+
+    gap:
+        10px !important;
+
+    color:
+        #d4ad4e !important;
+
+    -webkit-text-fill-color:
+        #d4ad4e !important;
+
+    opacity:
+        1 !important;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif !important;
+
+    font-size:
+        11px !important;
+
+    font-weight:
+        800 !important;
+
+    line-height:
+        1.25 !important;
+
+    letter-spacing:
+        0.8px !important;
+}
+
+
+/* small gold lines beside heading */
+
+.enquiry-modal-header .form-heading span {
+    width:
+        30px !important;
+
+    height:
+        1px !important;
+
+    flex:
+        0 0 30px !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #c99e3e
+        ) !important;
+}
+
+.enquiry-modal-header .form-heading span:last-child {
+    background:
+        linear-gradient(
+            90deg,
+            #c99e3e,
+            transparent
+        ) !important;
+}
+
+
+/* Tailored For You */
+
+.enquiry-modal-header .form-tagline {
+    margin:
+        5px 0 0 !important;
+
+    color:
+        #d9b860 !important;
+
+    -webkit-text-fill-color:
+        #d9b860 !important;
+
+    opacity:
+        1 !important;
+
+    font-size:
+        10px !important;
+
+    font-weight:
+        600 !important;
+
+    letter-spacing:
+        0.35px !important;
+}
+
+
+/* ============================================================
+   FORM AREA
+   Keep same brown surface: NO WHITE STRIP
+   ============================================================ */
+
+.enquiry-form {
+    margin:
+        0 !important;
+
+    padding:
+        20px 30px 28px !important;
+
+    background:
+        transparent !important;
+
+    border:
+        0 !important;
+}
+
+.enquiry-form form {
+    margin:
+        0 !important;
+
+    padding:
+        0 !important;
+
+    background:
+        transparent !important;
+
+    border:
+        0 !important;
+}
+
+
+/* in case old form wrapper has white background */
+
+.enquiry-modal-content .form-container,
+.enquiry-modal-content .form-body,
+.enquiry-modal-content .enquiry-form-wrapper,
+.enquiry-modal-content .enquiry-modal-body {
+    margin:
+        0 !important;
+
+    background:
+        transparent !important;
+
+    border:
+        0 !important;
+}
+
+
+/* ============================================================
+   INPUTS
+   Warm ivory instead of harsh pure white
+   ============================================================ */
+
+.enquiry-form input,
+.enquiry-form select,
+.enquiry-form textarea,
+.enquiry-modal-content input,
+.enquiry-modal-content select,
+.enquiry-modal-content textarea {
+    min-height:
+        46px !important;
+
+    background:
+        #f7f1e9 !important;
+
+    color:
+        #35231c !important;
+
+    -webkit-text-fill-color:
+        #35231c !important;
+
+    border:
+        1px solid rgba(177, 148, 111, 0.40) !important;
+
+    border-radius:
+        6px !important;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.65) !important;
+
+    font-size:
+        13px !important;
+
+    outline:
+        none !important;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease !important;
+}
+
+
+.enquiry-form input::placeholder,
+.enquiry-form textarea::placeholder {
+    color:
+        #8b786d !important;
+
+    -webkit-text-fill-color:
+        #8b786d !important;
+
+    opacity:
+        1 !important;
+}
+
+
+.enquiry-form input:focus,
+.enquiry-form select:focus,
+.enquiry-form textarea:focus {
+    background:
+        #fffaf4 !important;
+
+    border-color:
+        rgba(202, 162, 66, 0.78) !important;
+
+    box-shadow:
+        0 0 0 3px rgba(201, 158, 62, 0.12) !important;
+}
+
+
+/* ============================================================
+   CONSENT TEXT
+   Current screenshot shows this too faint
+   ============================================================ */
+
+.enquiry-form label,
+.enquiry-form .consent-text,
+.enquiry-form .privacy-text,
+.enquiry-form small {
+    color:
+        #b9a99d !important;
+
+    -webkit-text-fill-color:
+        #b9a99d !important;
+
+    opacity:
+        1 !important;
+
+    font-size:
+        9px !important;
+
+    line-height:
+        1.45 !important;
+}
+
+.enquiry-form input[type="checkbox"] {
+    min-height:
+        auto !important;
+
+    width:
+        14px !important;
+
+    height:
+        14px !important;
+
+    padding:
+        0 !important;
+
+    accent-color:
+        #c79a35;
+}
+
+
+/* ============================================================
+   MODAL CTA
+   ============================================================ */
+
+.enquiry-form .submit-btn,
+.enquiry-modal-content .submit-btn {
+    width:
+        100% !important;
+
+    min-height:
+        46px !important;
+
+    margin-top:
+        12px !important;
+
+    background:
+        linear-gradient(
+            105deg,
+            #9c711c 0%,
+            #d1ab42 47%,
+            #b38524 100%
+        ) !important;
+
+    color:
+        #1f120b !important;
+
+    -webkit-text-fill-color:
+        #1f120b !important;
+
+    border:
+        1px solid rgba(235, 199, 105, 0.50) !important;
+
+    border-radius:
+        6px !important;
+
+    box-shadow:
+        0 9px 22px rgba(0, 0, 0, 0.20) !important;
+
+    font-size:
+        12px !important;
+
+    font-weight:
+        800 !important;
+
+    letter-spacing:
+        0.15px !important;
+}
+
+.enquiry-form .submit-btn:hover {
+    transform:
+        translateY(-1px) !important;
+
+    filter:
+        brightness(1.05) !important;
+
+    box-shadow:
+        0 12px 26px rgba(0, 0, 0, 0.25) !important;
+}
+
+
+/* ============================================================
+   CLOSE BUTTON
+   ============================================================ */
+
+.enquiry-close-btn {
+    top:
+        14px !important;
+
+    right:
+        14px !important;
+
+    width:
+        32px !important;
+
+    height:
+        32px !important;
+
+    background:
+        rgba(255, 255, 255, 0.035) !important;
+
+    color:
+        #e8d7c1 !important;
+
+    border:
+        1px solid rgba(224, 197, 145, 0.35) !important;
+
+    border-radius:
+        50% !important;
+
+    opacity:
+        1 !important;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease !important;
+}
+
+.enquiry-close-btn:hover {
+    background:
+        rgba(202, 159, 65, 0.12) !important;
+
+    border-color:
+        rgba(224, 197, 145, 0.66) !important;
+
+    transform:
+        rotate(4deg) !important;
+}
+
+
+/* ============================================================
+   HERO / DESKTOP ENQUIRY FORM PROJECT NAME
+
+   "THANEKAR DNSB" must be immediately readable even before
+   the modal is opened.
+   ============================================================ */
+
+.hero-small-title,
+.logo-main,
+.hero-form .form-heading,
+.hero-form h2,
+.hero-form .logo-main,
+.hero-form .hero-small-title {
+    color:
+        #e6c574 !important;
+
+    -webkit-text-fill-color:
+        #e6c574 !important;
+
+    background:
+        none !important;
+
+    opacity:
+        1 !important;
+
+    filter:
+        none !important;
+
+    text-shadow:
+        0 2px 15px rgba(0, 0, 0, 0.40),
+        0 0 22px rgba(210, 168, 67, 0.08) !important;
+}
+
+
+/* If heading has nested spans, keep them visible too */
+
+.hero-form .form-heading *,
+.logo-main * {
+    color:
+        #e6c574 !important;
+
+    -webkit-text-fill-color:
+        #e6c574 !important;
+
+    opacity:
+        1 !important;
+}
+
+
+/* ============================================================
+   MOBILE MODAL
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+    .enquiry-modal-content {
+        width:
+            calc(100vw - 24px) !important;
+
+        max-height:
+            calc(100vh - 24px) !important;
+
+        border-radius:
+            15px !important;
+    }
+
+    .enquiry-modal-header {
+        padding:
+            25px 20px 17px !important;
+    }
+
+    .enquiry-modal-header h2 {
+        font-size:
+            25px !important;
+
+        letter-spacing:
+            0.4px !important;
+    }
+
+    .enquiry-form {
+        padding:
+            17px 20px 22px !important;
+
+        overflow-y:
+            auto !important;
+    }
+
+    .enquiry-form input,
+    .enquiry-form select,
+    .enquiry-form textarea {
+        min-height:
+            44px !important;
+    }
+}
+
+
+/* ============================================================
+   FINAL SCREENSHOT REVIEW POLISH
+   SEP 08 2026
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   1. SECTION SPACING
+   Current screenshots have too much blank vertical space.
+   ------------------------------------------------------------ */
+
+section:not(.hero-section) {
+    padding-top: 72px !important;
+    padding-bottom: 72px !important;
+}
+
+
+/* Keep content centered and intentional */
+
+.about-container,
+.configuration-container,
+.pricing-container,
+.floor-plans-container {
+    max-width: 1180px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+
+/* ------------------------------------------------------------
+   2. NAVBAR LOGO
+   Logo source has visual whitespace.
+   Give it a dark premium home instead of leaving it tiny.
+   ------------------------------------------------------------ */
+
+.navbar .logo {
+    width: 68px !important;
+    min-width: 68px !important;
+    height: 42px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    overflow: hidden !important;
+
+    padding: 2px 4px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #2c1510,
+            #432218
+        ) !important;
+
+    border:
+        1px solid rgba(183, 142, 55, 0.34) !important;
+
+    border-radius: 8px !important;
+}
+
+.navbar-logo-image {
+    width: 62px !important;
+    max-width: none !important;
+    height: auto !important;
+
+    object-fit: contain !important;
+
+    transform: scale(1.55) !important;
+    transform-origin: center !important;
+
+    opacity: 1 !important;
+}
+
+
+/* ------------------------------------------------------------
+   3. ABOUT SECTION
+   ------------------------------------------------------------ */
+
+.about-content p {
+    color: #65544c !important;
+    font-size: 15px !important;
+    line-height: 1.8 !important;
+}
+
+.about-content strong,
+.about-content b {
+    color: #8d681e !important;
+    font-weight: 700 !important;
+}
+
+
+/* ------------------------------------------------------------
+   4. DEVELOPER SECTION
+   Current bordered box looks unfinished.
+   ------------------------------------------------------------ */
+
+.developer-container {
+    width: min(100%, 1120px) !important;
+
+    margin: 52px auto 0 !important;
+
+    padding: 46px 50px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 253, 249, 0.97),
+            rgba(245, 237, 229, 0.92)
+        ) !important;
+
+    border:
+        1px solid rgba(158, 119, 42, 0.30) !important;
+
+    border-radius: 16px !important;
+
+    box-shadow:
+        0 18px 45px rgba(55, 38, 31, 0.07) !important;
+}
+
+.developer-content {
+    max-width: 980px !important;
+}
+
+.developer-content p {
+    color: #67564e !important;
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+}
+
+.developer-content h2 {
+    margin-bottom: 22px !important;
+}
+
+
+/* ------------------------------------------------------------
+   5. CONFIGURATION
+   Area values are currently almost invisible.
+   ------------------------------------------------------------ */
+
+.configuration-card {
+    background: #fcfaf7 !important;
+
+    border:
+        1px solid rgba(158, 119, 42, 0.28) !important;
+
+    box-shadow:
+        0 12px 32px rgba(55, 39, 32, 0.06) !important;
+}
+
+.configuration-card h3 {
+    color: #30211c !important;
+}
+
+.area-list {
+    gap: 14px !important;
+}
+
+.area-list div {
+    padding: 17px 15px !important;
+
+    background:
+        rgba(249, 244, 237, 0.82) !important;
+
+    border-left:
+        2px solid #b88a2c !important;
+}
+
+.area-list strong {
+    color: #765314 !important;
+
+    -webkit-text-fill-color: #765314 !important;
+
+    opacity: 1 !important;
+
+    font-size: 22px !important;
+    font-weight: 600 !important;
+}
+
+.area-list span {
+    color: #75645b !important;
+
+    -webkit-text-fill-color: #75645b !important;
+
+    opacity: 1 !important;
+
+    font-size: 12px !important;
+}
+
+
+/* AREA DETAILS / BUILT-UP AREA label */
+
+.area-title,
+.area-list small {
+    color: #9b7424 !important;
+
+    -webkit-text-fill-color: #9b7424 !important;
+
+    opacity: 1 !important;
+
+    font-weight: 700 !important;
+}
+
+
+/* Project Highlights */
+
+.configuration-features {
+    border-color: rgba(90, 65, 52, 0.15) !important;
+}
+
+.configuration-features p,
+.configuration-features span {
+    color: #65544c !important;
+}
+
+
+/* ------------------------------------------------------------
+   6. FEATURES
+   ------------------------------------------------------------ */
+
+.features-heading h2,
+.features-heading {
+    color: #30211c !important;
+}
+
+.features-heading em,
+.features-heading span {
+    color: #a77d25 !important;
+}
+
+
+/* Fallback message should not look like an application error */
+
+.features-section .error,
+.features-section .features-error,
+.features-section .empty-message {
+    color: #7a675e !important;
+    font-size: 14px !important;
+}
+
+
+/* ------------------------------------------------------------
+   7. PRICING
+   ------------------------------------------------------------ */
+
+.pricing-card {
+    min-height: 355px !important;
+}
+
+.pricing-description {
+    color: #66554d !important;
+}
+
+
+/* Limited-time offer currently has unreadable dark text */
+
+.pricing-offer p {
+    color: #d8ba73 !important;
+
+    -webkit-text-fill-color: #d8ba73 !important;
+
+    opacity: 1 !important;
+}
+
+.pricing-offer h3 {
+    color: #fff7eb !important;
+
+    -webkit-text-fill-color: #fff7eb !important;
+
+    opacity: 1 !important;
+
+    text-shadow:
+        0 1px 10px rgba(0, 0, 0, 0.24) !important;
+}
+
+.pricing-offer h3 span {
+    color: #e2b940 !important;
+
+    -webkit-text-fill-color: #e2b940 !important;
+
+    opacity: 1 !important;
+}
+
+.pricing-offer small {
+    color: #d1c2b7 !important;
+
+    -webkit-text-fill-color: #d1c2b7 !important;
+
+    opacity: 1 !important;
+}
+
+.pricing-offer .offer-button {
+    background:
+        linear-gradient(
+            110deg,
+            #a87d1f,
+            #d4ae46
+        ) !important;
+
+    color: #24140b !important;
+
+    -webkit-text-fill-color: #24140b !important;
+
+    opacity: 1 !important;
+
+    font-weight: 800 !important;
+}
+
+
+/* ------------------------------------------------------------
+   8. COMMERCIAL PRICING
+   Keep strong distinction
+   ------------------------------------------------------------ */
+
+.commercial-pricing-block {
+    padding-top: 62px !important;
+}
+
+.commercial-pricing-card {
+    min-height: 340px !important;
+}
+
+.commercial-pricing-card h3 {
+    color: #8c651a !important;
+}
+
+.commercial-pricing-card .price {
+    color: #8c651a !important;
+}
+
+
+/* ------------------------------------------------------------
+   9. AMENITIES
+   ------------------------------------------------------------ */
+
+.amenities-section {
+    padding-top: 76px !important;
+    padding-bottom: 76px !important;
+}
+
+.amenities-heading {
+    margin-bottom: 32px !important;
+}
+
+.amenities-image-wrapper {
+    position: relative !important;
+}
+
+
+/* elegant lower-image gradient */
+
+.amenities-image-wrapper::after {
+    content: "";
+
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+
+    height: 36% !important;
+
+    pointer-events: none !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 0%,
+            rgba(25, 15, 10, 0.13) 40%,
+            rgba(25, 15, 10, 0.65) 100%
+        ) !important;
+}
+
+.amenities-overlay {
+    position: absolute !important;
+    z-index: 3 !important;
+
+    background: transparent !important;
+}
+
+.amenities-overlay h3,
+.amenities-overlay p {
+    color: #fff8ed !important;
+
+    -webkit-text-fill-color: #fff8ed !important;
+
+    opacity: 1 !important;
+
+    text-shadow:
+        0 2px 14px rgba(0, 0, 0, 0.58) !important;
+}
+
+
+/* ------------------------------------------------------------
+   10. FLOOR PLANS
+   ------------------------------------------------------------ */
+
+.floor-plans-section {
+    padding-top: 78px !important;
+}
+
+.floor-plans-title {
+    color: #9a7020 !important;
+}
+
+.commercial-floor-plan-group {
+    margin-top: 38px !important;
+}
+
+.floor-plan-card {
+    min-height: 285px !important;
+}
+
+.floor-plan-details {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+
+/* ------------------------------------------------------------
+   11. LOCATION
+   Screenshot currently has DARK TEXT ON DARK PANEL.
+   ------------------------------------------------------------ */
+
+.location-container h1,
+.location-container h2,
+.location-container h3,
+.location-container .location-title {
+    color: #f1d487 !important;
+
+    -webkit-text-fill-color: #f1d487 !important;
+
+    opacity: 1 !important;
+
+    text-shadow:
+        0 2px 14px rgba(0, 0, 0, 0.18) !important;
+}
+
+.location-container p,
+.location-container address,
+.location-container .location-address {
+    color: #e0d1c3 !important;
+
+    -webkit-text-fill-color: #e0d1c3 !important;
+
+    opacity: 1 !important;
+
+    line-height: 1.7 !important;
+}
+
+.location-container .location-small-title {
+    color: #d5ad4d !important;
+
+    -webkit-text-fill-color: #d5ad4d !important;
+
+    opacity: 1 !important;
+}
+
+
+/* Don't change Google Map side */
+
+.location-container iframe {
+    background: white !important;
+}
+
+
+/* ------------------------------------------------------------
+   12. FOOTER
+   Actual logo is too tiny inside its box.
+   ------------------------------------------------------------ */
+
+.footer {
+    padding-top: 64px !important;
+}
+
+.footer-logo-container {
+    width: 145px !important;
+    min-width: 145px !important;
+    height: 110px !important;
+
+    overflow: hidden !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #30150d,
+            #472218
+        ) !important;
+
+    border:
+        1px solid rgba(180, 138, 48, 0.42) !important;
+
+    border-radius: 14px !important;
+}
+
+.footer-logo-container img {
+    width: 125px !important;
+    max-width: none !important;
+    height: auto !important;
+
+    transform: scale(1.75) !important;
+    transform-origin: center !important;
+
+    opacity: 1 !important;
+}
+
+.footer h2,
+.footer h3,
+.footer h4 {
+    color: #8e671c !important;
+}
+
+.footer p,
+.footer li,
+.footer a {
+    color: #66554d !important;
+
+    opacity: 1 !important;
+}
+
+.footer .contact-icon,
+.footer .social-icon {
+    opacity: 1 !important;
+}
+
+
+/* Footer buttons */
+
+.footer .enquiry-button,
+.footer .brochure-button {
+    opacity: 1 !important;
+
+    background:
+        linear-gradient(
+            110deg,
+            #9d721b,
+            #d1ab44
+        ) !important;
+
+    color: #23130b !important;
+
+    -webkit-text-fill-color: #23130b !important;
+}
+
+
+/* ------------------------------------------------------------
+   13. MOBILE
+   ------------------------------------------------------------ */
+
+@media (max-width: 767px) {
+
+    section:not(.hero-section) {
+        padding-top: 56px !important;
+        padding-bottom: 56px !important;
+    }
+
+    .navbar .logo {
+        width: 62px !important;
+        min-width: 62px !important;
+        height: 39px !important;
+    }
+
+    .navbar-logo-image {
+        width: 56px !important;
+        transform: scale(1.45) !important;
+    }
+
+    .developer-container {
+        width: calc(100% - 28px) !important;
+
+        padding: 30px 22px !important;
+
+        margin-top: 35px !important;
+    }
+
+    .pricing-card,
+    .commercial-pricing-card {
+        min-height: auto !important;
+    }
+
+    .footer-logo-container {
+        width: 135px !important;
+        min-width: 135px !important;
+        height: 105px !important;
+    }
+
+    .footer-logo-container img {
+        width: 118px !important;
+        transform: scale(1.7) !important;
+    }
+}
+
+
+
+/* ============================================================
+   FINAL APPROVAL PASS - SEP 08 2026
+   ============================================================ */
+
+
+/* FLOOR PLAN STATIC PREVIEWS
+   Prevent Chrome PDF viewer black/blank states */
+
+.floor-plan-image-container {
+    position: relative !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex: 0 0 48% !important;
+
+    min-height: 280px !important;
+
+    overflow: hidden !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f2ece5,
+            #fffdf9
+        ) !important;
+}
+
+.floor-plan-preview {
+    display: block !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    min-height: 280px !important;
+
+    object-fit: contain !important;
+
+    background: #ffffff !important;
+
+    border: 0 !important;
+
+    transition:
+        transform 0.35s ease !important;
+}
+
+.floor-plan-card:hover .floor-plan-preview {
+    transform: scale(1.015);
+}
+
+
+/* NAVBAR LOGO
+   More confident branding */
+
+.navbar .logo {
+    width: 82px !important;
+    min-width: 82px !important;
+    height: 48px !important;
+
+    padding: 2px !important;
+}
+
+.navbar-logo-image {
+    width: 72px !important;
+    max-width: none !important;
+
+    transform:
+        scale(1.9) !important;
+
+    transform-origin:
+        center !important;
+}
+
+
+/* CONFIGURATION
+   Avoid artificial empty space in 3 BHK card */
+
+.configuration-grid,
+.configuration-cards {
+    align-items: start !important;
+}
+
+.configuration-card {
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+
+/* ABOUT / DEVELOPER */
+
+.developer-container {
+    overflow: hidden !important;
+}
+
+
+/* SECTION TRANSITIONS */
+
+.floor-plans-section,
+.amenities-section,
+.pricing-section,
+.configuration-section {
+    scroll-margin-top: 75px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+
+    .floor-plan-card {
+        flex-direction: column !important;
+    }
+
+    .floor-plan-image-container {
+        flex:
+            none !important;
+
+        width:
+            100% !important;
+
+        min-height:
+            300px !important;
+    }
+
+    .floor-plan-preview {
+        min-height:
+            300px !important;
+    }
+
+    .navbar .logo {
+        width:
+            70px !important;
+
+        min-width:
+            70px !important;
+
+        height:
+            42px !important;
+    }
+
+    .navbar-logo-image {
+        width:
+            62px !important;
+
+        transform:
+            scale(1.75) !important;
+    }
+
+}
+
+
+/* ============================================================
+   FINAL RESIDENTIAL GRID BALANCE
+   Center last card when residential grid has odd number
+   ============================================================ */
+
+#residential-floor-plans .floor-plans-grid
+.floor-plan-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: calc((100% - 28px) / 2);
+    justify-self: center;
+}
+
+@media (max-width: 767px) {
+    #residential-floor-plans .floor-plans-grid
+    .floor-plan-card:last-child:nth-child(odd) {
+        grid-column: auto;
+        width: 100%;
+        justify-self: stretch;
+    }
+}

@@ -8,38 +8,48 @@ const commercialFloorPlans = [
         title: "1st Floor Commercial Plan",
         pdf: commercialPdf,
         page: 1,
+        preview:
+            "/images/floor-plan-previews/commercial-1.jpg",
     },
     {
         title: "2nd Floor Commercial Plan",
         pdf: commercialPdf,
         page: 2,
+        preview:
+            "/images/floor-plan-previews/commercial-2.jpg",
     },
 ];
 
 const residentialFloorPlans = [
     {
-        title: "1st & 2nd Floor",
-        pdf: "/images/FloorPlans.jsx/01_1st-2nd-floor-plan.pdf",
-    },
-    {
         title: "3rd Floor",
         pdf: "/images/FloorPlans.jsx/02_3rd-floor-plan.pdf",
+        preview:
+            "/images/floor-plan-previews/residential-3.jpg",
     },
     {
         title: "4th Floor",
         pdf: "/images/FloorPlans.jsx/03_4th-floor-plan.pdf",
+        preview:
+            "/images/floor-plan-previews/residential-4.jpg",
     },
     {
         title: "5th Floor",
         pdf: "/images/FloorPlans.jsx/04_5th-floor-plan.pdf",
+        preview:
+            "/images/floor-plan-previews/residential-5.jpg",
     },
     {
         title: "6th Floor",
         pdf: "/images/FloorPlans.jsx/05_6th-floor-plan.pdf",
+        preview:
+            "/images/floor-plan-previews/residential-6.jpg",
     },
     {
         title: "7th Floor",
         pdf: "/images/FloorPlans.jsx/06_7th-floor-plan.pdf",
+        preview:
+            "/images/floor-plan-previews/residential-7.jpg",
     },
 ];
 
@@ -47,16 +57,12 @@ function FloorPlanCard({
     plan,
     commercial = false,
 }) {
-    const previewUrl = plan.page
-        ? `${plan.pdf}#page=${plan.page}&toolbar=0&navpanes=0&scrollbar=0`
-        : `${plan.pdf}#toolbar=0&navpanes=0&scrollbar=0`;
-
     const viewUrl = plan.page
         ? `${plan.pdf}#page=${plan.page}`
         : plan.pdf;
 
     return (
-        <div
+        <article
             className={
                 commercial
                     ? "floor-plan-card commercial-floor-plan-card"
@@ -64,12 +70,12 @@ function FloorPlanCard({
             }
         >
             <div className="floor-plan-image-container">
-                <iframe
-                    src={previewUrl}
-                    title={`${plan.title} - Thanekar DNSB`}
-                    className="floor-plan-pdf"
-                    loading="lazy"
-                ></iframe>
+                <img
+                    src={plan.preview}
+                    alt={`${plan.title} - Thanekar DNSB`}
+                    className="floor-plan-preview"
+                    decoding="async"
+                />
             </div>
 
             <div className="floor-plan-details">
@@ -92,11 +98,12 @@ function FloorPlanCard({
                     href={viewUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`View ${plan.title}`}
                 >
                     View Plan →
                 </a>
             </div>
-        </div>
+        </article>
     );
 }
 
@@ -108,14 +115,16 @@ function FloorPlans() {
         >
             <div className="floor-plans-container">
 
-                <h2 className="floor-plans-title">
-                    Floor Plans
-                </h2>
+                <div className="floor-plans-heading-block">
+                    <h2 className="floor-plans-title">
+                        Floor Plans
+                    </h2>
 
-                <p className="floor-plans-subtitle">
-                    Explore commercial and residential floor
-                    plans of Thanekar DNSB.
-                </p>
+                    <p className="floor-plans-subtitle">
+                        Explore commercial and residential
+                        floor plans of Thanekar DNSB.
+                    </p>
+                </div>
 
                 <div
                     className="floor-plan-group commercial-floor-plan-group"
