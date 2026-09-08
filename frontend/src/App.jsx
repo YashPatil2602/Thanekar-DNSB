@@ -15,6 +15,7 @@ import EnquiryForm from "./components/EnquiryForm";
 import "./App.css";
 import "./ClientTheme.css";
 import "./ProfessionalPolish.css";
+import "./FinalPolish.css";
 
 function App() {
     const [isEnquiryOpen, setIsEnquiryOpen] = useState(true);

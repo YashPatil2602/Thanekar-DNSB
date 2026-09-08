@@ -1,0 +1,434 @@
+/* =========================================================
+   THANEKAR DNSB - FINAL PRODUCTION POLISH
+   Loaded last so these rules only refine the finished UI.
+   ========================================================= */
+
+/* ---------- GLOBAL / STICKY HEADER ---------- */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.navbar,
+.navbar-wrapper,
+.navbar-container,
+.site-header,
+header.site-header,
+header.navbar {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+}
+
+/* Small separation so the sticky navbar remains readable */
+.navbar,
+.navbar-wrapper,
+.navbar-container,
+.site-header {
+    box-shadow: 0 4px 18px rgba(49, 25, 12, 0.08) !important;
+}
+
+/* Prevent section heading from hiding behind sticky navbar */
+#home,
+#about,
+#configuration,
+#features,
+#pricing,
+#amenities,
+#floor-plans,
+#floorplans,
+#location,
+#contact {
+    scroll-margin-top: 92px !important;
+}
+
+
+/* =========================================================
+   SECTION SPACING
+   ========================================================= */
+
+#about,
+.about-section,
+#configuration,
+.configuration-section,
+#features,
+.features-section,
+#pricing,
+.pricing-section,
+#amenities,
+.amenities-section,
+#floor-plans,
+.floor-plans-section,
+#floorplans,
+#location,
+.location-section {
+    box-sizing: border-box;
+}
+
+/* Avoid excessive empty space between large sections */
+#floor-plans,
+.floor-plans-section,
+#floorplans {
+    padding-bottom: 54px !important;
+}
+
+#location,
+.location-section {
+    margin-top: 0 !important;
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+}
+
+
+/* =========================================================
+   FLOOR PLANS
+   ========================================================= */
+
+.floor-plans-grid,
+.residential-plans-grid,
+.commercial-plans-grid,
+.floor-plan-grid {
+    row-gap: 24px !important;
+    column-gap: 24px !important;
+}
+
+/* Keep cards visually consistent */
+.floor-plan-card {
+    overflow: hidden;
+}
+
+/* Keep plan preview images clean */
+.floor-plan-card img,
+.floor-plan-preview img,
+.plan-preview img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Prevent last residential card from creating excessive bottom gap */
+.residential-floor-plans,
+.residential-plans,
+.residential-section {
+    margin-bottom: 0 !important;
+    padding-bottom: 12px !important;
+}
+
+
+/* =========================================================
+   LOCATION
+   ========================================================= */
+
+.location-container,
+.location-wrapper,
+.location-content {
+    margin-bottom: 0 !important;
+}
+
+.location-card,
+.location-map-wrapper,
+.location-container {
+    overflow: hidden;
+}
+
+/* Make map and location card sit cleanly together */
+.location-map iframe,
+.map-container iframe,
+.location-section iframe {
+    display: block;
+    border: 0;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer,
+.footer,
+.site-footer {
+    margin-top: 0 !important;
+    padding-top: 48px !important;
+}
+
+.footer-container,
+.footer-content {
+    padding-top: 0 !important;
+}
+
+/* Reduce unnecessary empty space */
+.footer-grid,
+.footer-main,
+.footer-columns {
+    align-items: flex-start !important;
+    gap: 36px !important;
+}
+
+/* Main footer title */
+.footer h2,
+.footer h3,
+.footer h4,
+.footer-title,
+.footer-heading,
+.site-footer h2,
+.site-footer h3,
+.site-footer h4 {
+    color: #8a5b08 !important;
+    -webkit-text-fill-color: #8a5b08 !important;
+    opacity: 1 !important;
+}
+
+/* Normal footer text */
+.footer p,
+.footer span,
+.footer address,
+.footer-contact-text,
+.footer-description,
+.site-footer p,
+.site-footer span {
+    color: #554b44 !important;
+    -webkit-text-fill-color: #554b44 !important;
+    opacity: 1 !important;
+}
+
+/* Links */
+.footer a,
+.footer-link,
+.footer-links a,
+.quick-links a,
+.site-footer a {
+    color: #514840 !important;
+    -webkit-text-fill-color: #514840 !important;
+    opacity: 1 !important;
+    text-decoration: none;
+}
+
+.footer a:hover,
+.footer-link:hover,
+.footer-links a:hover,
+.quick-links a:hover {
+    color: #8a5b08 !important;
+}
+
+/* Contact item names should be clearly visible */
+.footer-contact strong,
+.footer-contact-title,
+.contact-label,
+.site-footer strong {
+    color: #815400 !important;
+    -webkit-text-fill-color: #815400 !important;
+    opacity: 1 !important;
+}
+
+/* Social circles */
+.footer-social a,
+.social-links a,
+.social-icon {
+    color: #5d4b3f !important;
+}
+
+/* Footer enquiry button */
+.footer .enquire-btn,
+.footer .enquire-button,
+.footer-enquire-btn,
+.footer .cta-button {
+    color: #211207 !important;
+    -webkit-text-fill-color: #211207 !important;
+    font-weight: 700 !important;
+}
+
+/* Footer brochure button - improve contrast */
+.footer .brochure-btn,
+.footer .download-brochure-btn,
+.footer-brochure-btn,
+.footer-download-btn,
+.site-footer .brochure-btn {
+    color: #211207 !important;
+    -webkit-text-fill-color: #211207 !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+}
+
+.footer .brochure-btn *,
+.footer .download-brochure-btn *,
+.footer-brochure-btn *,
+.footer-download-btn * {
+    color: #211207 !important;
+    -webkit-text-fill-color: #211207 !important;
+    opacity: 1 !important;
+}
+
+/* Bottom copyright area */
+.footer-bottom,
+.footer-copyright,
+.copyright {
+    margin-top: 28px !important;
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+}
+
+
+/* =========================================================
+   BUTTON VISIBILITY / CLICKABILITY
+   ========================================================= */
+
+button,
+a[role="button"],
+.enquire-btn,
+.enquire-button,
+.pricing-card button,
+.pricing-card .btn,
+.brochure-btn,
+.call-btn {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* Pricing CTAs */
+.pricing-card button,
+.pricing-card .enquire-btn,
+.pricing-card .enquire-button,
+.price-card button,
+.price-card .enquire-btn {
+    color: #1f1208 !important;
+    -webkit-text-fill-color: #1f1208 !important;
+    opacity: 1 !important;
+    font-weight: 700 !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    html {
+        scroll-padding-top: 82px;
+    }
+
+    #home,
+    #about,
+    #configuration,
+    #features,
+    #pricing,
+    #amenities,
+    #floor-plans,
+    #floorplans,
+    #location,
+    #contact {
+        scroll-margin-top: 84px !important;
+    }
+
+    /* Keep mobile header permanently accessible */
+    .navbar,
+    .navbar-wrapper,
+    .navbar-container,
+    .site-header,
+    header.site-header,
+    header.navbar {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 99999 !important;
+    }
+
+    /* Reduce large whitespace between floor plans and location */
+    #floor-plans,
+    .floor-plans-section,
+    #floorplans {
+        padding-bottom: 30px !important;
+    }
+
+    #location,
+    .location-section {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+    }
+
+    /* Location should fill mobile width naturally */
+    .location-container,
+    .location-wrapper,
+    .location-content {
+        width: calc(100% - 28px) !important;
+        max-width: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Footer: remove unnecessary tall blank areas */
+    footer,
+    .footer,
+    .site-footer {
+        padding-top: 34px !important;
+        padding-bottom: 0 !important;
+    }
+
+    .footer-grid,
+    .footer-main,
+    .footer-columns {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+    }
+
+    .footer-section,
+    .footer-column,
+    .footer-brand,
+    .footer-contact,
+    .footer-links,
+    .footer-actions {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .footer-bottom,
+    .footer-copyright,
+    .copyright {
+        margin-top: 26px !important;
+        padding-top: 16px !important;
+        padding-bottom: 18px !important;
+    }
+
+    /* Ensure long addresses/email do not overflow */
+    .footer p,
+    .footer a,
+    .footer span,
+    .footer address {
+        overflow-wrap: anywhere;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    #floor-plans,
+    .floor-plans-section,
+    #floorplans {
+        padding-bottom: 24px !important;
+    }
+
+    #location,
+    .location-section {
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+    }
+
+    .footer-grid,
+    .footer-main,
+    .footer-columns {
+        gap: 24px !important;
+    }
+}
