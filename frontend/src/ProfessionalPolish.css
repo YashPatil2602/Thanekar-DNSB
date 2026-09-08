@@ -2962,3 +2962,1170 @@ section:not(.hero-section) {
     line-height: 1.6 !important;
 }
 
+
+
+/* ============================================================
+   FINAL CLIENT MOBILE PATCH
+   Sticky navigation, visibility, CTA, footer and spacing
+   ============================================================ */
+
+@media (max-width: 767px) {
+
+    /* --------------------------------------------------------
+       STICKY / ALWAYS VISIBLE HEADER
+       -------------------------------------------------------- */
+
+    .navbar {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 9999 !important;
+        width: 100% !important;
+        background: #fbf7ef !important;
+        border-bottom: 1px solid rgba(170, 125, 20, 0.25) !important;
+        box-shadow: 0 5px 22px rgba(45, 24, 12, 0.10) !important;
+    }
+
+    .navbar-inner {
+        min-height: 72px !important;
+        height: auto !important;
+        padding: 8px 12px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 8px !important;
+        flex-wrap: nowrap !important;
+    }
+
+    .navbar-logo,
+    .logo-container {
+        flex: 0 0 auto !important;
+    }
+
+    .navbar-logo img,
+    .logo-container img {
+        width: 112px !important;
+        max-width: 112px !important;
+        height: 54px !important;
+        object-fit: contain !important;
+        display: block !important;
+    }
+
+    .navbar-buttons {
+        width: auto !important;
+        flex: 1 1 auto !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        gap: 7px !important;
+        flex-wrap: nowrap !important;
+    }
+
+    /* WhatsApp */
+    .whatsapp-btn,
+    .navbar-whatsapp,
+    .whatsapp-button {
+        width: 42px !important;
+        min-width: 42px !important;
+        height: 42px !important;
+        border-radius: 50% !important;
+        padding: 0 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex: 0 0 42px !important;
+    }
+
+    /* Brochure */
+    .brochure-btn,
+    .navbar-brochure,
+    .brochure-button {
+        min-height: 42px !important;
+        padding: 0 13px !important;
+        color: #2b180f !important;
+        -webkit-text-fill-color: #2b180f !important;
+        font-weight: 800 !important;
+        opacity: 1 !important;
+        text-shadow: none !important;
+        background:
+            linear-gradient(
+                110deg,
+                #a97908 0%,
+                #cf9f22 32%,
+                #f0cf64 52%,
+                #c89518 72%,
+                #a97609 100%
+            ) !important;
+    }
+
+    /* Call Now */
+    .call-btn,
+    .navbar-call,
+    .call-button {
+        min-height: 42px !important;
+        padding: 0 13px !important;
+        color: #211108 !important;
+        -webkit-text-fill-color: #211108 !important;
+        font-weight: 800 !important;
+    }
+
+    /* Hamburger */
+    .menu-toggle,
+    .hamburger,
+    .mobile-menu-toggle {
+        width: 44px !important;
+        min-width: 44px !important;
+        height: 44px !important;
+        padding: 6px !important;
+        color: #7c5600 !important;
+        border: 1px solid #b88919 !important;
+        background: #fffaf0 !important;
+        border-radius: 10px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+
+    /* --------------------------------------------------------
+       ALL PRIMARY CTA VISIBILITY
+       -------------------------------------------------------- */
+
+    .pricing-section button,
+    .pricing-section .enquire-btn,
+    .pricing-card button,
+    .commercial-pricing button,
+    .commercial-card button,
+    .offer-banner button,
+    .special-offer button,
+    .footer button,
+    .footer .enquire-btn {
+        opacity: 1 !important;
+        color: #211108 !important;
+        -webkit-text-fill-color: #211108 !important;
+        font-weight: 800 !important;
+        text-shadow: none !important;
+    }
+
+    .pricing-card .enquire-btn,
+    .commercial-card .enquire-btn,
+    .pricing-card button,
+    .commercial-card button {
+        background:
+            linear-gradient(
+                110deg,
+                #9b6a05 0%,
+                #c49314 28%,
+                #efd25d 52%,
+                #bc8610 76%,
+                #8a5903 100%
+            ) !important;
+        border: 1px solid rgba(102, 65, 3, 0.45) !important;
+        box-shadow: 0 7px 17px rgba(105, 66, 5, 0.24) !important;
+    }
+
+
+    /* --------------------------------------------------------
+       SPECIAL OFFER — CLEARLY CLICKABLE
+       -------------------------------------------------------- */
+
+    .special-offer,
+    .special-offer-badge,
+    .offer-badge {
+        cursor: pointer !important;
+        pointer-events: auto !important;
+        color: #211108 !important;
+        -webkit-text-fill-color: #211108 !important;
+        font-weight: 800 !important;
+    }
+
+
+    /* --------------------------------------------------------
+       FOOTER MOBILE — REMOVE LARGE EMPTY SPACES
+       -------------------------------------------------------- */
+
+    .footer {
+        padding-top: 40px !important;
+        padding-bottom: 18px !important;
+    }
+
+    .footer-content,
+    .footer-container {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        padding-top: 0 !important;
+        padding-bottom: 20px !important;
+    }
+
+    .footer-brand,
+    .footer-column,
+    .footer-section {
+        min-height: 0 !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .footer-brand {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        gap: 12px !important;
+    }
+
+    .footer-brand img,
+    .footer-logo img {
+        width: 150px !important;
+        max-width: 150px !important;
+        height: auto !important;
+        object-fit: contain !important;
+        margin: 0 0 5px !important;
+    }
+
+    .footer-brand h2,
+    .footer-brand h3,
+    .footer-brand-title {
+        margin: 0 !important;
+        line-height: 1.05 !important;
+    }
+
+    .footer-brand p {
+        margin: 8px 0 0 !important;
+        max-width: 330px !important;
+        line-height: 1.55 !important;
+        color: #5d514c !important;
+        -webkit-text-fill-color: #5d514c !important;
+    }
+
+    /* Decorative building icon should not create giant blank area */
+    .footer-building-icon,
+    .footer-decoration,
+    .footer-skyline {
+        margin: 10px 0 0 !important;
+        padding: 0 !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: 110px !important;
+    }
+
+
+    /* --------------------------------------------------------
+       QUICK LINKS COMPACT
+       -------------------------------------------------------- */
+
+    .footer-links,
+    .quick-links,
+    .footer-nav {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+        margin: 0 !important;
+    }
+
+    .footer-links a,
+    .quick-links a,
+    .footer-nav a {
+        margin: 0 !important;
+        padding: 9px 0 !important;
+        min-height: auto !important;
+        line-height: 1.35 !important;
+        color: #504742 !important;
+        -webkit-text-fill-color: #504742 !important;
+    }
+
+
+    /* --------------------------------------------------------
+       FOOTER HEADING COLORS
+       -------------------------------------------------------- */
+
+    .footer h2,
+    .footer h3,
+    .footer h4,
+    .footer-title,
+    .footer-heading {
+        color: #805800 !important;
+        -webkit-text-fill-color: #805800 !important;
+        opacity: 1 !important;
+    }
+
+
+    /* --------------------------------------------------------
+       CONTACT LABEL VISIBILITY
+       -------------------------------------------------------- */
+
+    .footer .contact-label,
+    .footer .contact-title,
+    .footer .contact-item strong,
+    .footer .contact-item b,
+    .footer .contact-item h4,
+    .footer .contact-item h5 {
+        color: #6d4a00 !important;
+        -webkit-text-fill-color: #6d4a00 !important;
+        opacity: 1 !important;
+        font-weight: 800 !important;
+    }
+
+    .footer .contact-item,
+    .footer .contact-item p,
+    .footer .contact-item a,
+    .footer .contact-value {
+        color: #514642 !important;
+        -webkit-text-fill-color: #514642 !important;
+        opacity: 1 !important;
+    }
+
+    .footer .contact-item {
+        margin-bottom: 18px !important;
+    }
+
+
+    /* --------------------------------------------------------
+       SOCIAL BUTTON VISIBILITY
+       -------------------------------------------------------- */
+
+    .footer .social-link,
+    .footer .social-icon,
+    .footer-social a {
+        color: #4b3b32 !important;
+        -webkit-text-fill-color: #4b3b32 !important;
+        border-color: #b7830a !important;
+        opacity: 1 !important;
+    }
+
+
+    /* --------------------------------------------------------
+       FOOTER ENQUIRY / BROCHURE CTA
+       -------------------------------------------------------- */
+
+    .footer .enquire-btn,
+    .footer .brochure-btn,
+    .footer button {
+        min-height: 48px !important;
+        color: #211108 !important;
+        -webkit-text-fill-color: #211108 !important;
+        font-weight: 800 !important;
+        opacity: 1 !important;
+    }
+
+
+    /* --------------------------------------------------------
+       GENERAL MOBILE TEXT VISIBILITY
+       -------------------------------------------------------- */
+
+    .pricing-section p,
+    .commercial-pricing p,
+    .configuration-section p,
+    .features-section p,
+    .footer p {
+        opacity: 1 !important;
+    }
+}
+
+
+/* Extra narrow Android phones */
+@media (max-width: 390px) {
+
+    .navbar-inner {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        gap: 5px !important;
+    }
+
+    .navbar-logo img,
+    .logo-container img {
+        width: 100px !important;
+        max-width: 100px !important;
+    }
+
+    .brochure-btn,
+    .navbar-brochure,
+    .call-btn,
+    .navbar-call {
+        padding-left: 9px !important;
+        padding-right: 9px !important;
+        font-size: 12px !important;
+    }
+
+    .whatsapp-btn,
+    .navbar-whatsapp,
+    .whatsapp-button {
+        width: 38px !important;
+        min-width: 38px !important;
+        height: 38px !important;
+        flex-basis: 38px !important;
+    }
+}
+
+
+/* ============================================================
+   FINAL PRICING + ENQUIRY CLIENT FIX
+   ============================================================ */
+
+.offer-badge {
+    cursor: pointer !important;
+}
+
+.pricing-button,
+.offer-button,
+.commercial-enquire-button {
+    cursor: pointer !important;
+}
+
+.enquiry-consent {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+}
+
+.enquiry-consent input {
+    flex: 0 0 auto !important;
+}
+
+.communication-consent {
+    margin-top: 8px !important;
+}
+
+.communication-consent span {
+    color: #e7d9cd !important;
+    -webkit-text-fill-color: #e7d9cd !important;
+    opacity: 1 !important;
+    line-height: 1.45 !important;
+}
+
+.enquiry-success.success-message h2,
+.enquiry-success .success-title {
+    color: #f1d487 !important;
+    -webkit-text-fill-color: #f1d487 !important;
+    opacity: 1 !important;
+}
+
+.enquiry-success.success-message p,
+.enquiry-success .success-text {
+    color: #eadfd6 !important;
+    -webkit-text-fill-color: #eadfd6 !important;
+    opacity: 1 !important;
+}
+
+@media (max-width: 767px) {
+    .pricing-button,
+    .offer-button,
+    .commercial-enquire-button {
+        color: #211108 !important;
+        -webkit-text-fill-color: #211108 !important;
+        opacity: 1 !important;
+        font-weight: 800 !important;
+    }
+
+    .offer-badge,
+    .offer-badge span {
+        color: #211108 !important;
+        -webkit-text-fill-color: #211108 !important;
+        opacity: 1 !important;
+    }
+
+    .enquiry-consent {
+        font-size: 11px !important;
+        line-height: 1.4 !important;
+    }
+
+    .enquiry-consent input {
+        width: 16px !important;
+        height: 16px !important;
+        margin-top: 1px !important;
+    }
+}
+
+/* ============================================================
+   FINAL CLIENT FIX
+   Sticky Header + Header Visibility + Footer Visibility
+   + Mobile Footer Spacing
+   ============================================================ */
+
+
+/* ============================================================
+   1. HEADER ALWAYS VISIBLE
+   ============================================================ */
+
+.navbar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 1200 !important;
+
+    background: rgba(255, 250, 240, 0.98) !important;
+
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(166, 124, 0, 0.35) !important;
+
+    box-shadow:
+        0 5px 18px rgba(42, 23, 12, 0.09) !important;
+}
+
+
+/* compensate for fixed navbar */
+
+main {
+    padding-top: 105px !important;
+}
+
+
+/* anchors should not hide behind header */
+
+html {
+    scroll-padding-top: 120px !important;
+}
+
+section {
+    scroll-margin-top: 120px !important;
+}
+
+
+/* ============================================================
+   2. HEADER BUTTON VISIBILITY
+   ============================================================ */
+
+.navbar .brochure-btn,
+.navbar .call-btn {
+    color: #211108 !important;
+    -webkit-text-fill-color: #211108 !important;
+
+    opacity: 1 !important;
+
+    text-shadow: none !important;
+
+    font-weight: 800 !important;
+}
+
+
+.navbar .brochure-btn *,
+.navbar .call-btn * {
+    color: #211108 !important;
+    -webkit-text-fill-color: #211108 !important;
+}
+
+
+.navbar .brochure-btn {
+    background:
+        linear-gradient(
+            120deg,
+            #b78716 0%,
+            #edcc58 45%,
+            #c99a22 100%
+        ) !important;
+
+    border-color: #b58a20 !important;
+}
+
+
+.navbar .call-btn {
+    background:
+        linear-gradient(
+            120deg,
+            #d0a326 0%,
+            #f1d56d 50%,
+            #bd8e1b 100%
+        ) !important;
+
+    border-color: #b58a20 !important;
+}
+
+
+/* WhatsApp remains clearly visible */
+
+.navbar .whatsapp-btn {
+    opacity: 1 !important;
+}
+
+
+/* hamburger visibility */
+
+.navbar .menu-toggle,
+.navbar .menu-toggle span {
+    color: #805600 !important;
+    border-color: #b58a20 !important;
+    opacity: 1 !important;
+}
+
+
+/* ============================================================
+   3. MODAL MUST STAY ABOVE FIXED HEADER
+   ============================================================ */
+
+.enquiry-modal-overlay {
+    z-index: 20000 !important;
+}
+
+
+/* ============================================================
+   4. FOOTER TEXT VISIBILITY ON LIGHT BACKGROUND
+   ============================================================ */
+
+.footer {
+    color: #3b2a21 !important;
+}
+
+
+/* Main footer headings */
+
+.footer-brand h2,
+.footer-section h3 {
+    color: #895d06 !important;
+    -webkit-text-fill-color: #895d06 !important;
+
+    opacity: 1 !important;
+
+    text-shadow: none !important;
+}
+
+
+/* DNSB subtitle */
+
+.footer .dnsb-logo strong {
+    color: #6b5549 !important;
+    -webkit-text-fill-color: #6b5549 !important;
+}
+
+
+/* Brand description */
+
+.footer-brand p {
+    color: #5e5049 !important;
+    -webkit-text-fill-color: #5e5049 !important;
+
+    opacity: 1 !important;
+}
+
+
+/* Quick Links */
+
+.footer-section li a {
+    color: #594b44 !important;
+    -webkit-text-fill-color: #594b44 !important;
+
+    opacity: 1 !important;
+
+    font-weight: 500 !important;
+}
+
+
+.footer-section li a:hover {
+    color: #9a6c08 !important;
+    -webkit-text-fill-color: #9a6c08 !important;
+}
+
+
+.footer-section li a::before {
+    color: #b18319 !important;
+    -webkit-text-fill-color: #b18319 !important;
+}
+
+
+/* Contact labels */
+
+.footer .contact-row strong {
+    color: #73500a !important;
+    -webkit-text-fill-color: #73500a !important;
+
+    opacity: 1 !important;
+
+    font-weight: 800 !important;
+}
+
+
+/* Contact values */
+
+.footer .contact-row a,
+.footer .contact-row p {
+    color: #554740 !important;
+    -webkit-text-fill-color: #554740 !important;
+
+    opacity: 1 !important;
+}
+
+
+.footer .contact-row a:hover {
+    color: #9a6c08 !important;
+    -webkit-text-fill-color: #9a6c08 !important;
+}
+
+
+/* Contact icons */
+
+.footer .contact-icon {
+    color: #a8780c !important;
+    -webkit-text-fill-color: #a8780c !important;
+
+    border-color: #b88a24 !important;
+
+    opacity: 1 !important;
+}
+
+
+/* Follow us */
+
+.footer .social-icon {
+    color: #5b4a41 !important;
+    -webkit-text-fill-color: #5b4a41 !important;
+
+    border-color: #b88a24 !important;
+
+    opacity: 1 !important;
+}
+
+
+.footer .social-icon:hover {
+    background: #b88a24 !important;
+
+    color: #fffaf0 !important;
+    -webkit-text-fill-color: #fffaf0 !important;
+}
+
+
+/* footer bottom */
+
+.footer .bottom-content p,
+.footer .bottom-links a {
+    color: #64554d !important;
+    -webkit-text-fill-color: #64554d !important;
+
+    opacity: 1 !important;
+}
+
+
+.footer .bottom-links a:hover {
+    color: #93670a !important;
+    -webkit-text-fill-color: #93670a !important;
+}
+
+
+/* ============================================================
+   5. ENQUIRE NOW BUTTON VISIBILITY
+   ============================================================ */
+
+.footer .enquiry-button {
+    color: #211108 !important;
+    -webkit-text-fill-color: #211108 !important;
+
+    opacity: 1 !important;
+
+    font-weight: 800 !important;
+
+    background:
+        linear-gradient(
+            110deg,
+            #ad7c0f,
+            #edcb55,
+            #b7810e
+        ) !important;
+}
+
+
+.footer .enquiry-button span {
+    color: #211108 !important;
+    -webkit-text-fill-color: #211108 !important;
+}
+
+
+/* brochure button */
+
+.footer .brochure-button {
+    color: #73500a !important;
+    -webkit-text-fill-color: #73500a !important;
+
+    border-color: #b88a24 !important;
+
+    font-weight: 800 !important;
+}
+
+
+/* ============================================================
+   6. MOBILE HEADER
+   ============================================================ */
+
+@media (max-width: 767px) {
+
+    .navbar {
+        min-height: 72px !important;
+    }
+
+    .navbar-inner {
+        min-height: 72px !important;
+
+        padding: 8px 10px !important;
+
+        flex-wrap: nowrap !important;
+
+        gap: 6px !important;
+
+        justify-content: space-between !important;
+    }
+
+
+    /* space for fixed navbar */
+
+    main {
+        padding-top: 72px !important;
+    }
+
+
+    html {
+        scroll-padding-top: 84px !important;
+    }
+
+    section {
+        scroll-margin-top: 84px !important;
+    }
+
+
+    /* logo */
+
+    .navbar .logo,
+    .navbar .navbar-logo {
+        width: 100px !important;
+        min-width: 100px !important;
+        max-width: 100px !important;
+
+        height: 54px !important;
+
+        flex: 0 0 100px !important;
+    }
+
+
+    .navbar .navbar-logo-image,
+    .navbar-logo img,
+    .logo-container img {
+        width: 100px !important;
+        min-width: 100px !important;
+        max-width: 100px !important;
+
+        height: 54px !important;
+
+        object-fit: contain !important;
+    }
+
+
+    /* Buttons must stay in one row */
+
+    .navbar-buttons {
+        width: auto !important;
+
+        flex: 1 1 auto !important;
+
+        order: initial !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: flex-end !important;
+
+        flex-wrap: nowrap !important;
+
+        gap: 5px !important;
+
+        min-width: 0 !important;
+    }
+
+
+    .navbar .brochure-btn,
+    .navbar .call-btn {
+        flex: 0 1 auto !important;
+
+        width: auto !important;
+
+        min-width: 0 !important;
+
+        padding: 9px 10px !important;
+
+        font-size: 12px !important;
+
+        line-height: 1 !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    .navbar .whatsapp-btn {
+        flex: 0 0 38px !important;
+
+        width: 38px !important;
+        min-width: 38px !important;
+        height: 38px !important;
+    }
+
+
+    .navbar .menu-toggle {
+        flex: 0 0 38px !important;
+
+        width: 38px !important;
+        min-width: 38px !important;
+        height: 38px !important;
+
+        margin: 0 !important;
+    }
+
+
+    /* dropdown appears under fixed header */
+
+    .navbar .nav-links {
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+
+        z-index: 1210 !important;
+
+        background: #fffaf0 !important;
+    }
+
+
+    .navbar .nav-links a {
+        color: #4a3529 !important;
+        -webkit-text-fill-color: #4a3529 !important;
+
+        opacity: 1 !important;
+    }
+}
+
+
+/* ============================================================
+   7. REMOVE LARGE MOBILE FOOTER BLANK SPACES
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+    .footer-container {
+        width: 88% !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 26px !important;
+
+        padding: 32px 0 24px !important;
+    }
+
+
+    .footer-brand,
+    .footer-section {
+        min-height: 0 !important;
+
+        height: auto !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+    }
+
+
+    .footer-logo-container {
+        width: 92px !important;
+        height: 92px !important;
+
+        margin: 0 0 16px !important;
+    }
+
+
+    .footer-logo {
+        width: 78px !important;
+        height: 78px !important;
+    }
+
+
+    .footer-brand h2 {
+        margin: 0 !important;
+
+        font-size: 29px !important;
+    }
+
+
+    .dnsb-logo {
+        margin-top: 5px !important;
+    }
+
+
+    .footer-brand p {
+        margin: 14px 0 0 !important;
+
+        line-height: 1.65 !important;
+    }
+
+
+    /* reduce decorative building blank area */
+
+    .building-icon {
+        width: 70px !important;
+        height: 82px !important;
+
+        margin-top: 18px !important;
+
+        transform: scale(0.82) !important;
+        transform-origin: left bottom !important;
+    }
+
+
+    .footer-section h3 {
+        margin: 0 !important;
+
+        font-size: 18px !important;
+    }
+
+
+    .footer-line {
+        margin-top: 8px !important;
+        margin-bottom: 15px !important;
+    }
+
+
+    /* quick links */
+
+    .footer-section ul {
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        display: grid !important;
+
+        gap: 5px !important;
+    }
+
+
+    .footer-section li {
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        min-height: 0 !important;
+    }
+
+
+    .footer-section li a {
+        display: block !important;
+
+        padding: 7px 0 !important;
+
+        font-size: 15px !important;
+
+        line-height: 1.35 !important;
+    }
+
+
+    /* contact section */
+
+    .contact-box {
+        gap: 15px !important;
+    }
+
+
+    .contact-row {
+        gap: 12px !important;
+
+        margin: 0 !important;
+    }
+
+
+    .contact-icon {
+        width: 38px !important;
+        min-width: 38px !important;
+        height: 38px !important;
+    }
+
+
+    .contact-row strong {
+        font-size: 15px !important;
+
+        margin-bottom: 3px !important;
+    }
+
+
+    .contact-row a,
+    .contact-row p {
+        font-size: 14px !important;
+
+        line-height: 1.55 !important;
+    }
+
+
+    /* follow us */
+
+    .social-icons {
+        margin: 0 0 18px !important;
+
+        gap: 12px !important;
+    }
+
+
+    .social-icon {
+        width: 48px !important;
+        height: 48px !important;
+    }
+
+
+    /* enquire section */
+
+    .brochure-box {
+        margin-top: 0 !important;
+    }
+
+
+    .enquiry-button,
+    .brochure-button {
+        min-height: 52px !important;
+    }
+
+
+    .brochure-divider {
+        margin: 16px 0 !important;
+    }
+
+
+    .footer-bottom {
+        padding-bottom: 18px !important;
+    }
+
+
+    .bottom-line {
+        margin-bottom: 16px !important;
+    }
+
+
+    .bottom-content {
+        width: 88% !important;
+
+        gap: 10px !important;
+
+        font-size: 12px !important;
+    }
+}
+
+
+/* very small phones */
+
+@media (max-width: 365px) {
+
+    .navbar .whatsapp-btn {
+        display: none !important;
+    }
+
+    .navbar .brochure-btn,
+    .navbar .call-btn {
+        padding-left: 7px !important;
+        padding-right: 7px !important;
+
+        font-size: 11px !important;
+    }
+
+    .navbar .logo,
+    .navbar .navbar-logo,
+    .navbar .navbar-logo-image {
+        width: 92px !important;
+        min-width: 92px !important;
+        max-width: 92px !important;
+
+        flex-basis: 92px !important;
+    }
+}

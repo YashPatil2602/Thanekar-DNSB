@@ -53,7 +53,7 @@ function App() {
 
                 <Features />
 
-                <Pricing />
+                <Pricing onEnquire={openEnquiry} />
 
                 <Amenities />
 

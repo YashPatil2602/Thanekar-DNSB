@@ -1,27 +1,109 @@
 import { useEffect, useState } from "react";
-
 import { submitContact } from "../api";
-
 import "./EnquiryForm.css";
+
+const EMPTY_FORM = {
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+};
+
+function getPurposeDetails(purpose) {
+    switch (purpose) {
+        case "brochure":
+            return {
+                heading: "DOWNLOAD BROCHURE",
+                actionText: "Submit & Download Brochure",
+                message: "Brochure download enquiry",
+            };
+
+        case "special-offer":
+            return {
+                heading: "SPECIAL OFFER",
+                actionText: "Get Offer Details",
+                message: "Special offer enquiry",
+            };
+
+        case "residential-2bhk":
+            return {
+                heading: "2 BHK ENQUIRY",
+                actionText: "Get Details",
+                message: "Residential 2 BHK enquiry",
+            };
+
+        case "residential-3bhk":
+            return {
+                heading: "3 BHK ENQUIRY",
+                actionText: "Get Details",
+                message: "Residential 3 BHK enquiry",
+            };
+
+        case "commercial-262":
+            return {
+                heading: "COMMERCIAL SHOP ENQUIRY",
+                actionText: "Get Shop Details",
+                message: "Commercial shop enquiry - 262 sq.ft.",
+            };
+
+        case "commercial-1011":
+            return {
+                heading: "COMMERCIAL SHOP ENQUIRY",
+                actionText: "Get Shop Details",
+                message: "Commercial shop enquiry - 1011 sq.ft.",
+            };
+
+        default:
+            return {
+                heading: "THANEKAR DNSB",
+                actionText: "Get It Now",
+                message: "General project enquiry",
+            };
+    }
+}
 
 function EnquiryForm({
     isOpen,
     onClose,
     purpose = "general",
 }) {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
-    });
+    const [formData, setFormData] = useState(EMPTY_FORM);
 
-    const [submitted, setSubmitted] = useState(false);
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitError, setSubmitError] = useState("");
+    const [countryCode, setCountryCode] =
+        useState("India(+91)");
+
+    const [privacyConsent, setPrivacyConsent] =
+        useState(false);
+
+    const [
+        communicationConsent,
+        setCommunicationConsent,
+    ] = useState(false);
+
+    const [submitted, setSubmitted] =
+        useState(false);
+
+    const [isSubmitting, setIsSubmitting] =
+        useState(false);
+
+    const [submitError, setSubmitError] =
+        useState("");
+
+    const purposeDetails =
+        getPurposeDetails(purpose);
 
     useEffect(() => {
-        if (!isOpen) return undefined;
+        if (!isOpen) {
+            return undefined;
+        }
+
+        setSubmitted(false);
+        setSubmitError("");
+
+        const previousOverflow =
+            document.body.style.overflow;
+
+        document.body.style.overflow = "hidden";
 
         const handleEscape = (event) => {
             if (event.key === "Escape") {
@@ -29,78 +111,115 @@ function EnquiryForm({
             }
         };
 
-        document.addEventListener("keydown", handleEscape);
+        document.addEventListener(
+            "keydown",
+            handleEscape
+        );
 
         return () => {
-            document.removeEventListener("keydown", handleEscape);
+            document.removeEventListener(
+                "keydown",
+                handleEscape
+            );
+
+            document.body.style.overflow =
+                previousOverflow;
         };
     }, [isOpen, onClose]);
 
     const handleChange = (event) => {
         const { name, value } = event.target;
 
-        setFormData((previousData) => ({
-            ...previousData,
+        if (name === "phone") {
+            const numbersOnly =
+                value.replace(/\D/g, "");
+
+            setFormData((previous) => ({
+                ...previous,
+                phone: numbersOnly.slice(0, 10),
+            }));
+
+            return;
+        }
+
+        setFormData((previous) => ({
+            ...previous,
             [name]: value,
         }));
     };
 
-    const downloadBrochure = () => {
-        const brochureLink = document.createElement("a");
+    const resetForm = () => {
+        setFormData(EMPTY_FORM);
+        setCountryCode("India(+91)");
+        setPrivacyConsent(false);
+        setCommunicationConsent(false);
+        setSubmitError("");
+        setIsSubmitting(false);
+    };
 
-        brochureLink.href =
+    const downloadBrochure = () => {
+        const link =
+            document.createElement("a");
+
+        link.href =
             "/brochure/thanekar-dnsb-brochure.pdf";
 
-        brochureLink.download =
-            "thanekar-dnsb-brochure.pdf";
+        link.download =
+            "Thanekar-DNSB-Brochure.pdf";
 
-        brochureLink.style.display = "none";
+        document.body.appendChild(link);
 
-        document.body.appendChild(brochureLink);
+        link.click();
 
-        brochureLink.click();
-
-        brochureLink.remove();
+        document.body.removeChild(link);
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
 
+        if (!privacyConsent) {
+            setSubmitError(
+                "Please accept the privacy consent before submitting."
+            );
+
+            return;
+        }
+
+        if (formData.phone.length !== 10) {
+            setSubmitError(
+                "Please enter a valid 10-digit mobile number."
+            );
+
+            return;
+        }
+
         setIsSubmitting(true);
         setSubmitError("");
 
+        const submissionData = {
+            ...formData,
+            message: purposeDetails.message,
+        };
+
         try {
-            const submissionData = {
-                ...formData,
-                message:
-                    purpose === "brochure"
-                        ? "Brochure download enquiry"
-                        : formData.message,
-            };
-
-            await submitContact(submissionData);
-
-            setSubmitted(true);
+            await submitContact(
+                submissionData
+            );
 
             if (purpose === "brochure") {
                 downloadBrochure();
             }
 
-            setTimeout(() => {
-                setFormData({
-                    name: "",
-                    email: "",
-                    phone: "",
-                    message: "",
-                });
+            setSubmitted(true);
 
+            window.setTimeout(() => {
+                resetForm();
                 setSubmitted(false);
-
                 onClose();
-            }, 2000);
+            }, 2200);
         } catch (error) {
             setSubmitError(
-                error.message ||
+                error?.message ||
                     "Unable to submit your enquiry. Please try again."
             );
         } finally {
@@ -120,7 +239,9 @@ function EnquiryForm({
         >
             <div
                 className="enquiry-modal-content"
-                onClick={(event) => event.stopPropagation()}
+                onClick={(event) =>
+                    event.stopPropagation()
+                }
                 role="dialog"
                 aria-modal="true"
                 aria-labelledby="enquiry-title"
@@ -131,20 +252,25 @@ function EnquiryForm({
                     onClick={onClose}
                     aria-label="Close enquiry form"
                 >
-                    <span aria-hidden="true">×</span>
+                    ×
                 </button>
 
                 {submitted ? (
-                    <div className="enquiry-success">
-                        <div className="success-icon">
+                    <div className="enquiry-success success-message">
+                        <div
+                            className="success-icon"
+                            aria-hidden="true"
+                        >
                             ✓
                         </div>
 
-                        <h2>Thank You!</h2>
+                        <h2 className="success-title">
+                            Thank You!
+                        </h2>
 
-                        <p>
+                        <p className="success-text">
                             {purpose === "brochure"
-                                ? "Your enquiry has been received. Your brochure download has started."
+                                ? "Your brochure download has started. We will also contact you shortly."
                                 : "Your enquiry has been received. We will contact you soon."}
                         </p>
                     </div>
@@ -156,20 +282,19 @@ function EnquiryForm({
                             </p>
 
                             <h2 id="enquiry-title">
-                                THANEKAR DNSB
+                                {purposeDetails.heading}
                             </h2>
 
                             <p className="form-subtitle">
-                                Luxury Residential & Commercial Development
+                                Luxury Residential &amp;
+                                Commercial Development
                             </p>
 
                             <div className="form-heading">
                                 <span></span>
 
                                 <strong>
-                                    {purpose === "brochure"
-                                        ? "DOWNLOAD BROCHURE"
-                                        : "GET LUXURY WALKTHROUGH"}
+                                    GET LUXURY WALKTHROUGH
                                 </strong>
 
                                 <span></span>
@@ -181,8 +306,8 @@ function EnquiryForm({
                         </div>
 
                         <form
-                            onSubmit={handleSubmit}
                             className="enquiry-form"
+                            onSubmit={handleSubmit}
                         >
                             <div className="form-group">
                                 <input
@@ -191,9 +316,10 @@ function EnquiryForm({
                                     name="name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    required
                                     placeholder="Name"
                                     aria-label="Name"
+                                    autoComplete="name"
+                                    required
                                 />
                             </div>
 
@@ -206,18 +332,35 @@ function EnquiryForm({
                                     onChange={handleChange}
                                     placeholder="Email (optional)"
                                     aria-label="Email"
+                                    autoComplete="email"
                                 />
                             </div>
 
                             <div className="phone-row">
                                 <select
-                                    defaultValue="India(+91)"
+                                    value={countryCode}
+                                    onChange={(event) =>
+                                        setCountryCode(
+                                            event.target.value
+                                        )
+                                    }
                                     aria-label="Country code"
                                 >
-                                    <option>India(+91)</option>
-                                    <option>UAE(+971)</option>
-                                    <option>USA(+1)</option>
-                                    <option>UK(+44)</option>
+                                    <option value="India(+91)">
+                                        India(+91)
+                                    </option>
+
+                                    <option value="UAE(+971)">
+                                        UAE(+971)
+                                    </option>
+
+                                    <option value="USA(+1)">
+                                        USA(+1)
+                                    </option>
+
+                                    <option value="UK(+44)">
+                                        UK(+44)
+                                    </option>
                                 </select>
 
                                 <input
@@ -226,21 +369,53 @@ function EnquiryForm({
                                     name="phone"
                                     value={formData.phone}
                                     onChange={handleChange}
-                                    required
                                     placeholder="Mobile Number"
                                     aria-label="Mobile Number"
+                                    autoComplete="tel"
+                                    inputMode="numeric"
+                                    maxLength={10}
+                                    required
                                 />
                             </div>
 
-                            <label className="consent">
+                            {/* REQUIRED PRIVACY CONSENT */}
+                            <label className="consent enquiry-consent">
                                 <input
                                     type="checkbox"
+                                    checked={privacyConsent}
+                                    onChange={(event) =>
+                                        setPrivacyConsent(
+                                            event.target.checked
+                                        )
+                                    }
                                     required
                                 />
 
                                 <span>
-                                    I consent to the use of provided data in
-                                    accordance with the privacy policy.
+                                    I consent to the use of
+                                    provided data in accordance
+                                    with the privacy policy.
+                                </span>
+                            </label>
+
+                            {/* ADDITIONAL COMMUNICATION CONSENT */}
+                            <label className="consent enquiry-consent communication-consent">
+                                <input
+                                    type="checkbox"
+                                    checked={
+                                        communicationConsent
+                                    }
+                                    onChange={(event) =>
+                                        setCommunicationConsent(
+                                            event.target.checked
+                                        )
+                                    }
+                                />
+
+                                <span>
+                                    I agree to receive project
+                                    information and updates through
+                                    phone, SMS, WhatsApp or email.
                                 </span>
                             </label>
 
@@ -251,9 +426,7 @@ function EnquiryForm({
                             >
                                 {isSubmitting
                                     ? "Sending..."
-                                    : purpose === "brochure"
-                                      ? "Submit & Download Brochure"
-                                      : "Get It Now"}
+                                    : purposeDetails.actionText}
                             </button>
 
                             {submitError && (
