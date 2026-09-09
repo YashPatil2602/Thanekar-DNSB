@@ -753,3 +753,737 @@ section[id] {
         font-size: 7px !important;
     }
 }
+
+/* ============================================================
+   FINAL NAVBAR + HERO POSITION FIX
+   Keep this block at the very end of this file.
+   ============================================================ */
+
+html,
+body,
+#root {
+    overflow-x: clip !important;
+}
+
+body {
+    margin: 0 !important;
+    padding-top: 0 !important;
+}
+
+#root {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-y: visible !important;
+}
+
+.navbar {
+    position: sticky !important;
+    top: 0 !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    z-index: 999999 !important;
+    margin: 0 !important;
+}
+
+main {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.hero-section,
+#home {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 0 !important;
+    }
+
+    .navbar {
+        position: sticky !important;
+        top: 0 !important;
+    }
+
+    main,
+    .hero-section,
+    #home {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+}
+
+/* ============================================================
+   FINAL CTA BUTTON STYLE
+   Consistent normal + hover state for all main action buttons
+   ============================================================ */
+
+.hero-button,
+.form-submit,
+.submit-btn,
+.pricing-button,
+.offer-button,
+.view-plan-btn,
+.location-button,
+.enquiry-button,
+.brochure-button,
+.brochure-btn,
+.call-btn {
+    background: linear-gradient(
+        135deg,
+        #b8860b 0%,
+        #e3bb42 48%,
+        #b8860b 100%
+    ) !important;
+
+    color: #2b160b !important;
+    border: 1px solid #b78825 !important;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.2s ease,
+        box-shadow 0.25s ease !important;
+}
+
+/* Make text/icons inside buttons inherit correctly */
+.hero-button *,
+.form-submit *,
+.submit-btn *,
+.pricing-button *,
+.offer-button *,
+.view-plan-btn *,
+.location-button *,
+.enquiry-button *,
+.brochure-button *,
+.brochure-btn *,
+.call-btn * {
+    color: inherit !important;
+}
+
+/* Consistent hover */
+.hero-button:hover,
+.form-submit:hover,
+.submit-btn:hover,
+.pricing-button:hover,
+.offer-button:hover,
+.view-plan-btn:hover,
+.location-button:hover,
+.enquiry-button:hover,
+.brochure-button:hover,
+.brochure-btn:hover,
+.call-btn:hover {
+    background: #35170c !important;
+    color: #f6d878 !important;
+    border-color: #c99a2e !important;
+
+    transform: translateY(-2px) !important;
+
+    box-shadow:
+        0 7px 18px rgba(53, 23, 12, 0.25),
+        0 2px 6px rgba(53, 23, 12, 0.14) !important;
+}
+
+/* Keep arrow/text visible during hover */
+.pricing-button:hover .button-arrow,
+.offer-button:hover .button-arrow,
+.hero-button:hover *,
+.form-submit:hover *,
+.submit-btn:hover *,
+.pricing-button:hover *,
+.offer-button:hover *,
+.view-plan-btn:hover *,
+.location-button:hover *,
+.enquiry-button:hover *,
+.brochure-button:hover *,
+.brochure-btn:hover *,
+.call-btn:hover * {
+    color: #f6d878 !important;
+}
+
+/* Keyboard accessibility */
+.hero-button:focus-visible,
+.form-submit:focus-visible,
+.submit-btn:focus-visible,
+.pricing-button:focus-visible,
+.offer-button:focus-visible,
+.view-plan-btn:focus-visible,
+.location-button:focus-visible,
+.enquiry-button:focus-visible,
+.brochure-button:focus-visible,
+.brochure-btn:focus-visible,
+.call-btn:focus-visible {
+    outline: 3px solid rgba(199, 154, 43, 0.4) !important;
+    outline-offset: 3px !important;
+}
+
+/* ============================================================
+   FINAL UNIFIED CTA BUTTON DESIGN
+   Same style as Commercial Pricing buttons
+   ============================================================ */
+
+.hero-button,
+.form-submit,
+.submit-btn,
+.pricing-button,
+.pricing-button.featured-button,
+.pricing-button.commercial-enquire-button,
+.offer-button,
+.view-plan-btn,
+.location-button,
+.enquiry-button,
+.brochure-button,
+.brochure-btn,
+.call-btn {
+    background: linear-gradient(
+        135deg,
+        #a97508 0%,
+        #e7bd3c 48%,
+        #b68108 100%
+    ) !important;
+
+    color: #2a1408 !important;
+    -webkit-text-fill-color: #2a1408 !important;
+
+    border: 1px solid #a97814 !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+
+    box-shadow:
+        0 5px 12px rgba(94, 58, 17, 0.20) !important;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.2s ease,
+        box-shadow 0.25s ease !important;
+}
+
+/* Keep inner text / arrows visible */
+.hero-button *,
+.form-submit *,
+.submit-btn *,
+.pricing-button *,
+.offer-button *,
+.view-plan-btn *,
+.location-button *,
+.enquiry-button *,
+.brochure-button *,
+.brochure-btn *,
+.call-btn * {
+    color: #2a1408 !important;
+    -webkit-text-fill-color: #2a1408 !important;
+    opacity: 1 !important;
+}
+
+/* Hover */
+.hero-button:hover,
+.form-submit:hover,
+.submit-btn:hover,
+.pricing-button:hover,
+.pricing-button.featured-button:hover,
+.pricing-button.commercial-enquire-button:hover,
+.offer-button:hover,
+.view-plan-btn:hover,
+.location-button:hover,
+.enquiry-button:hover,
+.brochure-button:hover,
+.brochure-btn:hover,
+.call-btn:hover {
+    background: #3a190c !important;
+
+    color: #ffd968 !important;
+    -webkit-text-fill-color: #ffd968 !important;
+
+    border-color: #c89724 !important;
+    opacity: 1 !important;
+
+    transform: translateY(-2px) !important;
+
+    box-shadow:
+        0 8px 18px rgba(58, 25, 12, 0.28) !important;
+}
+
+/* Hover inner text / arrows */
+.hero-button:hover *,
+.form-submit:hover *,
+.submit-btn:hover *,
+.pricing-button:hover *,
+.offer-button:hover *,
+.view-plan-btn:hover *,
+.location-button:hover *,
+.enquiry-button:hover *,
+.brochure-button:hover *,
+.brochure-btn:hover *,
+.call-btn:hover * {
+    color: #ffd968 !important;
+    -webkit-text-fill-color: #ffd968 !important;
+    opacity: 1 !important;
+}
+
+/* ============================================================
+   FINAL MASTER CTA DESIGN
+   SAME LOOK FOR ALL MAIN WEBSITE BUTTONS
+   ============================================================ */
+
+.hero-button,
+.form-submit,
+.enquiry-form .submit-btn,
+.pricing-button,
+.pricing-button.featured-button,
+.pricing-button.commercial-enquire-button,
+.offer-button,
+.view-plan-btn,
+.location-button,
+.enquiry-button,
+.brochure-button,
+.navbar .brochure-btn,
+.navbar .call-btn {
+
+    background: linear-gradient(
+        135deg,
+        #a87308 0%,
+        #e5b936 50%,
+        #aa7608 100%
+    ) !important;
+
+    background-image: linear-gradient(
+        135deg,
+        #a87308 0%,
+        #e5b936 50%,
+        #aa7608 100%
+    ) !important;
+
+    color: #281307 !important;
+    -webkit-text-fill-color: #281307 !important;
+
+    border: 1px solid #a97916 !important;
+    border-radius: 5px !important;
+
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0.1px !important;
+    text-decoration: none !important;
+    text-shadow: none !important;
+
+    min-height: 42px !important;
+    padding: 0 22px !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+
+    opacity: 1 !important;
+    filter: none !important;
+
+    box-shadow:
+        0 5px 12px rgba(72, 43, 13, 0.22) !important;
+
+    cursor: pointer !important;
+
+    transition:
+        background 0.22s ease,
+        color 0.22s ease,
+        transform 0.18s ease,
+        box-shadow 0.22s ease !important;
+}
+
+
+/* INNER TEXT AND ARROWS */
+.hero-button *,
+.form-submit *,
+.enquiry-form .submit-btn *,
+.pricing-button *,
+.offer-button *,
+.view-plan-btn *,
+.location-button *,
+.enquiry-button *,
+.brochure-button *,
+.navbar .brochure-btn *,
+.navbar .call-btn * {
+
+    color: #281307 !important;
+    -webkit-text-fill-color: #281307 !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+}
+
+
+/* REMOVE OLD SHINE / GLOW OVERLAYS */
+.hero-button::before,
+.hero-button::after,
+.form-submit::before,
+.form-submit::after,
+.enquiry-form .submit-btn::before,
+.enquiry-form .submit-btn::after,
+.pricing-button::before,
+.pricing-button::after,
+.offer-button::before,
+.offer-button::after,
+.view-plan-btn::before,
+.view-plan-btn::after,
+.location-button::before,
+.location-button::after,
+.enquiry-button::before,
+.enquiry-button::after,
+.brochure-button::before,
+.brochure-button::after,
+.navbar .brochure-btn::before,
+.navbar .brochure-btn::after,
+.navbar .call-btn::before,
+.navbar .call-btn::after {
+
+    display: none !important;
+    content: none !important;
+}
+
+
+/* SAME HOVER FOR EVERY MAIN BUTTON */
+.hero-button:hover,
+.form-submit:hover,
+.enquiry-form .submit-btn:hover,
+.pricing-button:hover,
+.pricing-button.featured-button:hover,
+.pricing-button.commercial-enquire-button:hover,
+.offer-button:hover,
+.view-plan-btn:hover,
+.location-button:hover,
+.enquiry-button:hover,
+.brochure-button:hover,
+.navbar .brochure-btn:hover,
+.navbar .call-btn:hover {
+
+    background: #3a180b !important;
+    background-image: none !important;
+
+    color: #ffd96b !important;
+    -webkit-text-fill-color: #ffd96b !important;
+
+    border-color: #bf8c24 !important;
+
+    opacity: 1 !important;
+    filter: none !important;
+
+    transform: translateY(-2px) !important;
+
+    box-shadow:
+        0 8px 18px rgba(58, 24, 11, 0.28) !important;
+}
+
+
+/* HOVER TEXT / ARROWS */
+.hero-button:hover *,
+.form-submit:hover *,
+.enquiry-form .submit-btn:hover *,
+.pricing-button:hover *,
+.offer-button:hover *,
+.view-plan-btn:hover *,
+.location-button:hover *,
+.enquiry-button:hover *,
+.brochure-button:hover *,
+.navbar .brochure-btn:hover *,
+.navbar .call-btn:hover * {
+
+    color: #ffd96b !important;
+    -webkit-text-fill-color: #ffd96b !important;
+    opacity: 1 !important;
+}
+
+
+/* KEEP FULL WIDTH FORM SUBMIT BUTTONS */
+.hero-form .form-submit,
+.enquiry-form .submit-btn {
+    width: 100% !important;
+}
+
+
+/* FOOTER CTA BUTTONS KEEP THEIR CONTAINER WIDTH */
+.footer .enquiry-button,
+.footer .brochure-button {
+    width: 100% !important;
+}
+
+/* ============================================================
+   FINAL BROCHURE + KNOW MORE FIX
+   Match Commercial Pricing CTA exactly
+   ============================================================ */
+
+/* Remove the separate shine animation from Limited Time Offer */
+.pricing-offer .offer-shine {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    animation: none !important;
+}
+
+/* BROCHURE + KNOW MORE - NORMAL */
+.navbar .brochure-btn,
+.pricing-offer .offer-button {
+    background: linear-gradient(
+        135deg,
+        #a87308 0%,
+        #e5b936 50%,
+        #aa7608 100%
+    ) !important;
+
+    background-image: linear-gradient(
+        135deg,
+        #a87308 0%,
+        #e5b936 50%,
+        #aa7608 100%
+    ) !important;
+
+    color: #281307 !important;
+    -webkit-text-fill-color: #281307 !important;
+
+    border: 1px solid #a97916 !important;
+    border-radius: 5px !important;
+
+    font-weight: 700 !important;
+    text-shadow: none !important;
+
+    opacity: 1 !important;
+    filter: none !important;
+
+    box-shadow:
+        0 5px 12px rgba(72, 43, 13, 0.22) !important;
+
+    transform: none !important;
+
+    transition:
+        background 0.22s ease,
+        color 0.22s ease,
+        transform 0.18s ease,
+        box-shadow 0.22s ease !important;
+}
+
+/* Remove old effects */
+.navbar .brochure-btn::before,
+.navbar .brochure-btn::after,
+.pricing-offer .offer-button::before,
+.pricing-offer .offer-button::after {
+    content: none !important;
+    display: none !important;
+    animation: none !important;
+}
+
+/* BROCHURE + KNOW MORE - HOVER */
+.navbar .brochure-btn:hover,
+.pricing-offer .offer-button:hover {
+    background: #3a180b !important;
+    background-image: none !important;
+
+    color: #ffd96b !important;
+    -webkit-text-fill-color: #ffd96b !important;
+
+    border-color: #bf8c24 !important;
+
+    opacity: 1 !important;
+    filter: none !important;
+
+    transform: translateY(-2px) !important;
+
+    box-shadow:
+        0 8px 18px rgba(58, 24, 11, 0.28) !important;
+}
+
+/* Force text visible */
+.navbar .brochure-btn:hover *,
+.pricing-offer .offer-button:hover * {
+    color: #ffd96b !important;
+    -webkit-text-fill-color: #ffd96b !important;
+    opacity: 1 !important;
+}
+
+/* ============================================================
+   FINAL CONSISTENT CTA STYLE
+   Brochure + Know More + Download Brochure + View Plan
+   ============================================================ */
+
+.navbar .brochure-btn,
+.pricing-offer .offer-button,
+.footer .brochure-button,
+.view-plan-btn {
+    background: linear-gradient(
+        135deg,
+        #a87308 0%,
+        #e5b936 50%,
+        #aa7608 100%
+    ) !important;
+
+    background-image: linear-gradient(
+        135deg,
+        #a87308 0%,
+        #e5b936 50%,
+        #aa7608 100%
+    ) !important;
+
+    color: #281307 !important;
+    -webkit-text-fill-color: #281307 !important;
+
+    border: 1px solid #a97916 !important;
+    border-radius: 5px !important;
+
+    font-weight: 700 !important;
+    text-shadow: none !important;
+
+    opacity: 1 !important;
+    filter: none !important;
+
+    box-shadow:
+        0 5px 12px rgba(72, 43, 13, 0.22) !important;
+
+    transition:
+        background 0.22s ease,
+        color 0.22s ease,
+        transform 0.18s ease,
+        box-shadow 0.22s ease !important;
+}
+
+/* Keep text / icons visible */
+.navbar .brochure-btn *,
+.pricing-offer .offer-button *,
+.footer .brochure-button *,
+.view-plan-btn * {
+    color: #281307 !important;
+    -webkit-text-fill-color: #281307 !important;
+    opacity: 1 !important;
+}
+
+/* Remove old shine effects */
+.pricing-offer .offer-shine {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    animation: none !important;
+}
+
+.navbar .brochure-btn::before,
+.navbar .brochure-btn::after,
+.pricing-offer .offer-button::before,
+.pricing-offer .offer-button::after,
+.footer .brochure-button::before,
+.footer .brochure-button::after,
+.view-plan-btn::before,
+.view-plan-btn::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* SAME HOVER */
+.navbar .brochure-btn:hover,
+.pricing-offer .offer-button:hover,
+.footer .brochure-button:hover,
+.view-plan-btn:hover {
+    background: #3a180b !important;
+    background-image: none !important;
+
+    color: #ffd96b !important;
+    -webkit-text-fill-color: #ffd96b !important;
+
+    border-color: #bf8c24 !important;
+
+    opacity: 1 !important;
+    filter: none !important;
+
+    transform: translateY(-2px) !important;
+
+    box-shadow:
+        0 8px 18px rgba(58, 24, 11, 0.28) !important;
+}
+
+/* Hover text / icons */
+.navbar .brochure-btn:hover *,
+.pricing-offer .offer-button:hover *,
+.footer .brochure-button:hover *,
+.view-plan-btn:hover * {
+    color: #ffd96b !important;
+    -webkit-text-fill-color: #ffd96b !important;
+    opacity: 1 !important;
+}
+
+/* Footer button can remain full width */
+.footer .brochure-button {
+    width: 100% !important;
+}
+
+/* ============================================================
+   ABSOLUTE FINAL VIEW PLAN BUTTON FIX
+   ============================================================ */
+
+a.view-plan-btn,
+.view-plan-btn {
+    background: linear-gradient(
+        135deg,
+        #a87308 0%,
+        #e5b936 50%,
+        #aa7608 100%
+    ) !important;
+
+    background-image: linear-gradient(
+        135deg,
+        #a87308 0%,
+        #e5b936 50%,
+        #aa7608 100%
+    ) !important;
+
+    color: #281307 !important;
+    -webkit-text-fill-color: #281307 !important;
+
+    border: 1px solid #a97916 !important;
+    opacity: 1 !important;
+    filter: none !important;
+
+    text-shadow: none !important;
+    box-shadow: 0 5px 12px rgba(72, 43, 13, 0.22) !important;
+}
+
+/* Remove any old shine layer */
+a.view-plan-btn::before,
+a.view-plan-btn::after,
+.view-plan-btn::before,
+.view-plan-btn::after {
+    content: none !important;
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    background: none !important;
+    animation: none !important;
+}
+
+/* Hover */
+a.view-plan-btn:hover,
+.view-plan-btn:hover,
+a.view-plan-btn:focus,
+.view-plan-btn:focus {
+    background: #3a180b !important;
+    background-image: none !important;
+
+    color: #ffd96b !important;
+    -webkit-text-fill-color: #ffd96b !important;
+
+    border-color: #bf8c24 !important;
+
+    opacity: 1 !important;
+    filter: none !important;
+
+    transform: translateY(-2px) !important;
+
+    box-shadow:
+        0 8px 18px rgba(58, 24, 11, 0.28) !important;
+}
+
+/* Keep text visible */
+a.view-plan-btn:hover *,
+.view-plan-btn:hover *,
+a.view-plan-btn:focus *,
+.view-plan-btn:focus * {
+    color: #ffd96b !important;
+    -webkit-text-fill-color: #ffd96b !important;
+    opacity: 1 !important;
+}
