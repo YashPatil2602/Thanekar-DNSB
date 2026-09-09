@@ -17,6 +17,10 @@ import "./ClientTheme.css";
 import "./ProfessionalPolish.css";
 import "./FinalPolish.css";
 
+import "./ClientFinalFix.css";
+import "./WalkthroughFix.css";
+import "./ClientFinalReview.css";
+import "./FinalClientCompletion.css";
 function App() {
     const [isEnquiryOpen, setIsEnquiryOpen] = useState(true);
     const [enquiryPurpose, setEnquiryPurpose] = useState("general");

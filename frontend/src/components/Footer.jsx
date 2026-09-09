@@ -28,11 +28,12 @@ function Footer({ onEnquire, onBrochure }) {
                         development in Badlapur.
                     </p>
 
-                    <div className="building-icon">
-                        <div className="building-main"></div>
-                        <div className="building-side left"></div>
-                        <div className="building-side right"></div>
-                    </div>
+                    <div className="footer-building-image">
+  <img
+    src="/images/hero/hero-2.png"
+    alt="Thanekar DNSB project building"
+  />
+</div>
                 </div>
 
                 <div className="footer-section">
@@ -104,11 +105,7 @@ function Footer({ onEnquire, onBrochure }) {
                             <div>
                                 <strong>Site Address</strong>
 
-                                <p>
-                                    Patil Pada, Station Pada,
-                                    <br />
-                                    Badlapur, Maharashtra - 421503
-                                </p>
+                                <p>Thanekar DNSB, At Gandhi Chowk,<br />Badlapur(E).</p>
                             </div>
                         </div>
 

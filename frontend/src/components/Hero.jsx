@@ -79,7 +79,7 @@ function Hero({ onEnquire }) {
         div className = "form-heading" >
         <
         span > < /span> <
-        strong > GET LUXURY WALKTHROUGH < /strong> <
+        strong ><span className="walkthrough-title">GET LUXURY WALKTHROUGH</span>< /strong> <
         span > < /span> <
         /div> <
         p className = "form-tagline" > Tailored For You < /p>
@@ -123,6 +123,17 @@ function Hero({ onEnquire }) {
         <
         span > I consent to the use of provided data in accordance with the privacy policy. < /span> <
         /label>
+
+        <label className="consent communication-consent">
+            <input
+                type="checkbox"
+                required
+            />
+            <span>
+                I agree to receive project information and updates through phone,
+                SMS, WhatsApp or email.
+            </span>
+        </label>
 
         <
         button type = "submit"

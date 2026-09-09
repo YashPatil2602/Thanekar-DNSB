@@ -1,0 +1,117 @@
+/* =========================================================
+   THANEKAR DNSB
+   FINAL WALKTHROUGH HEADING FIX
+   ========================================================= */
+
+/*
+  Main rule:
+  Never allow GET LUXURY WALKTHROUGH to break letter-by-letter.
+*/
+.walkthrough-title {
+    display: inline-block !important;
+    width: auto !important;
+    max-width: 100% !important;
+
+    white-space: nowrap !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+
+    color: #8a5a2b !important;
+    -webkit-text-fill-color: #8a5a2b !important;
+
+    background: transparent !important;
+    background-image: none !important;
+
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    letter-spacing: 1px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    text-shadow: none !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+}
+
+/* Remove the old decorative pseudo-elements.
+   They were forcing the text to collapse vertically. */
+.walkthrough-title::before,
+.walkthrough-title::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Parent strong element must also stay horizontal */
+strong:has(.walkthrough-title) {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+
+    text-align: center !important;
+    white-space: nowrap !important;
+
+    background: transparent !important;
+    background-image: none !important;
+
+    margin: 0 auto 8px !important;
+    padding: 0 !important;
+}
+
+/* =========================================================
+   HERO FORM - CREAM BACKGROUND
+   ========================================================= */
+
+.hero-form .walkthrough-title,
+.hero-enquiry .walkthrough-title,
+.hero-content .walkthrough-title,
+.hero-right .walkthrough-title,
+.hero-form-container .walkthrough-title {
+    color: #8a5a2b !important;
+    -webkit-text-fill-color: #8a5a2b !important;
+}
+
+/* =========================================================
+   POPUP MODAL - DARK BROWN BACKGROUND
+   ========================================================= */
+
+.enquiry-modal-content .walkthrough-title,
+.enquiry-modal .walkthrough-title {
+    color: #e6c46a !important;
+    -webkit-text-fill-color: #e6c46a !important;
+}
+
+/* Keep popup compact again */
+.enquiry-modal-content strong:has(.walkthrough-title) {
+    margin-bottom: 6px !important;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+    .walkthrough-title {
+        font-size: 10px !important;
+        line-height: 1.2 !important;
+        letter-spacing: 0.55px !important;
+
+        white-space: nowrap !important;
+        word-break: keep-all !important;
+        overflow-wrap: normal !important;
+    }
+
+    strong:has(.walkthrough-title) {
+        white-space: nowrap !important;
+        margin-bottom: 6px !important;
+    }
+}
+
+/* Extra-small phones */
+@media (max-width: 380px) {
+    .walkthrough-title {
+        font-size: 9px !important;
+        letter-spacing: 0.35px !important;
+    }
+}

@@ -293,9 +293,7 @@ function EnquiryForm({
                             <div className="form-heading">
                                 <span></span>
 
-                                <strong>
-                                    GET LUXURY WALKTHROUGH
-                                </strong>
+                                <strong><span className="walkthrough-title">GET LUXURY WALKTHROUGH</span></strong>
 
                                 <span></span>
                             </div>

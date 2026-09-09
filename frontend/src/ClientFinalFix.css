@@ -1,0 +1,744 @@
+/* ==========================================================
+   THANEKAR DNSB
+   FINAL CLIENT FEEDBACK FIXES
+   ========================================================== */
+
+:root {
+    --dnsb-cream: #fbf7ef;
+    --dnsb-cream-deep: #f3eadc;
+    --dnsb-gold: #b78b2c;
+    --dnsb-gold-light: #e2c46d;
+    --dnsb-light-brown: #72513b;
+    --dnsb-brown: #4f3023;
+    --dnsb-body: #66574e;
+    --dnsb-border: rgba(183, 139, 44, 0.34);
+}
+
+
+/* ==========================================================
+   1. STICKY HEADER
+   Client: header should remain visible while scrolling.
+   ========================================================== */
+
+.navbar,
+.site-header,
+header.navbar,
+header.site-header {
+    position: sticky !important;
+    position: -webkit-sticky !important;
+    top: 0 !important;
+    z-index: 9998 !important;
+
+    background: rgba(251, 247, 239, 0.97) !important;
+
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+
+    border-bottom:
+        1px solid rgba(183, 139, 44, 0.24) !important;
+
+    box-shadow:
+        0 4px 16px rgba(76, 47, 31, 0.07) !important;
+}
+
+
+/* Reduce empty white space in menu bar */
+
+.navbar-inner,
+.navbar-container,
+.navbar .container {
+    min-height: 64px !important;
+    padding-top: 7px !important;
+    padding-bottom: 7px !important;
+}
+
+.navbar-logo,
+.logo-container {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.navbar-logo img,
+.logo-container img {
+    max-height: 48px !important;
+    width: auto !important;
+    object-fit: contain !important;
+}
+
+.navbar-buttons {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    align-items: center !important;
+}
+
+
+/* ==========================================================
+   2. BROCHURE / CALL NOW / SPECIAL OFFER
+   Client: black text should be light brown.
+   ========================================================== */
+
+.brochure-btn,
+.navbar-brochure,
+.call-btn,
+.navbar-call,
+.pricing-badge,
+.special-offer,
+.special-offer-badge {
+    color: var(--dnsb-light-brown) !important;
+    -webkit-text-fill-color: var(--dnsb-light-brown) !important;
+}
+
+.brochure-btn,
+.navbar-brochure,
+.call-btn,
+.navbar-call {
+    background:
+        linear-gradient(
+            120deg,
+            #b88622 0%,
+            #e7c45e 48%,
+            #c8952d 100%
+        ) !important;
+
+    border: 1px solid rgba(143, 104, 29, 0.24) !important;
+
+    box-shadow:
+        0 6px 14px rgba(120, 84, 27, 0.13) !important;
+}
+
+.pricing-badge {
+    border: none !important;
+    cursor: pointer !important;
+
+    background:
+        linear-gradient(
+            120deg,
+            #b98d31,
+            #e0c36c,
+            #c49a42
+        ) !important;
+
+    color: #704d33 !important;
+    -webkit-text-fill-color: #704d33 !important;
+
+    font-weight: 800 !important;
+}
+
+
+/* ==========================================================
+   3. HEADING SHADOW
+   Client: pricing heading shadow is spread/heavy.
+   Make text bright, sharp and premium.
+   ========================================================== */
+
+.pricing-main-title,
+.pricing-main-title *,
+.pricing-section h2,
+.section-title,
+.section-title *,
+.pricing-section .highlight,
+.pricing-section .gold-text {
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+.pricing-main-title span,
+.pricing-section h2 span {
+    color: #a87919 !important;
+    -webkit-text-fill-color: #a87919 !important;
+
+    text-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.7) !important;
+}
+
+
+/* ==========================================================
+   4. WHY CHOOSE DNSB BOX ALIGNMENT
+   Fix disconnected / uneven line appearance.
+   ========================================================== */
+
+.features-grid,
+.why-choose-grid,
+.why-choose-cards {
+    display: grid !important;
+    align-items: stretch !important;
+}
+
+.feature-card,
+.why-choose-card,
+.feature-box {
+    height: 100% !important;
+    min-height: 100% !important;
+    box-sizing: border-box !important;
+
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+
+    border:
+        1px solid rgba(183, 139, 44, 0.38) !important;
+
+    border-radius: 14px !important;
+
+    background:
+        rgba(255, 253, 248, 0.92) !important;
+}
+
+.features-grid > *,
+.why-choose-grid > *,
+.why-choose-cards > * {
+    align-self: stretch !important;
+}
+
+.feature-card::before,
+.feature-card::after,
+.why-choose-card::before,
+.why-choose-card::after {
+    box-sizing: border-box !important;
+}
+
+
+/* ==========================================================
+   5. HERO / BUILDING
+   Reduce oversized text.
+   Remove dirty shadow.
+   ========================================================== */
+
+.hero-title,
+.hero-section h1,
+.hero-content h1 {
+    text-shadow:
+        0 2px 3px rgba(24, 15, 10, 0.32) !important;
+
+    filter: none !important;
+
+    letter-spacing: -0.025em !important;
+
+    line-height: 1.04 !important;
+}
+
+.hero-subtitle,
+.hero-content p {
+    text-shadow:
+        0 1px 2px rgba(20, 12, 8, 0.26) !important;
+}
+
+
+/* ==========================================================
+   6. INLINE HERO FORM
+   Client dislikes very dark brown section.
+   Use premium cream on inline form only.
+   DO NOT change popup modal.
+   ========================================================== */
+
+.hero-form:not(.enquiry-modal-content),
+.hero-form-wrapper:not(.enquiry-modal-content),
+.hero-form-container:not(.enquiry-modal-content),
+.hero-enquiry:not(.enquiry-modal-content),
+.hero-enquiry-form:not(.enquiry-modal-content) {
+    background:
+        linear-gradient(
+            180deg,
+            #fbf5e9 0%,
+            #f2e7d4 100%
+        ) !important;
+
+    color: var(--dnsb-brown) !important;
+
+    border-color:
+        rgba(183, 139, 44, 0.27) !important;
+}
+
+.hero-form:not(.enquiry-modal-content) h2,
+.hero-form:not(.enquiry-modal-content) h3,
+.hero-form-wrapper:not(.enquiry-modal-content) h2,
+.hero-form-container:not(.enquiry-modal-content) h2,
+.hero-enquiry:not(.enquiry-modal-content) h2 {
+    color: var(--dnsb-brown) !important;
+    -webkit-text-fill-color: var(--dnsb-brown) !important;
+}
+
+.hero-form:not(.enquiry-modal-content) p,
+.hero-form-wrapper:not(.enquiry-modal-content) p,
+.hero-form-container:not(.enquiry-modal-content) p,
+.hero-enquiry:not(.enquiry-modal-content) p {
+    color: var(--dnsb-light-brown) !important;
+    -webkit-text-fill-color: var(--dnsb-light-brown) !important;
+}
+
+
+/* ==========================================================
+   7. IMAGE DISCLAIMER
+   Client wording exactly:
+   "Images used for representation only"
+   ========================================================== */
+
+.dnsb-representation-image {
+    position: relative !important;
+    overflow: hidden;
+}
+
+.dnsb-representation-image::after {
+    content: "Images used for representation only";
+
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
+    z-index: 25;
+
+    max-width: calc(100% - 20px);
+
+    padding: 5px 9px;
+
+    border-radius: 4px;
+
+    background:
+        rgba(45, 30, 21, 0.72);
+
+    color: #fffaf0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 10px;
+    font-weight: 500;
+
+    line-height: 1.25;
+
+    letter-spacing: 0.01em;
+
+    pointer-events: none;
+}
+
+
+/* Amenities disclaimer should stay clearly visible */
+
+.amenities-slider,
+.amenity-slide,
+.amenities-image-wrapper,
+.amenity-image-wrapper {
+    position: relative !important;
+}
+
+
+/* ==========================================================
+   8. LOCATION
+   Client: remove dark brown, use cream.
+   ========================================================== */
+
+.location-section,
+#location {
+    background:
+        #fbf7ef !important;
+}
+
+.location-card,
+.location-container {
+    border:
+        1px solid rgba(183, 139, 44, 0.28) !important;
+
+    border-radius: 18px !important;
+
+    overflow: hidden !important;
+
+    box-shadow:
+        0 10px 26px rgba(74, 49, 31, 0.07) !important;
+}
+
+.location-info,
+.location-content,
+.location-details,
+.location-left {
+    background:
+        linear-gradient(
+            145deg,
+            #fffaf1 0%,
+            #f3e9d8 100%
+        ) !important;
+
+    color: var(--dnsb-brown) !important;
+}
+
+.location-info h2,
+.location-content h2,
+.location-details h2,
+.location-left h2,
+.location-info h3,
+.location-content h3 {
+    color: #9c711d !important;
+    -webkit-text-fill-color: #9c711d !important;
+}
+
+.location-info p,
+.location-content p,
+.location-details p,
+.location-left p {
+    color: #69584c !important;
+    -webkit-text-fill-color: #69584c !important;
+}
+
+
+/* Get Directions remains strong and readable */
+
+.location-section a,
+.location-direction-btn,
+.get-directions-btn {
+    color: #674833 !important;
+    -webkit-text-fill-color: #674833 !important;
+
+    background:
+        linear-gradient(
+            120deg,
+            #b98b28,
+            #e8cd77,
+            #c28e28
+        ) !important;
+}
+
+
+/* ==========================================================
+   9. FOOTER
+   Better visibility, less empty appearance, warm brown fonts.
+   ========================================================== */
+
+.site-footer,
+.footer {
+    background:
+        linear-gradient(
+            180deg,
+            #f6ede1 0%,
+            #eee1d0 100%
+        ) !important;
+
+    color: var(--dnsb-body) !important;
+}
+
+.footer h2,
+.footer h3,
+.footer h4,
+.site-footer h2,
+.site-footer h3,
+.site-footer h4,
+.footer-heading {
+    color: #936817 !important;
+    -webkit-text-fill-color: #936817 !important;
+}
+
+.footer p,
+.footer li,
+.footer a,
+.footer span,
+.site-footer p,
+.site-footer li,
+.site-footer a,
+.site-footer span {
+    color: #5f5147 !important;
+}
+
+.footer a:hover,
+.site-footer a:hover {
+    color: #9f7422 !important;
+}
+
+
+/* Improve footer spacing without huge empty gaps */
+
+.footer-grid,
+.footer-container {
+    align-items: start !important;
+}
+
+.footer-grid {
+    row-gap: 26px !important;
+}
+
+
+/* Existing building icon / thumbnail area */
+
+.footer-building-mini,
+.footer-building-icon,
+.footer-building-outline,
+.footer-skyline {
+    margin-top: 18px !important;
+    margin-bottom: 8px !important;
+}
+
+
+/* Footer CTA text should not look black */
+
+.footer-enquire-btn,
+.footer-brochure-btn,
+.footer .enquire-btn,
+.footer .brochure-btn {
+    color: #6c4b34 !important;
+    -webkit-text-fill-color: #6c4b34 !important;
+}
+
+
+/* ==========================================================
+   10. POPUP SUCCESS VISIBILITY
+   Keep previous working fix.
+   ========================================================== */
+
+.enquiry-modal-content .success-message h2,
+.enquiry-modal-content .success-message h3,
+.enquiry-modal-content .success-title,
+.enquiry-modal-content .thank-you-title {
+    color: #f3d987 !important;
+    -webkit-text-fill-color: #f3d987 !important;
+
+    opacity: 1 !important;
+
+    text-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.22) !important;
+}
+
+.enquiry-modal-content .success-message p,
+.enquiry-modal-content .success-text,
+.enquiry-modal-content .thank-you-message {
+    color: #eadbd0 !important;
+    -webkit-text-fill-color: #eadbd0 !important;
+
+    opacity: 1 !important;
+
+    line-height: 1.6 !important;
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 767px) {
+
+    /* sticky compact navbar */
+
+    .navbar,
+    .site-header {
+        top: 0 !important;
+        z-index: 9998 !important;
+    }
+
+    .navbar-inner,
+    .navbar-container,
+    .navbar .container {
+        min-height: 58px !important;
+
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+
+        gap: 5px !important;
+
+        flex-wrap: nowrap !important;
+    }
+
+    .navbar-logo img,
+    .logo-container img {
+        width: 82px !important;
+        max-width: 82px !important;
+        max-height: 45px !important;
+    }
+
+    .navbar-buttons {
+        gap: 5px !important;
+
+        margin: 0 !important;
+
+        width: auto !important;
+    }
+
+    .brochure-btn,
+    .navbar-brochure,
+    .call-btn,
+    .navbar-call {
+        min-height: 36px !important;
+
+        padding:
+            8px 9px !important;
+
+        font-size: 11px !important;
+
+        white-space: nowrap !important;
+    }
+
+    .whatsapp-btn,
+    .navbar-whatsapp,
+    .whatsapp-button {
+        width: 36px !important;
+        min-width: 36px !important;
+        height: 36px !important;
+    }
+
+
+    /* Hero text smaller */
+
+    .hero-title,
+    .hero-section h1,
+    .hero-content h1 {
+        font-size: clamp(
+            31px,
+            9.5vw,
+            43px
+        ) !important;
+
+        line-height: 1.04 !important;
+
+        text-shadow:
+            0 1px 2px rgba(20, 12, 8, 0.30) !important;
+    }
+
+    .hero-subtitle,
+    .hero-content p {
+        font-size: 15px !important;
+        line-height: 1.55 !important;
+    }
+
+
+    /*
+       Client:
+       on mobile text should not cover too much of building.
+       Keep text lower and give clearer reading area.
+    */
+
+    .hero-content {
+        top: auto !important;
+
+        bottom: 42px !important;
+
+        max-width:
+            calc(100% - 32px) !important;
+    }
+
+
+    /* Why choose boxes line alignment */
+
+    .features-grid,
+    .why-choose-grid,
+    .why-choose-cards {
+        grid-template-columns:
+            1fr !important;
+
+        gap: 12px !important;
+    }
+
+    .feature-card,
+    .why-choose-card,
+    .feature-box {
+        min-height: auto !important;
+        height: auto !important;
+    }
+
+
+    /* disclaimer smaller */
+
+    .dnsb-representation-image::after {
+        right: 7px;
+        bottom: 7px;
+
+        padding: 4px 7px;
+
+        font-size: 8.5px;
+    }
+
+
+    /* Location */
+
+    .location-card,
+    .location-container {
+        grid-template-columns:
+            1fr !important;
+    }
+
+
+    /* Footer reduce blank spacing */
+
+    .footer,
+    .site-footer {
+        padding-top:
+            36px !important;
+    }
+
+    .footer-grid,
+    .footer-container {
+        gap: 24px !important;
+    }
+
+    .footer-brand,
+    .footer-column,
+    .footer-section {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+
+/* Very narrow phones */
+
+@media (max-width: 390px) {
+
+    .navbar-logo img,
+    .logo-container img {
+        width: 72px !important;
+        max-width: 72px !important;
+    }
+
+    .brochure-btn,
+    .navbar-brochure,
+    .call-btn,
+    .navbar-call {
+        padding:
+            7px 7px !important;
+
+        font-size: 10px !important;
+    }
+
+    .hero-title,
+    .hero-section h1,
+    .hero-content h1 {
+        font-size: 30px !important;
+    }
+}
+
+/* ==========================================================
+   CLIENT: SMALL PROJECT BUILDING IMAGE IN FOOTER
+   Automatically uses existing project building asset.
+   ========================================================== */
+
+.footer-building-mini,
+.footer-building-icon,
+.footer-building-outline,
+.footer-skyline {
+    width: 120px !important;
+    height: 92px !important;
+
+    background-image:
+        url("/images/hero/hero-2.png") !important;
+
+    background-size:
+        cover !important;
+
+    background-position:
+        center !important;
+
+    background-repeat:
+        no-repeat !important;
+
+    border:
+        1px solid rgba(183, 139, 44, 0.28) !important;
+
+    border-radius:
+        10px !important;
+
+    overflow:
+        hidden !important;
+}
+
+.footer-building-mini > *,
+.footer-building-icon > *,
+.footer-building-outline > *,
+.footer-skyline > * {
+    opacity: 0 !important;
+}
+

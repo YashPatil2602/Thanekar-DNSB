@@ -1,0 +1,775 @@
+:root {
+  --client-cream: #fbf7ef;
+  --client-cream-deep: #f4eadc;
+  --client-gold: #b88a24;
+  --client-gold-bright: #c49227;
+  --client-light-brown: #7b5a43;
+  --client-dark-brown: #3d281d;
+  --client-body-text: #66564b;
+}
+
+
+/* =========================================================
+   1. STICKY HEADER + REMOVE EXTRA WHITE SPACE
+   ========================================================= */
+
+html,
+body,
+#root {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.navbar {
+  position: sticky !important;
+  position: -webkit-sticky !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 10000 !important;
+
+  background: rgba(255, 250, 241, 0.98) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+
+  margin: 0 !important;
+  min-height: 64px !important;
+
+  box-shadow:
+    0 1px 0 rgba(184, 138, 36, 0.35),
+    0 5px 18px rgba(80, 55, 30, 0.06) !important;
+}
+
+.navbar-inner {
+  min-height: 64px !important;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+}
+
+.hero-section,
+#home {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.navbar + .hero-section,
+.navbar + #home {
+  margin-top: 0 !important;
+}
+
+.navbar-spacer,
+.header-spacer,
+.nav-spacer {
+  display: none !important;
+}
+
+
+/* =========================================================
+   2. HERO TEXT SMALLER / CLEANER
+   ========================================================= */
+
+.hero-content h1 {
+  font-size: clamp(40px, 4vw, 56px) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.8px !important;
+}
+
+.hero-content p {
+  font-size: 16px !important;
+  line-height: 1.55 !important;
+}
+
+
+/* =========================================================
+   3. WALKTHROUGH TITLE - ALWAYS HORIZONTAL
+   ========================================================= */
+
+.form-heading {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  width: 100% !important;
+}
+
+.form-heading strong {
+  display: inline-block !important;
+  width: auto !important;
+  min-width: max-content !important;
+  max-width: none !important;
+  flex: 0 0 auto !important;
+}
+
+.walkthrough-title {
+  display: inline-block !important;
+
+  width: auto !important;
+  min-width: max-content !important;
+  max-width: none !important;
+
+  white-space: nowrap !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+
+  writing-mode: horizontal-tb !important;
+  text-orientation: mixed !important;
+
+  color: #9b6f22 !important;
+  -webkit-text-fill-color: #9b6f22 !important;
+
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.7px !important;
+  line-height: 1.2 !important;
+
+  text-shadow: none !important;
+}
+
+.form-heading > span:not(.walkthrough-title) {
+  flex: 1 1 36px !important;
+  max-width: 42px !important;
+  min-width: 20px !important;
+}
+
+
+/* =========================================================
+   4. BROCHURE / CALL NOW / SPECIAL OFFER LIGHT BROWN TEXT
+   ========================================================= */
+
+.brochure-btn,
+.call-btn,
+.navbar-brochure,
+.navbar-call,
+.offer-badge,
+.offer-badge span {
+  color: var(--client-light-brown) !important;
+  -webkit-text-fill-color: var(--client-light-brown) !important;
+  font-weight: 800 !important;
+}
+
+.brochure-btn:hover,
+.call-btn:hover,
+.navbar-brochure:hover,
+.navbar-call:hover {
+  color: #624431 !important;
+  -webkit-text-fill-color: #624431 !important;
+}
+
+
+/* =========================================================
+   5. PRICING HEADING - SHARP GOLD, NO SPREAD SHADOW
+   ========================================================= */
+
+.pricing-heading h2 span {
+  color: var(--client-gold) !important;
+  -webkit-text-fill-color: var(--client-gold) !important;
+
+  background: none !important;
+  background-image: none !important;
+
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+
+  opacity: 1 !important;
+  filter: none !important;
+
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.28) !important;
+}
+
+
+/* =========================================================
+   6. FEATURES / WHY CHOOSE DNSB ALIGNMENT
+   ========================================================= */
+
+.features-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+
+  align-items: stretch !important;
+  gap: 12px !important;
+
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+.feature-card {
+  box-sizing: border-box !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+
+  height: 100% !important;
+  min-height: 165px !important;
+
+  margin: 0 !important;
+  padding: 28px 25px !important;
+
+  border: 1px solid rgba(184, 138, 36, 0.5) !important;
+  border-radius: 12px !important;
+
+  background: rgba(255, 253, 248, 0.78) !important;
+}
+
+.feature-card + .feature-card {
+  border-left: 1px solid rgba(184, 138, 36, 0.5) !important;
+}
+
+
+/* =========================================================
+   7. REPRESENTATION DISCLAIMER
+   ========================================================= */
+
+.hero-slider,
+.amenities-image-wrapper {
+  position: relative !important;
+}
+
+.representation-note {
+  position: absolute !important;
+  z-index: 20 !important;
+
+  right: 12px !important;
+  bottom: 10px !important;
+
+  display: inline-flex !important;
+  align-items: center !important;
+
+  padding: 5px 9px !important;
+
+  background: rgba(38, 24, 17, 0.74) !important;
+
+  color: #fffaf1 !important;
+  -webkit-text-fill-color: #fffaf1 !important;
+
+  border: 1px solid rgba(255, 244, 220, 0.35) !important;
+  border-radius: 5px !important;
+
+  font-size: 10px !important;
+  font-family: Arial, sans-serif !important;
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.1px !important;
+
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45) !important;
+
+  pointer-events: none !important;
+}
+
+.amenities-representation-note {
+  right: 14px !important;
+  bottom: 12px !important;
+}
+
+
+/* =========================================================
+   8. LOCATION - CREAM INSTEAD OF DARK BROWN
+   ========================================================= */
+
+.location-section {
+  background:
+    linear-gradient(
+      180deg,
+      #fffaf3 0%,
+      var(--client-cream) 100%
+    ) !important;
+}
+
+.location-container {
+  overflow: hidden !important;
+
+  background: var(--client-cream) !important;
+
+  border: 1px solid rgba(184, 138, 36, 0.55) !important;
+  border-radius: 14px !important;
+}
+
+.location-content {
+  background:
+    linear-gradient(
+      145deg,
+      #fffaf3 0%,
+      var(--client-cream-deep) 100%
+    ) !important;
+
+  color: var(--client-dark-brown) !important;
+}
+
+.location-content h2 {
+  color: #9d711f !important;
+  -webkit-text-fill-color: #9d711f !important;
+  text-shadow: none !important;
+}
+
+.location-small-title {
+  color: #9c742c !important;
+  -webkit-text-fill-color: #9c742c !important;
+}
+
+.location-description {
+  color: #59483e !important;
+  -webkit-text-fill-color: #59483e !important;
+
+  font-weight: 500 !important;
+  line-height: 1.65 !important;
+}
+
+
+/* =========================================================
+   9. FOOTER PROJECT BUILDING IMAGE
+   ========================================================= */
+
+.footer-building-image {
+  width: 160px !important;
+  height: 115px !important;
+
+  margin-top: 24px !important;
+
+  overflow: hidden !important;
+
+  border: 1px solid rgba(184, 138, 36, 0.55) !important;
+  border-radius: 10px !important;
+
+  background: #201008 !important;
+
+  box-shadow: 0 8px 22px rgba(69, 46, 28, 0.12) !important;
+}
+
+.footer-building-image img {
+  display: block !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+
+/* fallback if old building markup remains */
+.building-icon {
+  width: 160px !important;
+  height: 115px !important;
+
+  margin-top: 24px !important;
+
+  background:
+    url("/images/hero/hero-2.png")
+    center center / cover
+    no-repeat !important;
+
+  border: 1px solid rgba(184, 138, 36, 0.55) !important;
+  border-radius: 10px !important;
+
+  overflow: hidden !important;
+}
+
+.building-icon .building-main,
+.building-icon .building-side {
+  display: none !important;
+}
+
+
+/* =========================================================
+   10. FOOTER TEXT VISIBILITY
+   ========================================================= */
+
+.footer {
+  background:
+    linear-gradient(
+      180deg,
+      #f8efe4 0%,
+      #f3e7d9 100%
+    ) !important;
+}
+
+.footer-brand p,
+.footer-section li a,
+.contact-row p,
+.contact-row a,
+.bottom-footer,
+.bottom-footer p,
+.bottom-links a {
+  color: #5d5047 !important;
+  -webkit-text-fill-color: #5d5047 !important;
+}
+
+.footer-brand h2,
+.footer-section h3,
+.contact-row strong {
+  color: #8f671d !important;
+  -webkit-text-fill-color: #8f671d !important;
+}
+
+
+/* =========================================================
+   11. MOBILE
+   TEXT BELOW BUILDING + COMPACT HEADER
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  .navbar {
+    min-height: 64px !important;
+  }
+
+  .navbar-inner {
+    min-height: 64px !important;
+    padding: 6px 10px !important;
+    gap: 6px !important;
+  }
+
+  .hero-section {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+
+  /* Building first */
+  .hero-slider {
+    position: relative !important;
+
+    display: block !important;
+
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow: visible !important;
+
+    background: var(--client-cream) !important;
+  }
+
+  .hero-slider::before {
+    content: "" !important;
+
+    display: block !important;
+
+    width: 100% !important;
+
+    height: 56vh !important;
+    min-height: 420px !important;
+    max-height: 560px !important;
+  }
+
+  .hero-slide {
+    position: absolute !important;
+
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+
+    height: 56vh !important;
+    min-height: 420px !important;
+    max-height: 560px !important;
+
+    object-fit: cover !important;
+    object-position: center top !important;
+  }
+
+  .hero-image-overlay {
+    position: absolute !important;
+
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+
+    bottom: auto !important;
+
+    height: 56vh !important;
+    min-height: 420px !important;
+    max-height: 560px !important;
+  }
+
+
+  /* Client asked text under building */
+  .hero-content {
+    position: relative !important;
+
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+
+    transform: none !important;
+
+    z-index: 10 !important;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    box-sizing: border-box !important;
+
+    padding: 24px 20px 28px !important;
+
+    background:
+      linear-gradient(
+        180deg,
+        #fffaf3 0%,
+        #f5eadc 100%
+      ) !important;
+
+    color: var(--client-dark-brown) !important;
+  }
+
+  .hero-small-title {
+    color: #9a711f !important;
+    -webkit-text-fill-color: #9a711f !important;
+  }
+
+  .hero-content h1 {
+    margin: 7px 0 14px !important;
+
+    color: #34231a !important;
+    -webkit-text-fill-color: #34231a !important;
+
+    font-size: 36px !important;
+    line-height: 1.04 !important;
+    letter-spacing: -0.5px !important;
+
+    text-shadow: none !important;
+  }
+
+  .hero-content p {
+    color: #665348 !important;
+    -webkit-text-fill-color: #665348 !important;
+
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+  }
+
+  .hero-dots {
+    position: absolute !important;
+
+    top: calc(max(56vh, 420px) - 48px) !important;
+    bottom: auto !important;
+
+    z-index: 15 !important;
+  }
+
+  .hero-representation-note {
+    top: calc(max(56vh, 420px) - 30px) !important;
+    bottom: auto !important;
+
+    right: 8px !important;
+
+    font-size: 8px !important;
+    padding: 4px 6px !important;
+  }
+
+
+  /* walkthrough must never become vertical */
+  .form-heading {
+    gap: 6px !important;
+  }
+
+  .form-heading strong {
+    min-width: 0 !important;
+  }
+
+  .walkthrough-title {
+    min-width: 0 !important;
+    max-width: 100% !important;
+
+    white-space: nowrap !important;
+
+    font-size: 10px !important;
+    letter-spacing: 0.25px !important;
+  }
+
+
+  /* feature cards aligned */
+  .features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .feature-card {
+    min-height: 0 !important;
+    width: 100% !important;
+  }
+
+
+  /* Footer no large empty areas */
+  .footer-container,
+  .footer-main {
+    gap: 24px !important;
+  }
+
+  .footer-brand {
+    margin-bottom: 0 !important;
+  }
+
+  .footer-brand p {
+    margin-top: 18px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .footer-building-image,
+  .building-icon {
+    width: 150px !important;
+    height: 105px !important;
+
+    margin-top: 18px !important;
+  }
+
+  .representation-note {
+    font-size: 8px !important;
+
+    right: 8px !important;
+    bottom: 8px !important;
+
+    padding: 4px 6px !important;
+  }
+}
+
+
+@media (max-width: 420px) {
+
+  .hero-content h1 {
+    font-size: 34px !important;
+  }
+
+  .brochure-btn,
+  .call-btn,
+  .navbar-brochure,
+  .navbar-call {
+    font-size: 11px !important;
+  }
+
+  .walkthrough-title {
+    font-size: 9px !important;
+  }
+}
+
+/* =========================================================
+   FINAL CLIENT HERO REQUIREMENTS
+   ========================================================= */
+
+/* Keep hero slideshow as positioning container */
+.hero-slider {
+    position: relative !important;
+}
+
+/* Representation disclaimer on hero image */
+.hero-slider::after {
+    content: "Images used for representation only";
+    position: absolute !important;
+    right: 14px !important;
+    bottom: 12px !important;
+    z-index: 999 !important;
+
+    padding: 5px 9px !important;
+    border-radius: 4px !important;
+
+    background: rgba(58, 34, 22, 0.78) !important;
+    color: #f6ead6 !important;
+    -webkit-text-fill-color: #f6ead6 !important;
+
+    font-size: 10px !important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0.25px !important;
+
+    pointer-events: none !important;
+}
+
+/* Hero walkthrough heading - readable and single line */
+.hero-form .walkthrough-title {
+    display: inline-block !important;
+    white-space: nowrap !important;
+
+    color: #8a542b !important;
+    -webkit-text-fill-color: #8a542b !important;
+
+    font-weight: 800 !important;
+    letter-spacing: 0.7px !important;
+    text-shadow: none !important;
+}
+
+/* Both Hero consent rows */
+.hero-form .consent {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 7px !important;
+
+    width: 100% !important;
+    margin-top: 8px !important;
+
+    color: #654c3f !important;
+    -webkit-text-fill-color: #654c3f !important;
+
+    font-size: 10px !important;
+    line-height: 1.45 !important;
+}
+
+/* Second communication consent */
+.hero-form .communication-consent {
+    margin-top: 7px !important;
+    margin-bottom: 4px !important;
+}
+
+.hero-form .consent input[type="checkbox"] {
+    flex: 0 0 auto !important;
+    width: 14px !important;
+    height: 14px !important;
+    margin-top: 1px !important;
+    accent-color: #b68a22 !important;
+}
+
+.hero-form .consent span {
+    display: block !important;
+    color: #654c3f !important;
+    -webkit-text-fill-color: #654c3f !important;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+
+    .hero-slider::after {
+        right: 8px !important;
+        bottom: 8px !important;
+
+        padding: 4px 7px !important;
+
+        font-size: 8px !important;
+        line-height: 1.2 !important;
+    }
+
+    .hero-form .walkthrough-title {
+        white-space: nowrap !important;
+        font-size: 10px !important;
+        letter-spacing: 0.35px !important;
+    }
+
+    .hero-form .consent {
+        font-size: 9px !important;
+        line-height: 1.35 !important;
+        gap: 6px !important;
+    }
+
+    .hero-form .consent input[type="checkbox"] {
+        width: 13px !important;
+        height: 13px !important;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .hero-form .walkthrough-title {
+        font-size: 9px !important;
+        letter-spacing: 0.2px !important;
+    }
+
+    .hero-slider::after {
+        font-size: 7px !important;
+    }
+}
