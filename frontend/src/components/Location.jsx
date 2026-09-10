@@ -34,7 +34,7 @@ function Location() {
 
         <div className="location-map">
           <iframe
-            src={googleMapsEmbedUrl}
+            src="https://www.google.com/maps?q=19.1638638,73.2395138&z=18&output=embed"
             title="Thanekar DNSB, At Gandhi Chowk, Badlapur East"
             loading="lazy"
             allowFullScreen

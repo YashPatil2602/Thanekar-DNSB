@@ -119,7 +119,7 @@ function Footer({ onEnquire, onBrochure }) {
 
                     <div className="social-icons">
                         <a
-                            href="https://www.instagram.com/"
+                            href="https://www.instagram.com/thanekar_group?stkn=ZTNpa3N3YnB0eWVn"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="social-icon"

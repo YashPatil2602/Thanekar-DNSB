@@ -425,7 +425,7 @@ section[id] {
 }
 
 .footer-building-image::after {
-    content: "Images used for representation only";
+    content: none !important;
 
     position: absolute !important;
 

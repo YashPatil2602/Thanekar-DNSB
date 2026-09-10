@@ -21,6 +21,7 @@ import "./ClientFinalFix.css";
 import "./WalkthroughFix.css";
 import "./ClientFinalReview.css";
 import "./FinalClientCompletion.css";
+import "./ClientFinalRequestedFixes.css";
 function App() {
     const [isEnquiryOpen, setIsEnquiryOpen] = useState(true);
     const [enquiryPurpose, setEnquiryPurpose] = useState("general");

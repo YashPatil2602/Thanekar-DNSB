@@ -94,9 +94,7 @@ function Amenities() {
                         decoding="async"
                     />
 
-        <span className="representation-note amenities-representation-note">
-          Images used for representation only
-        </span>
+        <span className="representation-note amenities-representation-note">Images used for representation only</span>
 
                     <div className="amenities-overlay">
                         <h3>
