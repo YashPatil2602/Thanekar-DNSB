@@ -1763,7 +1763,7 @@ textarea:focus-visible {
         ) !important;
 }
 
-.enquiry-modal-header .form-heading span:last-child {
+.enquiry-modal-header .form-heading > span:last-child {
     background:
         linear-gradient(
             90deg,
