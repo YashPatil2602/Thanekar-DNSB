@@ -143,3 +143,122 @@
         letter-spacing: 0.1px !important;
     }
 }
+
+/* FINAL WALKTHROUGH HEADING FIX - HERO + POPUP - DESKTOP + MOBILE */
+
+.form-heading::before,
+.form-heading::after,
+.hero-form .form-heading::before,
+.hero-form .form-heading::after,
+.enquiry-modal .form-heading::before,
+.enquiry-modal .form-heading::after {
+  display: none !important;
+  content: none !important;
+}
+
+.form-heading strong,
+.hero-form .form-heading strong,
+.enquiry-modal .form-heading strong {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  gap: 14px !important;
+  position: relative !important;
+  text-decoration: none !important;
+  border: 0 !important;
+}
+
+.form-heading strong::before,
+.form-heading strong::after,
+.hero-form .form-heading strong::before,
+.hero-form .form-heading strong::after,
+.enquiry-modal .form-heading strong::before,
+.enquiry-modal .form-heading strong::after {
+  content: "" !important;
+  display: block !important;
+  flex: 1 1 0 !important;
+  max-width: 72px !important;
+  height: 1px !important;
+  background: #b98b2c !important;
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+}
+
+.form-heading .walkthrough-title,
+.hero-form .form-heading .walkthrough-title,
+.enquiry-modal .form-heading .walkthrough-title {
+  display: inline-block !important;
+  position: relative !important;
+  flex: 0 0 auto !important;
+  white-space: nowrap !important;
+  line-height: 1.25 !important;
+  padding: 0 4px !important;
+  margin: 0 !important;
+  text-decoration: none !important;
+  border: 0 !important;
+}
+
+.form-heading .walkthrough-title::before,
+.form-heading .walkthrough-title::after,
+.hero-form .form-heading .walkthrough-title::before,
+.hero-form .form-heading .walkthrough-title::after,
+.enquiry-modal .form-heading .walkthrough-title::before,
+.enquiry-modal .form-heading .walkthrough-title::after {
+  display: none !important;
+  content: none !important;
+}
+
+@media (max-width: 768px) {
+  .form-heading strong,
+  .hero-form .form-heading strong,
+  .enquiry-modal .form-heading strong {
+    gap: 10px !important;
+  }
+
+  .form-heading strong::before,
+  .form-heading strong::after,
+  .hero-form .form-heading strong::before,
+  .hero-form .form-heading strong::after,
+  .enquiry-modal .form-heading strong::before,
+  .enquiry-modal .form-heading strong::after {
+    max-width: 48px !important;
+    min-width: 20px !important;
+  }
+
+  .form-heading .walkthrough-title,
+  .hero-form .form-heading .walkthrough-title,
+  .enquiry-modal .form-heading .walkthrough-title {
+    font-size: 12px !important;
+    white-space: nowrap !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .form-heading strong,
+  .hero-form .form-heading strong,
+  .enquiry-modal .form-heading strong {
+    gap: 7px !important;
+  }
+
+  .form-heading strong::before,
+  .form-heading strong::after,
+  .hero-form .form-heading strong::before,
+  .hero-form .form-heading strong::after,
+  .enquiry-modal .form-heading strong::before,
+  .enquiry-modal .form-heading strong::after {
+    max-width: 34px !important;
+    min-width: 14px !important;
+  }
+
+  .form-heading .walkthrough-title,
+  .hero-form .form-heading .walkthrough-title,
+  .enquiry-modal .form-heading .walkthrough-title {
+    font-size: 11px !important;
+    padding: 0 2px !important;
+  }
+}
