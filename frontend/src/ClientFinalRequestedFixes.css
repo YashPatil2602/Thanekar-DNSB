@@ -385,3 +385,11 @@
     }
 }
 
+
+
+/* SHOW REPRESENTATION DISCLAIMER ONLY ON AMENITIES */
+
+.representation-note:not(.amenities-representation-note) {
+  display: none !important;
+}
+

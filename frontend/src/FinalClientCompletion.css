@@ -326,7 +326,6 @@ section[id] {
    ============================================================ */
 
 .hero-slider::after {
-    content: "Images used for representation only" !important;
 
     position: absolute !important;
 
@@ -379,7 +378,7 @@ section[id] {
 }
 
 .floor-plan-image-container::after {
-    content: "Images used for representation only";
+    content: none !important;
 
     position: absolute !important;
 
@@ -673,7 +672,7 @@ section[id] {
 #about [class*="visual"]:not(:has([class*="visual"]))::after,
 #about [class*="building"]:not(:has([class*="building"]))::after,
 #about [class*="render"]:not(:has([class*="render"]))::after {
-    content: "Images used for representation only";
+    content: none !important;
 
     position: absolute !important;
 
@@ -710,7 +709,7 @@ section[id] {
 }
 
 #about [style*="background-image"]::after {
-    content: "Images used for representation only";
+    content: none !important;
 
     position: absolute !important;
 

@@ -278,7 +278,7 @@ header.site-header {
 }
 
 .dnsb-representation-image::after {
-    content: "Images used for representation only";
+    content: none !important;
 
     position: absolute;
     right: 10px;

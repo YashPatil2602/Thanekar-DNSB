@@ -661,7 +661,7 @@ body,
 
 /* Representation disclaimer on hero image */
 .hero-slider::after {
-    content: "Images used for representation only";
+    content: none !important;
     position: absolute !important;
     right: 14px !important;
     bottom: 12px !important;
