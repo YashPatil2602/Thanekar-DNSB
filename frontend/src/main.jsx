@@ -1,3 +1,4 @@
+console.info("Thanekar DNSB production boot 20260911-1105");
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
