@@ -393,3 +393,13 @@
   display: none !important;
 }
 
+
+/* REMOVE HERO HEADING SHADOWS */
+.hero-content h1,
+.hero-content .hero-title,
+.hero-form h1,
+.hero-form h2,
+.hero-form #enquiry-title {
+  text-shadow: none !important;
+  filter: none !important;
+}
