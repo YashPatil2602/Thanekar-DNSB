@@ -1486,3 +1486,67 @@ a.view-plan-btn:focus *,
     -webkit-text-fill-color: #ffd96b !important;
     opacity: 1 !important;
 }
+
+
+/* FINAL: REMOVE SHADOW ONLY FROM TWO HERO TITLES */
+.hero-content h1 {
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+.hero-form h2 {
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+/* ===== LATEST CLIENT REQUESTS ===== */
+
+/* Softer premium gold for the main filled CTA buttons */
+.brochure-btn,
+.call-btn,
+.hero-button,
+.form-submit,
+.submit-btn,
+.pricing-button,
+.offer-button,
+.location-button,
+.enquiry-button,
+.brochure-button,
+.view-plan-btn {
+    background: linear-gradient(
+        135deg,
+        #ad8748 0%,
+        #cfb477 52%,
+        #a47838 100%
+    ) !important;
+
+    border-color: #a88449 !important;
+    box-shadow: 0 3px 8px rgba(74, 49, 21, 0.16) !important;
+}
+
+/* Keep button text clean */
+.brochure-btn,
+.call-btn,
+.hero-button,
+.form-submit,
+.submit-btn,
+.pricing-button,
+.offer-button,
+.location-button,
+.enquiry-button,
+.brochure-button,
+.view-plan-btn {
+    color: #24180f !important;
+    text-shadow: none !important;
+}
+
+/* Remove the artificial dark fade from hero image on mobile */
+@media (max-width: 768px) {
+    .hero-image-overlay {
+        background: transparent !important;
+        background-image: none !important;
+        opacity: 0 !important;
+    }
+}
+
+/* ===== END LATEST CLIENT REQUESTS ===== */
