@@ -1499,48 +1499,143 @@ a.view-plan-btn:focus *,
     filter: none !important;
 }
 
-/* ===== LATEST CLIENT REQUESTS ===== */
+/* ===== FINAL CLIENT PREMIUM SUBTLE GOLD ===== */
 
-/* Softer premium gold for the main filled CTA buttons */
+/* Main CTA buttons */
+.navbar .brochure-btn,
+.navbar .call-btn,
 .brochure-btn,
 .call-btn,
 .hero-button,
+.hero-form .form-submit,
 .form-submit,
 .submit-btn,
+.enquiry-button,
+.enquiry-form button[type="submit"],
+.enquiry-modal-content button[type="submit"],
 .pricing-button,
 .offer-button,
+.pricing-section button,
+.view-plan-btn,
+.floor-plans-section button,
 .location-button,
-.enquiry-button,
+.location-section button,
 .brochure-button,
-.view-plan-btn {
+.footer .enquiry-button,
+.footer .brochure-button,
+.footer button {
     background: linear-gradient(
         135deg,
-        #ad8748 0%,
-        #cfb477 52%,
-        #a47838 100%
+        #b58a46 0%,
+        #d6b66f 52%,
+        #a97834 100%
     ) !important;
 
-    border-color: #a88449 !important;
-    box-shadow: 0 3px 8px rgba(74, 49, 21, 0.16) !important;
+    background-color: #bd9650 !important;
+    border-color: #a97d3d !important;
+
+    color: #27190d !important;
+    -webkit-text-fill-color: #27190d !important;
+
+    box-shadow:
+        0 3px 8px rgba(69, 45, 18, 0.18) !important;
+
+    text-shadow: none !important;
+    filter: none !important;
 }
 
-/* Keep button text clean */
-.brochure-btn,
-.call-btn,
-.hero-button,
-.form-submit,
-.submit-btn,
-.pricing-button,
-.offer-button,
-.location-button,
-.enquiry-button,
-.brochure-button,
-.view-plan-btn {
-    color: #24180f !important;
+/* Button text/icons */
+.navbar .brochure-btn *,
+.navbar .call-btn *,
+.brochure-btn *,
+.call-btn *,
+.hero-button *,
+.hero-form .form-submit *,
+.form-submit *,
+.submit-btn *,
+.enquiry-button *,
+.pricing-button *,
+.offer-button *,
+.view-plan-btn *,
+.location-button *,
+.brochure-button * {
+    color: #27190d !important;
+    -webkit-text-fill-color: #27190d !important;
     text-shadow: none !important;
 }
 
-/* Remove the artificial dark fade from hero image on mobile */
+/* Slightly deeper hover */
+.navbar .brochure-btn:hover,
+.navbar .call-btn:hover,
+.brochure-btn:hover,
+.call-btn:hover,
+.hero-button:hover,
+.hero-form .form-submit:hover,
+.form-submit:hover,
+.submit-btn:hover,
+.enquiry-button:hover,
+.enquiry-form button[type="submit"]:hover,
+.enquiry-modal-content button[type="submit"]:hover,
+.pricing-button:hover,
+.offer-button:hover,
+.pricing-section button:hover,
+.view-plan-btn:hover,
+.floor-plans-section button:hover,
+.location-button:hover,
+.location-section button:hover,
+.brochure-button:hover,
+.footer .enquiry-button:hover,
+.footer .brochure-button:hover,
+.footer button:hover {
+    background: linear-gradient(
+        135deg,
+        #a97d3d 0%,
+        #c9a75f 52%,
+        #986b2d 100%
+    ) !important;
+
+    border-color: #94692f !important;
+    color: #21150b !important;
+
+    box-shadow:
+        0 4px 9px rgba(69, 45, 18, 0.21) !important;
+
+    filter: none !important;
+}
+
+/* Special Offer badge */
+.offer-badge,
+.special-offer,
+.special-offer-badge,
+.pricing-card .offer-badge {
+    background: linear-gradient(
+        135deg,
+        #b58a46 0%,
+        #d6b66f 52%,
+        #a97834 100%
+    ) !important;
+
+    background-color: #bd9650 !important;
+    border-color: #a97d3d !important;
+    color: #27190d !important;
+
+    box-shadow:
+        0 3px 8px rgba(69, 45, 18, 0.18) !important;
+
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+/* WhatsApp must stay green */
+.whatsapp-btn,
+.whatsapp-button,
+.whatsapp-icon,
+a[href*="wa.me"],
+a[href*="whatsapp"] {
+    background-color: #25d366 !important;
+}
+
+/* Keep mobile hero dark fade removed */
 @media (max-width: 768px) {
     .hero-image-overlay {
         background: transparent !important;
@@ -1549,4 +1644,163 @@ a.view-plan-btn:focus *,
     }
 }
 
-/* ===== END LATEST CLIENT REQUESTS ===== */
+/* ===== END FINAL CLIENT PREMIUM SUBTLE GOLD ===== */
+
+
+/* ===== FINAL UNIFORM SUBTLE GOLD ===== */
+
+/*
+   CLIENT REQUEST:
+   Wherever the bright gold CTA color appears,
+   use one consistent subtle premium gold.
+*/
+
+#home .hero-button,
+#home .form-submit,
+.hero-form .form-submit,
+
+.enquiry-modal-content button[type="submit"],
+.enquiry-form button[type="submit"],
+.enquiry-modal-content .form-submit,
+.enquiry-modal-content .submit-btn,
+
+.navbar .brochure-btn,
+.navbar .call-btn,
+.brochure-btn,
+.call-btn,
+
+#pricing button,
+#pricing a[class*="btn"],
+#pricing a[class*="button"],
+.pricing-button,
+.offer-button,
+
+#floor-plans button,
+#floor-plans a[class*="btn"],
+#floor-plans a[class*="button"],
+.view-plan-btn,
+
+#location button,
+#location a[class*="btn"],
+#location a[class*="button"],
+.location-button,
+
+.footer .enquiry-button,
+.footer .brochure-button,
+.footer a[class*="enquiry"],
+.footer a[class*="brochure"],
+.brochure-button {
+    background: #c6a46b !important;
+    background-color: #c6a46b !important;
+    background-image: none !important;
+
+    border-color: #aa854e !important;
+
+    color: #24180d !important;
+    -webkit-text-fill-color: #24180d !important;
+
+    box-shadow:
+        0 2px 6px rgba(61, 42, 20, 0.16) !important;
+
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+/* Keep text/icons consistent */
+#home .hero-button *,
+#home .form-submit *,
+.enquiry-modal-content button[type="submit"] *,
+.navbar .brochure-btn *,
+.navbar .call-btn *,
+#pricing button *,
+#pricing a[class*="btn"] *,
+#pricing a[class*="button"] *,
+#floor-plans button *,
+#floor-plans a[class*="btn"] *,
+#floor-plans a[class*="button"] *,
+#location button *,
+#location a[class*="btn"] *,
+#location a[class*="button"] *,
+.footer .enquiry-button *,
+.footer .brochure-button * {
+    color: #24180d !important;
+    -webkit-text-fill-color: #24180d !important;
+    text-shadow: none !important;
+}
+
+/* Same restrained hover everywhere */
+#home .hero-button:hover,
+#home .form-submit:hover,
+.enquiry-modal-content button[type="submit"]:hover,
+.enquiry-form button[type="submit"]:hover,
+
+.navbar .brochure-btn:hover,
+.navbar .call-btn:hover,
+
+#pricing button:hover,
+#pricing a[class*="btn"]:hover,
+#pricing a[class*="button"]:hover,
+
+#floor-plans button:hover,
+#floor-plans a[class*="btn"]:hover,
+#floor-plans a[class*="button"]:hover,
+
+#location button:hover,
+#location a[class*="btn"]:hover,
+#location a[class*="button"]:hover,
+
+.footer .enquiry-button:hover,
+.footer .brochure-button:hover {
+    background: #b58f55 !important;
+    background-color: #b58f55 !important;
+    background-image: none !important;
+
+    border-color: #99713d !important;
+    color: #20150b !important;
+
+    box-shadow:
+        0 3px 7px rgba(61, 42, 20, 0.18) !important;
+
+    filter: none !important;
+}
+
+/* Special Offer badge - same family, slightly deeper */
+.offer-badge,
+.special-offer,
+.special-offer-badge,
+.pricing-card .offer-badge {
+    background: #b99254 !important;
+    background-color: #b99254 !important;
+    background-image: none !important;
+
+    border-color: #9d753d !important;
+    color: #24180d !important;
+
+    box-shadow:
+        0 2px 6px rgba(61, 42, 20, 0.16) !important;
+
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+/* WhatsApp remains green */
+.whatsapp-btn,
+.whatsapp-button,
+.whatsapp-icon,
+a[href*="wa.me"],
+a[href*="whatsapp"] {
+    background: #25d366 !important;
+    background-color: #25d366 !important;
+    background-image: none !important;
+}
+
+/* Keep previously approved mobile hero fix */
+@media (max-width: 768px) {
+    .hero-image-overlay {
+        background: transparent !important;
+        background-image: none !important;
+        opacity: 0 !important;
+    }
+}
+
+/* ===== END FINAL UNIFORM SUBTLE GOLD ===== */
