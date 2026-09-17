@@ -19,3 +19,6 @@ venv/
 # Python cache
 _pycache_/
 *.py[cod]
+backend/.env
+backend/data/
+backend/*.db

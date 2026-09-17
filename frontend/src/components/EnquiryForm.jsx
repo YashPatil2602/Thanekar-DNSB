@@ -198,7 +198,11 @@ function EnquiryForm({
 
         const submissionData = {
             ...formData,
+            country_code: countryCode,
+            privacy_consent: privacyConsent,
+            communication_consent: communicationConsent,
             message: purposeDetails.message,
+            source: `popup-${purpose}`,
         };
 
         try {
