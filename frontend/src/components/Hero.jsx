@@ -302,9 +302,7 @@ function Hero({ onEnquire }) {
                             <input
                                 type="email"
                                 name="email"
-                                placeholder="
-                                    Email (optional)
-                                "
+                                placeholder="Email (optional)"
                                 aria-label="Email"
                                 autoComplete="email"
                             />
