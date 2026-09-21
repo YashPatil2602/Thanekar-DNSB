@@ -56,6 +56,7 @@ const residentialFloorPlans = [
 function FloorPlanCard({
     plan,
     commercial = false,
+    onFloorPlan,
 }) {
     const viewUrl = plan.page
         ? `${plan.pdf}#page=${plan.page}`
@@ -99,6 +100,14 @@ function FloorPlanCard({
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`View ${plan.title}`}
+                    onClick={(event) => {
+                        event.preventDefault();
+
+                        onFloorPlan?.({
+                            url: viewUrl,
+                            label: plan.title,
+                        });
+                    }}
                 >
                     View Plan →
                 </a>
@@ -107,7 +116,7 @@ function FloorPlanCard({
     );
 }
 
-function FloorPlans() {
+function FloorPlans({ onFloorPlan }) {
     return (
         <section
             className="floor-plans-section"
@@ -150,6 +159,7 @@ function FloorPlans() {
                                 key={`${plan.pdf}-${plan.page}`}
                                 plan={plan}
                                 commercial
+                                onFloorPlan={onFloorPlan}
                             />
                         ))}
                     </div>
@@ -179,6 +189,7 @@ function FloorPlans() {
                             <FloorPlanCard
                                 key={plan.pdf}
                                 plan={plan}
+                                onFloorPlan={onFloorPlan}
                             />
                         ))}
                     </div>
