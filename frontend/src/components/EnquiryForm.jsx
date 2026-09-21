@@ -18,6 +18,13 @@ function getPurposeDetails(purpose) {
                 message: "Brochure download enquiry",
             };
 
+        case "floor-plan":
+            return {
+                heading: "DOWNLOAD FLOOR PLAN",
+                actionText: "Submit & Download Floor Plan",
+                message: "Floor plan enquiry",
+            };
+
         case "special-offer":
             return {
                 heading: "SPECIAL OFFER",
@@ -66,6 +73,8 @@ function EnquiryForm({
     isOpen,
     onClose,
     purpose = "general",
+    resourceUrl = "",
+    resourceLabel = "",
 }) {
     const [formData, setFormData] = useState(EMPTY_FORM);
 
@@ -136,7 +145,7 @@ function EnquiryForm({
 
             setFormData((previous) => ({
                 ...previous,
-                phone: numbersOnly.slice(0, 10),
+                phone: numbersOnly.slice(0, 15),
             }));
 
             return;
@@ -174,6 +183,24 @@ function EnquiryForm({
         document.body.removeChild(link);
     };
 
+    const downloadFloorPlan = () => {
+        if (!resourceUrl) {
+            return;
+        }
+
+        const safeLabel = (resourceLabel || "Floor-Plan")
+            .replace(/[^a-zA-Z0-9]+/g, "-")
+            .replace(/^-|-$/g, "");
+
+        const link = document.createElement("a");
+        link.href = resourceUrl.split("#")[0];
+        link.download = `Thanekar-DNSB-${safeLabel}.pdf`;
+
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -185,9 +212,22 @@ function EnquiryForm({
             return;
         }
 
-        if (formData.phone.length !== 10) {
+        const phoneDigits =
+            formData.phone.replace(/\D/g, "");
+
+        const isIndianNumber =
+            countryCode === "India(+91)";
+
+        const isValidPhone = isIndianNumber
+            ? /^[6-9]\d{9}$/.test(phoneDigits)
+            : phoneDigits.length >= 7 &&
+              phoneDigits.length <= 15;
+
+        if (!isValidPhone) {
             setSubmitError(
-                "Please enter a valid 10-digit mobile number."
+                isIndianNumber
+                    ? "Please enter a valid 10-digit Indian mobile number starting with 6, 7, 8, or 9."
+                    : "Please enter a valid mobile number."
             );
 
             return;
@@ -201,7 +241,10 @@ function EnquiryForm({
             country_code: countryCode,
             privacy_consent: privacyConsent,
             communication_consent: communicationConsent,
-            message: purposeDetails.message,
+            message:
+                purpose === "floor-plan" && resourceLabel
+                    ? `${purposeDetails.message} - ${resourceLabel}`
+                    : purposeDetails.message,
             source: `popup-${purpose}`,
         };
 
@@ -212,6 +255,10 @@ function EnquiryForm({
 
             if (purpose === "brochure") {
                 downloadBrochure();
+            }
+
+            if (purpose === "floor-plan") {
+                downloadFloorPlan();
             }
 
             setSubmitted(true);
@@ -275,7 +322,9 @@ function EnquiryForm({
                         <p className="success-text">
                             {purpose === "brochure"
                                 ? "Your brochure download has started. We will also contact you shortly."
-                                : "Your enquiry has been received. We will contact you soon."}
+                                : purpose === "floor-plan"
+                                  ? "Your floor plan download has started. We will also contact you shortly."
+                                  : "Your enquiry has been received. We will contact you soon."}
                         </p>
                     </div>
                 ) : (
@@ -375,7 +424,11 @@ function EnquiryForm({
                                     aria-label="Mobile Number"
                                     autoComplete="tel"
                                     inputMode="numeric"
-                                    maxLength={10}
+                                    maxLength={
+                                        countryCode === "India(+91)"
+                                            ? 10
+                                            : 15
+                                    }
                                     required
                                 />
                             </div>

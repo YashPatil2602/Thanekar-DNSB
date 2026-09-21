@@ -25,15 +25,18 @@ import "./ClientFinalRequestedFixes.css";
 function App() {
     const [isEnquiryOpen, setIsEnquiryOpen] = useState(true);
     const [enquiryPurpose, setEnquiryPurpose] = useState("general");
+    const [enquiryResource, setEnquiryResource] = useState(null);
 
-    const openEnquiry = (purpose = "general") => {
+    const openEnquiry = (purpose = "general", resource = null) => {
         setEnquiryPurpose(purpose);
+        setEnquiryResource(resource);
         setIsEnquiryOpen(true);
     };
 
     const closeEnquiry = () => {
         setIsEnquiryOpen(false);
         setEnquiryPurpose("general");
+        setEnquiryResource(null);
     };
 
     return (
@@ -42,6 +45,8 @@ function App() {
                 isOpen={isEnquiryOpen}
                 onClose={closeEnquiry}
                 purpose={enquiryPurpose}
+                resourceUrl={enquiryResource?.url || ""}
+                resourceLabel={enquiryResource?.label || ""}
             />
 
             <Navbar
@@ -63,7 +68,11 @@ function App() {
 
                 <Amenities />
 
-                <FloorPlans />
+                <FloorPlans
+                    onFloorPlan={(plan) =>
+                        openEnquiry("floor-plan", plan)
+                    }
+                />
 
                 <Location />
             </main>

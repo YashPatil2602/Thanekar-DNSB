@@ -248,7 +248,20 @@ def contact():
         if character.isdigit()
     )
 
-    if len(phone_digits) < 7 or len(phone_digits) > 15:
+    if country_code == "India(+91)":
+        if (
+            len(phone_digits) != 10
+            or phone_digits[0] not in "6789"
+        ):
+            return jsonify({
+                "status": "error",
+                "message": (
+                    "Please enter a valid 10-digit Indian "
+                    "mobile number starting with 6, 7, 8, or 9."
+                ),
+            }), 400
+
+    elif len(phone_digits) < 7 or len(phone_digits) > 15:
         return jsonify({
             "status": "error",
             "message": "Please enter a valid mobile number.",
@@ -264,7 +277,7 @@ def contact():
         name=name,
         email=email or None,
         country_code=country_code,
-        phone=phone,
+        phone=phone_digits,
         privacy_consent=privacy_consent,
         communication_consent=communication_consent,
         message=message or None,
