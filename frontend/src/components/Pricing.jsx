@@ -220,7 +220,7 @@ function Pricing({ onEnquire }) {
                             </p>
 
                             <div className="price commercial-price">
-                                ₹60 <span>LAKH*</span>
+                                XX <span>LAKH*</span>
                             </div>
 
                             <div className="pricing-divider"></div>
@@ -267,7 +267,7 @@ function Pricing({ onEnquire }) {
                             </p>
 
                             <div className="price commercial-price">
-                                ₹4 <span>CR*</span>
+                                X <span>CR*</span>
                             </div>
 
                             <div className="pricing-divider"></div>
