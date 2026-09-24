@@ -17,10 +17,17 @@ function Hero({ onEnquire }) {
         useState("");
 
     const heroImages = [
-        "/images/hero/hero-1.png",
-        "/images/hero/hero-2.png",
-        "/images/hero/hero-3.png",
+        "/images/hero/web/hero-1.webp",
+        "/images/hero/web/hero-2.webp",
+        "/images/hero/web/hero-3.webp",
     ];
+
+    useEffect(() => {
+        heroImages.slice(1).forEach((src) => {
+            const image = new Image();
+            image.src = src;
+        });
+    }, []);
 
 
     useEffect(() => {
@@ -30,7 +37,7 @@ function Hero({ onEnquire }) {
                     (previousSlide + 1) %
                     heroImages.length
             );
-        }, 5000);
+        }, 2500);
 
         return () => clearInterval(slider);
     }, [heroImages.length]);
@@ -136,6 +143,9 @@ function Hero({ onEnquire }) {
                         <img
                             key={image}
                             src={image}
+                            loading={index === 0 ? "eager" : "lazy"}
+                            decoding="async"
+                            fetchPriority={index === 0 ? "high" : "auto"}
                             alt={
                                 `Thanekar DNSB ${
                                     index + 1

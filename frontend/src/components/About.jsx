@@ -61,7 +61,7 @@ function About() {
         { /* RIGHT - IMAGE */ } <
         div className = "about-image" >
         <
-        img src = "/images/hero/hero-2.png"
+        img src = "/images/hero/web/hero-2.webp"
         alt = "Thanekar DNSB" /
         >
         <
