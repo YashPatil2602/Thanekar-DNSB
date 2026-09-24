@@ -30,7 +30,7 @@ function Footer({ onEnquire, onBrochure }) {
 
                     <div className="footer-building-image">
   <img
-    src="/images/hero/hero-2.png"
+    src="/images/hero/web/hero-2.webp"
     alt="Thanekar DNSB project building"
   />
 </div>
