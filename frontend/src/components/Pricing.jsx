@@ -67,7 +67,7 @@ function Pricing({ onEnquire }) {
                         <h3>2 BHK</h3>
 
                         <div className="price">
-                            ₹70 <span>LAKH*</span>
+                            XX <span>LAKH*</span>
                         </div>
 
                         <div className="pricing-divider"></div>
@@ -120,7 +120,7 @@ function Pricing({ onEnquire }) {
                         <h3>3 BHK</h3>
 
                         <div className="price featured-price">
-                            ₹86 <span>LAKH*</span>
+                            XX <span>LAKH*</span>
                         </div>
 
                         <div className="pricing-divider"></div>
