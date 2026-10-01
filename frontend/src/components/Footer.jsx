@@ -1,4 +1,5 @@
 import "./Footer.css";
+import "./ReraFooter.css";
 
 function Footer({ onEnquire, onBrochure }) {
     return (
@@ -170,6 +171,22 @@ function Footer({ onEnquire, onBrochure }) {
                     </div>
                 </div>
 
+            </div>
+
+            
+            <div className="footer-rera-section">
+                <div className="footer-rera-details">
+                    <span className="footer-rera-title">MAHARERA NO.</span>
+                    <strong className="footer-rera-number">
+                        PM1330002500361
+                    </strong>
+                </div>
+
+                <img
+                    src="/images/rera/maharera-qr.png"
+                    alt="MahaRERA QR Code"
+                    className="footer-rera-qr"
+                />
             </div>
 
             <div className="footer-bottom">
