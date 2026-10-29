@@ -393,3 +393,36 @@
   display: none !important;
 }
 
+
+
+/* =========================================================
+   CLIENT IMAGE LOADING / SHARPNESS FIX
+   Keep existing slider timing; remove visual blur/blank state.
+   ========================================================= */
+
+/* Hero images are preloaded in Hero.jsx.
+   Keep cross-fade, but remove slow scale animation. */
+.hero-slide {
+    filter: none !important;
+    transform: none !important;
+    transition: opacity 1s ease !important;
+    image-rendering: auto !important;
+    backface-visibility: hidden;
+}
+
+.hero-slide.active {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+}
+
+/* Amenities images are preloaded in Amenities.jsx.
+   Do not fade from transparent or scale from 1.03. */
+.amenities-image {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+    animation: none !important;
+    image-rendering: auto !important;
+}
+

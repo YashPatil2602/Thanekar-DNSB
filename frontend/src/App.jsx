@@ -9,6 +9,7 @@ import Pricing from "./components/Pricing";
 import Amenities from "./components/Amenities";
 import FloorPlans from "./components/FloorPlans";
 import Location from "./components/Location";
+import LocationNearby from "./components/LocationNearby";
 import Footer from "./components/Footer";
 import EnquiryForm from "./components/EnquiryForm";
 
@@ -75,6 +76,7 @@ function App() {
                 />
 
                 <Location />
+                <LocationNearby />
             </main>
 
             <Footer

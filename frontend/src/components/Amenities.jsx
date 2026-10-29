@@ -33,6 +33,13 @@ function Amenities() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
+        amenities.forEach(({ image: src }) => {
+            const image = new Image();
+            image.src = src;
+        });
+    }, []);
+
+    useEffect(() => {
         const timer = setInterval(() => {
             setCurrentIndex(
                 (previousIndex) =>
