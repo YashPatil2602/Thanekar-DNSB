@@ -1156,3 +1156,19 @@
         letter-spacing: 2px;
     }
 }
+
+
+/* Starting from pricing label */
+.starting-from-label {
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 0.30em;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-transform: none;
+    color: #806343;
+    margin-right: 6px;
+    white-space: nowrap;
+    vertical-align: middle;
+}

@@ -25,12 +25,6 @@ function Pricing({ onEnquire }) {
         }
     };
 
-    const handleOfferKeyDown = (event) => {
-        if (event.key === "Enter" || event.key === " ") {
-            event.preventDefault();
-            handleEnquire("special-offer");
-        }
-    };
 
     return (
         <section className="pricing-section" id="pricing">
@@ -41,7 +35,7 @@ function Pricing({ onEnquire }) {
 
                 <div className="pricing-heading">
                     <p className="pricing-label">
-                        RESIDENTIAL PRICING &amp; OFFERS
+                        RESIDENTIAL PRICING
                     </p>
 
                     <h2>
@@ -54,8 +48,7 @@ function Pricing({ onEnquire }) {
 
                     <p className="pricing-intro">
                         Discover premium residential homes at Thanekar DNSB
-                        with attractive pricing and a special limited-time
-                        offer.
+                        and contact our team for current pricing and availability.
                     </p>
                 </div>
 
@@ -67,7 +60,7 @@ function Pricing({ onEnquire }) {
                         <h3>2 BHK</h3>
 
                         <div className="price">
-                            XX <span>LAKH*</span>
+                            <span className="starting-from-label">Starting from</span> ₹70 <span>LAKH*</span>
                         </div>
 
                         <div className="pricing-divider"></div>
@@ -100,18 +93,6 @@ function Pricing({ onEnquire }) {
                             <span className="sparkle sparkle-three">✦</span>
                         </div>
 
-                        <div
-                            className="offer-badge"
-                            role="button"
-                            tabIndex={0}
-                            aria-label="Enquire about the special offer"
-                            onClick={() =>
-                                handleEnquire("special-offer")
-                            }
-                            onKeyDown={handleOfferKeyDown}
-                        >
-                            <span>SPECIAL OFFER</span>
-                        </div>
 
                         <p className="pricing-type pricing-type-gold">
                             RESIDENTIAL
@@ -120,7 +101,7 @@ function Pricing({ onEnquire }) {
                         <h3>3 BHK</h3>
 
                         <div className="price featured-price">
-                            XX <span>LAKH*</span>
+                            <span className="starting-from-label">Starting from</span> ₹86 <span>LAKH*</span>
                         </div>
 
                         <div className="pricing-divider"></div>
@@ -143,36 +124,6 @@ function Pricing({ onEnquire }) {
                     </article>
                 </div>
 
-                {/* LIMITED TIME OFFER */}
-                <div className="pricing-offer">
-                    <div
-                        className="offer-shine"
-                        aria-hidden="true"
-                    ></div>
-
-                    <div className="offer-content">
-                        <p>LIMITED TIME OFFER</p>
-
-                        <h3>
-                            Get up to{" "}
-                            <span>₹8 Lakh Discount*</span>
-                        </h3>
-
-                        <small>
-                            *Terms &amp; conditions apply.
-                        </small>
-                    </div>
-
-                    <a
-                        href="#contact"
-                        className="offer-button"
-                        onClick={(event) =>
-                            handleEnquire("special-offer", event)
-                        }
-                    >
-                        Know More <span>→</span>
-                    </a>
-                </div>
 
                 {/* =====================================================
                     COMMERCIAL PRICING
@@ -220,7 +171,7 @@ function Pricing({ onEnquire }) {
                             </p>
 
                             <div className="price commercial-price">
-                                XX <span>LAKH*</span>
+                                <span className="starting-from-label">Starting from</span> ₹60 <span>LAKH*</span>
                             </div>
 
                             <div className="pricing-divider"></div>
@@ -267,7 +218,7 @@ function Pricing({ onEnquire }) {
                             </p>
 
                             <div className="price commercial-price">
-                                X <span>CR*</span>
+                                <span className="starting-from-label">Starting from</span> ₹4 <span>CR*</span>
                             </div>
 
                             <div className="pricing-divider"></div>

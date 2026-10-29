@@ -1,0 +1,145 @@
+.dnsb-nearby-section {
+  padding: 40px 24px 70px;
+  background: #faf5ed;
+  color: #2b1d09;
+}
+
+.dnsb-nearby-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.dnsb-nearby-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.dnsb-nearby-eyebrow {
+  display: block;
+  margin-bottom: 12px;
+  color: #9a7418;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.dnsb-nearby-heading h2 {
+  margin: 0 0 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.dnsb-nearby-heading h2 span {
+  color: #b88f1e;
+}
+
+.dnsb-nearby-heading > p {
+  margin: 0 auto;
+  max-width: 650px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #806b60;
+}
+
+.dnsb-nearby-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.dnsb-nearby-card {
+  min-width: 0;
+  padding: 22px 20px;
+  background: #fffaf4;
+  border: 1px solid #dfc46e;
+  border-radius: 10px;
+  box-shadow: 0 6px 22px rgba(74, 48, 20, 0.04);
+}
+
+.dnsb-nearby-icon {
+  margin-bottom: 14px;
+  font-size: 23px;
+}
+
+.dnsb-nearby-card h3 {
+  margin: 0 0 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.dnsb-nearby-places {
+  display: flex;
+  flex-direction: column;
+}
+
+.dnsb-nearby-place {
+  padding: 12px 0;
+  border-top: 1px solid #eee3d4;
+}
+
+.dnsb-nearby-place p {
+  margin: 0 0 6px;
+  color: #6c5a50;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.dnsb-nearby-place strong {
+  color: #9a7418;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.dnsb-nearby-note {
+  margin: 18px 0 0;
+  color: #806b60;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.dnsb-nearby-map {
+  margin-top: 35px;
+  overflow: hidden;
+  border: 1px solid #dfc46e;
+  border-radius: 12px;
+  background: #fffaf4;
+}
+
+.dnsb-nearby-map h3 {
+  padding: 18px 20px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.dnsb-nearby-map iframe {
+  display: block;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .dnsb-nearby-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 540px) {
+  .dnsb-nearby-section {
+    padding: 35px 16px 50px;
+  }
+
+  .dnsb-nearby-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .dnsb-nearby-card {
+    padding: 20px;
+  }
+}
