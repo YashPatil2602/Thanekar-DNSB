@@ -60,7 +60,7 @@ function Pricing({ onEnquire }) {
                         <h3>2 BHK</h3>
 
                         <div className="price">
-                            <span className="starting-from-label">Starting from</span> ₹70 <span>LAKH*</span>
+                            <span className="starting-from-label">Starting from</span> ₹__ <span>LAKH*</span>
                         </div>
 
                         <div className="pricing-divider"></div>
@@ -101,7 +101,7 @@ function Pricing({ onEnquire }) {
                         <h3>3 BHK</h3>
 
                         <div className="price featured-price">
-                            <span className="starting-from-label">Starting from</span> ₹86 <span>LAKH*</span>
+                            <span className="starting-from-label">Starting from</span> ₹__ <span>LAKH*</span>
                         </div>
 
                         <div className="pricing-divider"></div>
@@ -171,7 +171,7 @@ function Pricing({ onEnquire }) {
                             </p>
 
                             <div className="price commercial-price">
-                                <span className="starting-from-label">Starting from</span> ₹60 <span>LAKH*</span>
+                                <span className="starting-from-label">Starting from</span> ₹__ <span>LAKH*</span>
                             </div>
 
                             <div className="pricing-divider"></div>
@@ -218,7 +218,7 @@ function Pricing({ onEnquire }) {
                             </p>
 
                             <div className="price commercial-price">
-                                <span className="starting-from-label">Starting from</span> ₹4 <span>CR*</span>
+                                <span className="starting-from-label">Starting from</span> ₹__ <span>CR*</span>
                             </div>
 
                             <div className="pricing-divider"></div>
