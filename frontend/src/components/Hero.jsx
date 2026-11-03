@@ -1,3 +1,4 @@
+import { trackLeadConversion } from "../googleAds";
 import { useEffect, useState } from "react";
 import { submitContact } from "../api";
 import "./Hero.css";
@@ -115,6 +116,8 @@ function Hero({ onEnquire }) {
                     "Luxury walkthrough enquiry",
                 source: "hero-form",
             });
+
+            trackLeadConversion();
 
             form.reset();
             setSubmitted(true);

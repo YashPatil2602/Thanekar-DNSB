@@ -1,3 +1,4 @@
+import { trackLeadConversion } from "../googleAds";
 import { useEffect, useState } from "react";
 import { submitContact } from "../api";
 import "./EnquiryForm.css";
@@ -252,6 +253,8 @@ function EnquiryForm({
             await submitContact(
                 submissionData
             );
+
+            trackLeadConversion();
 
             if (purpose === "brochure") {
                 downloadBrochure();
