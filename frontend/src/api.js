@@ -14,5 +14,14 @@ export async function submitContact(formData) {
     });
     const result = await response.json();
     if (!response.ok) throw new Error(result.message || "Unable to submit enquiry");
+    if (
+        result?.success === false ||
+        result?.status === "error"
+    ) {
+        throw new Error(
+            result?.message || "Unable to submit enquiry"
+        );
+    }
+
     return result;
 }
